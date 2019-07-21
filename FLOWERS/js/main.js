@@ -1,0 +1,9 @@
+document.write("<script src="js/three.js"></script>");
+document.write("<script src="js/OrbitControls.js"></script>")
+document.write("<script src="js/EffectComposer.js"></script>")
+document.write("<script src="js/RenderPass.js"></script>")
+document.write("<script src="js/ShaderPass.js"></script>")
+document.write("<script src="js/CopyShader.js"></script>")
+document.write("<script src="js/LuminosityHighPassShader.js"></script>")
+document.write("<script src="js/UnrealBloomPass.js"></script>")
+document.write("<script src="js/Flowers.js"></script>")

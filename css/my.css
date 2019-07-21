@@ -1,0 +1,163 @@
+/* Here is your custom css styles. */
+.aui-list-theme-box {
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.aui-list-item {
+    width: 23%;
+    float: left;
+    margin: 0 1% 0 1%;
+    border-radius: 5px;
+    background: #fff;
+    display: block;
+    overflow: hidden;
+}
+
+.aui-list-theme-img {
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+
+.aui-list-theme-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: none;
+}
+
+.aui-list-theme-message {
+    background: #fff;
+    /*padding: 0.2rem 0.1rem 0 0.1rem;*/
+}
+
+.aui-list-theme-title {
+    color: #333333;
+    font-size: 0.7rem;
+    margin: 0.3rem 0  0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+    font-weight: normal;
+    text-align: left;
+    text-overflow: ellipsis;
+}
+
+.aui-list-theme-message p {
+    color: #6e6e6e;
+    font-size: 0.8rem;
+}
+
+.aui-list-theme-message span em {
+    background: -webkit-linear-gradient(#fd7796, #f90f0e);
+    /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#fd7796, #f90f0e);
+    /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#fd7796, #f90f0e);
+    /* Firefox 3.6 - 15 */
+    background: linear-gradient(#fd7796, #f90f0e);
+    /* æ ‡å‡†çš„è¯­æ³• */
+    background-color: #f90f0e;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 0.85rem;
+    /*padding: 0 0.3rem;*/
+    font-style: normal;
+    margin-right: 0.2rem;
+}
+
+.aui-list-theme-message span {
+   /* color: #999999;
+    font-size: 0.8rem;
+    font-style: normal;
+    margin-bottom: 0.8rem;
+    display: block;
+    text-align: left;
+    text-decoration:line-through;
+	*/
+	background: #fff;
+    /*padding: 0.2rem 0.1rem 0 0.1rem;*/
+}
+
+.aui-list-theme-pic{
+     color:#f0354a;
+   /*font-weight:normal;*/
+    font-size:1.3rem;
+}
+.aui-list-theme-pic i{
+   background: -webkit-linear-gradient(#fd7796, #f90f0e); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#fd7796, #f90f0e); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#fd7796, #f90f0e); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#fd7796, #f90f0e); /* æ ‡å‡†çš„è¯­æ³• */
+    background-color:#f90f0e;
+    border-radius: 1px;
+    color: #fff;
+    font-size: 0.85rem;
+    padding: 0 0.1rem;
+    font-style: normal;
+    margin-right: 0.2rem;
+}
+.aui-list-theme-pic em{
+    font-size:0.9rem;
+	color: #999999;
+	text-decoration:line-through;
+    font-style:normal;
+}
+
+.aui-list-theme-message .time {
+    color: #fff;
+    background:#f0303d;
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: normal;
+    border-radius:2px;
+   /* padding: 0 0.2rem;
+    margin-right:0.2rem;*/
+}
+.aui-list-theme-message .msn {
+    color: #f0303d;
+    border:1px solid #f0303d;
+    background:none;
+    font-size: 0.6rem;
+    font-style: normal;
+    font-weight: normal;
+    border-radius:2px;
+    padding: 0 0.2rem;
+    margin-right:0.2rem;
+}
+
+
+span.onsale {
+    min-height: 3.236em;
+    min-width: 3.236em;
+    padding: .202em;
+    font-weight: 700;
+    position: absolute;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    font-size: .857em;
+    -webkit-font-smoothing: antialiased;
+	left: auto;
+    background: #4666a3;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    line-height: 50px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: bottom;
+    -moz-transform-origin: bottom;
+    -ms-transform-origin: bottom;
+    transform-origin: bottom;
+    top: -15px;
+    right: -20px;
+    width: 100px;
+    height: 40px;
+	z-index: 1;
+}

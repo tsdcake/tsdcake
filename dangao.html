@@ -1,0 +1,610 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	
+	
+		
+		
+		 <title>q</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link type="text/css" rel="stylesheet" href="css/main.css">
+		<style>
+			body {
+				color: #444;
+			}
+			a {
+				color: #08f;
+			}
+			.btn1 { /* 按钮美化 */
+				width: 100px; /* 宽度 */
+				height: 30px;
+				border-width: 0px; /* 边框宽度 */
+				border-radius: 3px; /* 边框半径 */
+				background: #1E90FF; /* 背景颜色 */
+				cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
+				outline: none; /* 不显示轮廓线 */
+				font-family: Microsoft YaHei; /* 设置字体 */
+				color: white; /* 字体颜色 */
+				font-size: 12px; /* 字体大小 */
+				float:right;
+				z-index:999;
+			}
+		#kg{
+					position: absolute;
+					top: 0px;
+					width: 100%;
+					padding: 10px;
+					box-sizing: border-box;
+					text-align: center;
+					z-index: 1; /* TODO Solve this in HTML */
+			}
+		#info {
+			position: absolute;
+			top: 0px;
+			width: 100%;
+			padding: 10px;
+			box-sizing: border-box;
+			text-align: center;
+			z-index: 1; /* TODO Solve this in HTML */
+		}
+
+		.dg.ac {
+			z-index: 2 !important; /* TODO Solve this in HTML */
+		}
+		.title{
+            position: absolute;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.5);
+            line-height: 1;
+            border-radius: 5px;
+        }
+
+		</style>
+	</head>
+	<body>
+		<div class="title one">巧克力</div>
+		<div class="title two">奶油夹层</div>
+		<!--<div class="title three">第三个盒子</div>-->
+		<div id="container"></div>
+		<div id="kg"><button class="btn1">分解</button><button class="btn1">关闭</button>
+		</div>
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+		<script type="module">
+			import * as THREE from 'https://threejs.org/examples/../build/three.module.js';
+			import { OrbitControls } from 'https://threejs.org/examples/./jsm/controls/OrbitControls.js';
+			import { Reflector } from 'https://threejs.org/examples/./jsm/objects/Reflector.js';
+          
+			// scene size
+			var WIDTH = window.innerWidth;
+			var HEIGHT = window.innerHeight;
+			// camera
+			var VIEW_ANGLE = 45;
+			var ASPECT = WIDTH / HEIGHT;
+			var NEAR = 1;
+			var FAR = 500;
+			var camera, scene, renderer;
+			var cameraControls;
+			var sphereGroup, smallSphere;
+			var P1,P2,P3,P4,P5,P6,P7,P8,P9;
+			var P1_1,P1_2,P1_3,P5_1;
+			var fj=false;
+			var count=0,k;
+			var PP_P=[];
+		
+			init();
+			animate();
+			function init() {
+				var container = document.getElementById( 'container' );
+				// renderer
+				renderer = new THREE.WebGLRenderer( { antialias: true } );
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( WIDTH, HEIGHT );
+				container.appendChild( renderer.domElement );
+				// scene
+				scene = new THREE.Scene();
+				// camera
+				camera = new THREE.PerspectiveCamera( VIEW_ANGLE, ASPECT, NEAR, FAR );
+				camera.position.set( 0, 75-17, 160 );
+				cameraControls = new OrbitControls( camera, renderer.domElement );
+				cameraControls.target.set( 0, 40-20, 0 );
+				cameraControls.maxDistance = 400;
+				cameraControls.minDistance = 10;
+				cameraControls.update();
+				// reflectors/mirrors
+					var geometry = new THREE.CircleBufferGeometry( 50, 64 );
+					var groundMirror = new Reflector( geometry, {
+						clipBias: 0.003,
+						textureWidth: WIDTH * window.devicePixelRatio,
+						textureHeight: HEIGHT * window.devicePixelRatio,
+						color: 0x777777,
+						recursion: 1
+					} );
+						groundMirror.position.y = 0.5;
+						groundMirror.rotateX( - Math.PI / 2 );
+						scene.add( groundMirror );
+				//茶色：0x58ACFA 透明玻璃色：0XECF1F3
+				   var glass_material = new THREE.MeshBasicMaterial({color : 0x7c7c7c});
+							 glass_material.opacity = 0.45;
+							 glass_material.transparent = true;
+					var cube = new THREE.Mesh(new THREE.BoxGeometry(53, 53, 2.2), glass_material);
+							cube.position.set( 0, 1.3, 0 );
+							cube.rotation.x = - Math.PI * 0.5;
+							cube.opacity=0.1;
+							cube.receiveShadow = true;
+							scene.add( cube );
+							
+							 $(".two").hide();
+						    $(".one").hide();
+							
+							
+             //createCubeWall(1, 180, 80, 0.5, glass_material, 155, 90, -250);
+           
+				/*var geometry = new THREE.PlaneBufferGeometry( 100, 100 );
+				var verticalMirror = new Reflector( geometry, {
+					clipBias: 0.003,
+					textureWidth: WIDTH * window.devicePixelRatio,
+					textureHeight: HEIGHT * window.devicePixelRatio,
+					color: 0x889999,
+					recursion: 1
+				} );
+				verticalMirror.position.y = 50;
+				verticalMirror.position.z = - 50;
+				scene.add( verticalMirror );
+				sphereGroup = new THREE.Object3D();
+				scene.add( sphereGroup );
+				var geometry = new THREE.CylinderBufferGeometry( 0.1, 15 * Math.cos( Math.PI / 180 * 30 ), 0.1, 24, 1 );
+				var material = new THREE.MeshPhongMaterial( { color: 0xffffff, emissive: 0x444444 } );
+				var P1 = new THREE.Mesh( geometry, material );
+				P1.position.y = - 15 * Math.sin( Math.PI / 180 * 30 ) - 0.05;
+				P1.rotateX( - Math.PI );
+				var geometry = new THREE.SphereBufferGeometry( 15, 24, 24, Math.PI / 2, Math.PI * 2, 0, Math.PI / 180 * 140 );
+				var halfSphere = new THREE.Mesh( geometry, material );
+				halfSphere.add( P1 );
+				halfSphere.rotateX( - Math.PI / 180 * 135 );
+				halfSphere.rotateZ( - Math.PI / 180 * 20 );
+				halfSphere.position.y = 7.8 + 15 * Math.sin( Math.PI / 180 * 30 );
+				sphereGroup.add( halfSphere );
+				*/	   //胚子层下 P6
+					   P6 = new THREE.Mesh( new THREE.CylinderBufferGeometry( 20, 20, 5, 64 ),new THREE.MeshBasicMaterial( {color: 0xfedd91} ));
+								P6.position.set( 0, 4, 0 );
+								scene.add( P6 );
+					   //胚子层上 P4
+					   P4 = new THREE.Mesh( new THREE.CylinderBufferGeometry( 20, 20, 5, 64 ),new THREE.MeshBasicMaterial( {color: 0xfedd91} ) );
+								P4.position.set( 0, 10, 0 );
+								scene.add( P4 );
+					   //奶油层夹层部 P5
+					   P5 = new THREE.Mesh(new THREE.CylinderBufferGeometry( 21, 21, 2, 64 ),new THREE.MeshBasicMaterial( {color: 0xfffff3} ) );
+								P5.position.set( 0, 7, 0 );
+								scene.add( P5 );
+					   //奶油层顶部 P3
+					   P3 = new THREE.Mesh(new THREE.CylinderBufferGeometry( 21.2, 21.2, 3, 64 ),new THREE.MeshBasicMaterial( {color: 0xfffff3} ));
+								P3.position.set( 0, 13, 0 );
+								scene.add(P3);
+								
+								
+								 
+					   var P331 = new THREE.Mesh(new THREE.CylinderBufferGeometry( 32.2, 32.2, 2, 64 ),new THREE.MeshBasicMaterial( {color: 0xfffff3} ));
+								P331.position.set( 0, 1, 0 );
+								//scene.add(P331);
+								
+								
+								
+					   ////外圈奶油层 右半 P7
+						var geometry = new THREE.CylinderBufferGeometry( 23, 23, 12.7, 64 ,0,1,true,Math.PI );
+						var material = new THREE.MeshBasicMaterial( {color: 0xfffff3} );
+						     material.side = THREE.DoubleSide;//两面都显示
+						P7 = new THREE.Mesh( geometry, material );
+							 P7.position.set( 0, 8.05, 0 );
+				          //圆球
+						   var geometry = new THREE.SphereBufferGeometry( 2,64, 64,Math.PI/2,Math.PI*2,0,Math.PI*6/10 );
+						   var material = new THREE.MeshBasicMaterial({color : 0x7e8c19 });
+						   var cube = new THREE.Mesh(geometry, material);
+							cube.position.set( 0, 4.4, -22);
+							cube.rotateX( -Math.PI*0.5 );
+							cube.rotateZ( -Math.PI*0.2);
+							P7.add(cube);
+						   var cube = new THREE.Mesh(geometry, material);
+							cube.position.set( 21, 3, 5);
+							cube.rotateX( -Math.PI*0.5 );
+							
+							cube.rotateZ( -Math.PI*0.33 );
+							P7.add(cube);
+						   var cube = new THREE.Mesh(geometry, material);
+							cube.position.set( -15, -3, -17);
+							cube.rotateX( -Math.PI*0.5 );
+							cube.rotateZ( Math.PI*0.4 );
+							P7.add(cube);
+							  var cube = new THREE.Mesh(geometry, material);
+							cube.position.set( 18, -2, -12);
+							cube.rotateX( -Math.PI*0.5 );
+							cube.rotateZ(- Math.PI*0.1);
+							P7.add(cube);
+						var geometry = new THREE.CylinderBufferGeometry( 20, 20, 12.7, 64 ,0,1,true,Math.PI );
+						var material = new THREE.MeshBasicMaterial( {color: 0xfffff3} );
+				            material.side = THREE.DoubleSide;//两面都显示
+						var cylinder1 = new THREE.Mesh( geometry, material );
+						        P7.add( cylinder1 );
+						var cylinder2=  new THREE.Mesh(new THREE.RingBufferGeometry(23, 20, 64, 8,-0.58,Math.PI ), new THREE.MeshBasicMaterial( {color: 0xffffff} ));
+								cylinder2.position.set( 0, -6.3, 0);
+								cylinder2.rotateX(-0.5*Math.PI );
+								P7.add( cylinder2 );
+						var cylinder2=  new THREE.Mesh(new THREE.RingBufferGeometry(23, 20, 64, 8,0.58,Math.PI ), new THREE.MeshBasicMaterial( {color: 0xffffff} ));
+								cylinder2.position.set( 0, 6.2, 0);
+								cylinder2.rotateX(-0.5*Math.PI );
+								cylinder2.rotateY(Math.PI );
+								P7.add( cylinder2 );
+						var geometry = new THREE.PlaneBufferGeometry( 3.1, 13, 32 );
+						var material = new THREE.MeshBasicMaterial( {color: 0xfffff3, side: THREE.DoubleSide} );
+						var plane = new THREE.Mesh( geometry, material );
+								plane.position.set( 18.3, 0, 10.7);
+								plane.rotateY(-0.16*Math.PI );
+								P7.add( plane );
+						var plane = new THREE.Mesh( geometry, material );
+								plane.position.set( -18.4, 0, -12);
+								plane.rotateY(-0.16*Math.PI );
+								P7.add( plane );
+								P7 .rotateX( - Math.PI );
+								scene.add( P7 );
+					//外圈奶油层 左半 P8
+					P8=P7.clone();
+							P8.rotateY( Math.PI );
+							scene.add( P8 );
+							
+							var P29=P7.clone();
+							P29.position.y-=17;
+							P29.material.color.set(0xfffff3);
+							P29.scale.set(1.4, 1.4, 1.4);
+							//scene.add( P29 );
+							var P330=P29.clone();
+							P330.rotateY( Math.PI );
+							//scene.add(P330);
+				   //波浪 P2
+					var glass_material = new THREE.MeshBasicMaterial({color : 0x62cadd });
+						 glass_material.opacity = 0.65;
+						 glass_material.transparent = true;
+					var geometry = new THREE.CylinderBufferGeometry( 20, 20, 0.8, 64 );
+					 P2 = new THREE.Mesh(geometry, glass_material);
+						P2.position.set( 0, 15, 0 );
+						P2.rotation.x = Math.PI ;
+						P2.opacity=0.5;
+						P2.receiveShadow = true;
+						var geometry1 = new THREE.SphereGeometry( 0.3, 32, 64 );
+						var material1 = new THREE.MeshBasicMaterial( {color: 0xf7ecec} );
+						for(var i=0;i<100;i++){
+						  var sphere = new THREE.Mesh( geometry1, material1 );
+							  sphere.position.set((Math.random()*36-18)%13,-0.1,(Math.random()*36-18)%13)
+							  P2.add( sphere );
+						}
+						 scene.add( P2 );
+				     //船 P1
+						var geometry = new THREE.SphereBufferGeometry( 5, 24, 24, Math.PI / 2, Math.PI * 2, 0, Math.PI / 180 * 60 );
+						var material = new THREE.MeshBasicMaterial( { color: 0x000000 } );
+						material.side = THREE.DoubleSide;//两面都显示
+						 var P111 = new THREE.Mesh( geometry, material );
+								P111.position.y = -1;
+								P111.scale.set(1.5, 1.2, 1.0);
+							    P111.rotateX( -Math.PI+0.05 );
+								P111.rotateZ( -Math.PI);
+								 scene.add(P111);
+								
+						 P1 = new THREE.Mesh(new THREE.SphereBufferGeometry( 0.1, 0.1, 24), material );
+								P1.position.y = 22;
+								
+								P1.rotateX( Math.PI-0.15 );
+								P1.add(P111);
+							var glass_material = new THREE.MeshBasicMaterial({color : 0xfedd91 });
+								 glass_material.opacity = 0.95;
+								 glass_material.transparent = true;
+							var geometry = new THREE.CylinderBufferGeometry( 3, 3, 0.2, 64 );
+							var cube = new THREE.Mesh(geometry, glass_material);
+									cube.position.set( 0, 2.7, 0 );
+									cube.rotation.x = Math.PI ;
+									cube.scale.set(1.5, 1.1, 1.0);
+									cube.opacity=0.5;
+									cube.receiveShadow = true;
+									P1.add(cube);
+				         //船桨
+						   var x=3,y=30,z=0.3;
+						   var geometry = new THREE.BoxGeometry(x,y, z );
+									geometry.vertices[4].x+=(x-0.1);
+									geometry.vertices[5].x+=(x-0.1);
+						   var material = new THREE.MeshBasicMaterial( { color: 0x000000 } );
+						   var mash = new THREE.Mesh( geometry, material );
+								  mash.position.set(0,3,6);
+								  mash.rotateX( -Math.PI*0.5-0.1 );
+								  mash.rotateY(Math.PI*0.3 );
+								  mash.scale.set(0.30, 0.30, 0.30);
+								  P1.add(mash);
+						   var mash = new THREE.Mesh( geometry, material );
+								 mash.position.set(1,3.8,-6);
+								 mash.rotateX( Math.PI*0.5+0.5 );
+								 mash.rotateY(-Math.PI*0.2 );
+								 mash.scale.set(0.30, 0.30, 0.30);
+								 P1.add(mash);
+				        //船帆
+						   var x=9,y=17,z=0.3;
+						   var geometry = new THREE.BoxGeometry(x,y, z );
+							   geometry.vertices[4].x+=(x-0.1);
+							   geometry.vertices[5].x+=(x-0.1);
+						   var mash = new THREE.Mesh( geometry,new THREE.MeshBasicMaterial( { color: 0xabc74c } ));
+								 mash.position.set(-1,-2,0);
+								 mash.rotateX( -Math.PI);
+								 mash.rotateZ( Math.PI*0.15);
+								 mash.scale.set(0.60, 0.60, 0.60);
+								 P1.add(mash);
+								 P1.scale.set(1.30, 1.30, 1.30);
+								 scene.add(P1);
+								 
+								 
+	
+								 
+					
+				// walls
+				var planeGeo = new THREE.PlaneBufferGeometry( 900.1, 900.1 );
+				var planeBottom = new THREE.Mesh( planeGeo, new THREE.MeshPhongMaterial( { color: 0xffffff } ) );
+				planeBottom.rotateX( - Math.PI / 2 );
+				planeBottom.position.y = -18;
+				scene.add( planeBottom );
+				
+				// lights
+				var mainLight = new THREE.PointLight( 0xcccccc, 1.5, 250 );
+				mainLight.position.y = 60;
+				scene.add( mainLight );
+				var greenLight = new THREE.PointLight( 0x00ff00, 0.25, 1000 );
+				greenLight.position.set( 550, 50, 0 );
+				scene.add( greenLight );
+				var redLight = new THREE.PointLight( 0xff0000, 0.25, 1000 );
+				redLight.position.set( - 550, 50, 0 );
+				scene.add( redLight );
+				var blueLight = new THREE.PointLight( 0x7f7fff, 0.25, 1000 );
+				blueLight.position.set( 0, 50, 550 );
+				scene.add( blueLight );
+			 P1_1=draw_line(0,-8,13,0,-3,0,0x0077ff);
+				P1_1.position.set(100000+7.5,35+8,-0.8);
+				P1_1.rotateZ(1.5*Math.PI);
+				P1_1.rotateY(0.5*Math.PI);
+				//P1_1.rotateX(-0.5*Math.PI);
+				var root=draw_root(0,-8,13);
+				root.rotateZ(0.5*Math.PI);
+				root.rotateX(-Math.PI*0.08);
+				root.scale.set(0.20, 0.20, 0.20);
+				P1_1.add(root);
+				PP_P.push(P1_1);
+				scene.add(P1_1);
+				
+				
+				P5_1=draw_line(23,23,15,4,4,1,0x0077ff);
+				P5_1.position.set(100000-39.5,6.5+16,36);
+				P5_1.rotateZ(1.5*Math.PI);
+				P5_1.rotateY(0.5*Math.PI);
+				//P5_1.rotateX(-0.5*Math.PI);
+				var root=draw_root(23,23,15);
+				root.rotateZ(0.8*Math.PI);
+				//root.rotateX(Math.PI*0.08);
+				root.scale.set(0.20, 0.20, 0.20);
+				P5_1.add(root);
+				PP_P.push(P5_1);
+				scene.add(P5_1);
+				bindClick();
+			}
+			
+			function draw_root(x,y,z){
+			 
+              var circle2 = new THREE.Mesh(new THREE.CylinderBufferGeometry(4.5,4.5,0.05,32),new THREE.MeshBasicMaterial( { color: 0x0082ff,side:THREE.DoubleSide ,opacity:0.65} ) );
+			  var circle1= new THREE.Mesh(new THREE.CylinderBufferGeometry( 6,6,0.05, 32 ),new THREE.MeshBasicMaterial( { color: 0x0ea7ff,side:THREE.DoubleSide ,opacity:0.5 } ) );
+			  var circle= new THREE.Mesh(new THREE.CylinderBufferGeometry( 8,8,0.05,32 ),new THREE.MeshBasicMaterial( { color: 0x0aaeff,side:THREE.DoubleSide ,opacity:0.4 ,transparent : true} ) );
+			  var circle22 = new THREE.Mesh(new THREE.CylinderBufferGeometry( 4.5,4.5,0.05,32 ),new THREE.MeshBasicMaterial( { color: 0x0082ff,side:THREE.DoubleSide ,opacity:0.65} ) );
+			  circle.add(circle1); 
+			  circle2.position.set(0,0.1,0);
+			  circle.add(circle2); 
+			  circle22.position.set(0,-0.05,0);
+			  circle.add(circle22);
+			  circle.position.set(x,y,z);
+              return circle;
+			}
+			
+			function draw_line(x1,y1,z1,x2,y2,z2,color_line){
+             var material = new THREE.LineBasicMaterial({color:color_line});
+				        var geometry = new THREE.Geometry();
+				        geometry.vertices.push(new THREE.Vector3(x1,y1,z1));
+				        geometry.vertices.push(new THREE.Vector3(x2,y2,z2));
+				        geometry.vertices.push(new THREE.Vector3(0,0,0));
+				        var line=new THREE.Line(geometry,material);
+                          return line;
+			}
+			
+			function bindClick(){
+				var allP = document.getElementById("kg").getElementsByTagName("button"),
+			　　i=0,
+			　　len = allP.length;
+			console.log(len);
+				for( ;i<len;i++){AlertP(allP[i],i);}
+				function AlertP(obj,i){
+				obj.onclick = function(){
+					console.log(i);
+					if(fj)fj=false;
+			        else fj=true;
+				}
+				}
+			}
+			
+			    /* 创建字体精灵 */
+    function makeTextSprite(message, parameters) {
+        if ( parameters === undefined ) parameters = {};
+        let fontface = parameters.hasOwnProperty("fontface") ? parameters["fontface"] : "Arial";
+        /* 字体大小 */
+        let fontsize = parameters.hasOwnProperty("fontsize") ?parameters["fontsize"] : 18;
+        /* 边框厚度 */
+        let borderThickness = parameters.hasOwnProperty("borderThickness") ?parameters["borderThickness"] : 4;
+        /* 边框颜色 */
+        let borderColor = parameters.hasOwnProperty("borderColor") ?parameters["borderColor"] : { r:0, g:0, b:0, a:1.0 };
+        /* 背景颜色 */
+        let backgroundColor = parameters.hasOwnProperty("backgroundColor") ? parameters["backgroundColor"] : { r:255, g:255, b:255, a:1.0 };
+        /* 创建画布 */
+        let canvas = document.createElement('canvas');
+        let context = canvas.getContext('2d');
+        /* 字体加粗 */
+        context.font = "Bold " + fontsize + "px " + fontface;
+        /* 获取文字的大小数据，高度取决于文字的大小 */
+        let metrics = context.measureText( message );
+        let textWidth = metrics.width;
+        /* 背景颜色 */
+        context.fillStyle   = "rgba(" + backgroundColor.r + "," + backgroundColor.g + "," + backgroundColor.b + "," + backgroundColor.a + ")";
+        /* 边框的颜色 */
+        context.strokeStyle = "rgba(" + borderColor.r + "," + borderColor.g + "," + borderColor.b + "," + borderColor.a + ")";
+        context.lineWidth = borderThickness;
+        /* 绘制圆角矩形 */
+        roundRect(context, borderThickness/2, borderThickness/2, textWidth + borderThickness, fontsize * 1.4 + borderThickness, 6);
+        context.fillStyle = "rgba(0, 0, 0, 1.0)"; /* 字体颜色 */
+        context.fillText( message, borderThickness, fontsize + borderThickness);
+        /* 画布内容用于纹理贴图 */
+        let texture = new THREE.Texture(canvas);
+        texture.needsUpdate = true;
+        let spriteMaterial = new THREE.SpriteMaterial({ map: texture } );
+        let sprite = new THREE.Sprite( spriteMaterial )
+        //console.log(sprite.spriteMaterial);
+        sprite.scale.set(100,50,10);
+        return sprite;
+    }
+
+			
+			
+			/* 绘制圆角矩形 */
+    function roundRect(ctx, x, y, w, h, r) {
+
+        ctx.beginPath();
+        ctx.moveTo(x+r, y);
+        ctx.lineTo(x+w-r, y);
+        ctx.quadraticCurveTo(x+w, y, x+w, y+r);
+        ctx.lineTo(x+w, y+h-r);
+        ctx.quadraticCurveTo(x+w, y+h, x+w-r, y+h);
+        ctx.lineTo(x+r, y+h);
+        ctx.quadraticCurveTo(x, y+h, x, y+h-r);
+        ctx.lineTo(x, y+r);
+        ctx.quadraticCurveTo(x, y, x+r, y);
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+
+    }
+
+		
+			function animate() {
+				requestAnimationFrame( animate );
+				/*var timer = Date.now() * 0.01;
+				sphereGroup.rotation.y -= 0.002;
+				smallSphere.position.set(
+					Math.cos( timer * 0.1 ) * 30,
+					Math.abs( Math.cos( timer * 0.2 ) ) * 20 + 5,
+					Math.sin( timer * 0.1 ) * 30
+				);
+				smallSphere.rotation.y = ( Math.PI / 2 ) - timer * 0.1;
+				smallSphere.rotation.z = timer * 0.8;*/
+			
+				if(fj&&count<120){
+				            count++;
+							     P1.position.y =P1.position.y+0.185;
+								 //P1_1.position.y= P1_1.position.y+0.185;
+								 P2.position.y =P2.position.y+0.18;
+								 P3.position.y =P3.position.y+0.1;
+							      P4.position.y =P4.position.y+0.085;
+								    P5.position.y =P5.position.y+0.01;
+									
+									 P8.position.x =P8.position.x-0.18;
+									  P8.position.z =P8.position.z-0.18;
+									 P7.position.x =P7.position.x+0.18;
+									  P7.position.z =P7.position.z+0.18;
+									   
+								
+				}
+				if(fj==false&&count>0){
+				count--;
+								 P1.position.y =P1.position.y-0.185;
+								  //P1_1.position.y= P1_1.position.y-0.185;
+								 P2.position.y =P2.position.y-0.18;
+								 P3.position.y =P3.position.y-0.1;
+								  P4.position.y =P4.position.y-0.085;
+								    P5.position.y =P5.position.y-0.01;
+									
+									 P8.position.x =P8.position.x+0.18;
+									  P8.position.z =P8.position.z+0.18;
+									  P7.position.x =P7.position.x-0.18;
+									   P7.position.z =P7.position.z-0.18;
+									   
+									   
+									  /* PP_P.forEach(function(Pp) {
+                                     console.log("----------------jj22222j");
+									 Pp.position.y-=0.185;
+                                    console.log(Pp.children[1]);
+								     console.log("----------------jj22111111111111111111111111111111222j");	   
+									   });
+									   */
+									   
+				}
+				//console.log(P7.children[2]);
+						//获取到窗口的一半高度和一半宽度
+						
+						if(count==119&&fj){
+		
+						P1_1.position.y=P1_1.position.y+0.185*120;
+						P1_1.position.x=P1_1.position.x-100000;
+                        P5_1.position.y=P5_1.position.y+0.01*120;
+						P5_1.position.x=P5_1.position.x-100000;
+						  
+		
+						    $(".two").show();
+						    $(".one").show();
+						}
+						if(count==118&&fj==false){
+						console.log("dsdsdsd");
+						P1_1.position.y=P1_1.position.y-0.185*120;
+						P1_1.position.x=P1_1.position.x+100000;
+						P5_1.position.x=P5_1.position.x+100000;
+						P5_1.position.y=P5_1.position.y-0.01*120;
+				           $(".two").hide();
+						    $(".one").hide();
+						}
+						      						        let halfWidth = window.innerWidth / 2;
+								let halfHeight = window.innerHeight / 2;		
+								let vector1 =  P1_1.position.clone().project(camera);
+								let vector2 = P5_1.position.clone().project(camera);
+								let vector3 =P7.children[2].position.clone().project(camera);
+							    let vector4=P7.position.clone().project(camera);
+								//修改第一个的div的位置
+								$(".one").css({
+									left:vector1.x * halfWidth -10+ halfWidth,
+									top:-vector1.y * halfHeight-5 + halfHeight
+								});
+								$(".two").css({
+                                    left:vector2.x * halfWidth-10 + halfWidth,
+									top:-vector2.y * halfHeight -5+ halfHeight
+								});  
+				renderer.render( scene, camera );
+			}
+		</script>
+	</body>
+</html>
