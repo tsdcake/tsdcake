@@ -1,4 +1,173 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>太泗蒂.艺术蛋糕</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="css/main.css">
+	</head>
 
+	<body>
+
+		<script type="x-shader/x-vertex" id="vertexShader">
+			varying vec3 vWorldPosition;
+			void main() {
+				vec4 worldPosition = modelMatrix * vec4( position, 1.0 );
+				vWorldPosition = worldPosition.xyz;
+				gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+			}
+		</script>
+
+		<script type="x-shader/x-fragment" id="fragmentShader">
+			uniform vec3 topColor;
+			uniform vec3 bottomColor;
+			uniform float offset;
+			uniform float exponent;
+			varying vec3 vWorldPosition;
+			void main() {
+				float h = normalize( vWorldPosition + offset ).y;
+				gl_FragColor = vec4( mix( bottomColor, topColor, max( pow( max( h, 0.0 ), exponent ), 0.0 ) ), 1.0 );
+			}
+		</script>
+
+		<script type="module">
+			import * as THREE from 'https://threejs.org/examples/../build/three.module.js';
+			import Stats from 'https://threejs.org/examples/./jsm/libs/stats.module.js';
+			import { OrbitControls } from 'https://threejs.org/examples/./jsm/controls/OrbitControls.js';
+			import { Reflector } from 'https://threejs.org/examples/./jsm/objects/Reflector.js';
+			var SCREEN_WIDTH = window.innerWidth;
+			var SCREEN_HEIGHT = window.innerHeight;
+			var container, stats;
+			var camera, scene, renderer;
+			init();
+			animate();
+			function init() {
+				container = document.createElement( 'div' );
+				document.body.appendChild( container );
+				// CAMERA
+				camera = new THREE.PerspectiveCamera( 40, SCREEN_WIDTH / SCREEN_HEIGHT, 1, 10000 );
+				camera.position.set( 700, 200, - 500 );
+				// SCENE
+				scene = new THREE.Scene();
+				// LIGHTS
+				var light = new THREE.DirectionalLight( 0xaabbff, 0.3 );
+				light.position.x = 300;
+				light.position.y = 250;
+				light.position.z = - 500;
+				scene.add( light );
+				// SKYDOME
+				var vertexShader = document.getElementById( 'vertexShader' ).textContent;
+				var fragmentShader = document.getElementById( 'fragmentShader' ).textContent;
+				var uniforms = {
+					topColor: { value: new THREE.Color( 0x0077ff ) },
+					bottomColor: { value: new THREE.Color( 0xffffff ) },
+					offset: { value: 400 },
+					exponent: { value: 0.6 }
+				};
+				uniforms.topColor.value.copy( light.color );
+				var skyGeo = new THREE.SphereBufferGeometry( 4000, 32, 15 );
+				var skyMat = new THREE.ShaderMaterial( {
+					uniforms: uniforms,
+					vertexShader: vertexShader,
+					fragmentShader: fragmentShader,
+					side: THREE.BackSide
+				} );
+				var sky = new THREE.Mesh( skyGeo, skyMat );
+				scene.add( sky );
+				// RENDERER
+				renderer = new THREE.WebGLRenderer( { antialias: true } );
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( SCREEN_WIDTH, SCREEN_HEIGHT );
+				container.appendChild( renderer.domElement );
+				renderer.gammaInput = true;
+				renderer.gammaOutput = true;
+				// CONTROLS
+				var controls = new OrbitControls( camera, renderer.domElement );
+				controls.maxPolarAngle = 0.9 * Math.PI / 2;
+				controls.enableZoom = false;
+				// STATS
+				stats = new Stats();
+				container.appendChild( stats.dom );
+				// MODEL
+				var material = new THREE.MeshBasicMaterial( {color: 0x808080, dithering: true} );
+				var geometry = new THREE.BoxBufferGeometry( 1500, 1500 ,10);
+				var mesh = new THREE.Mesh( geometry, material );
+				mesh.position.set( 0, -60, 0 );
+				mesh.rotation.x = - Math.PI * 0.5;
+				mesh.receiveShadow = true;
+			    scene.add( mesh );
+				var material = new THREE.MeshBasicMaterial( {color: 0xffffdd, dithering: true} );
+				var geometry = new THREE.BoxBufferGeometry( 150, 150 ,10);
+				var mesh = new THREE.Mesh( geometry, material );
+				mesh.position.set( 0, -50, 0 );
+				mesh.rotation.x = - Math.PI * 0.5;
+				mesh.receiveShadow = true;
+			    scene.add( mesh );
+				var geometry = new THREE.CylinderBufferGeometry( 50, 50, 10, 64 );
+				var material = new THREE.MeshBasicMaterial( {color: 0xfedd91} );
+				var cylinder = new THREE.Mesh( geometry, material );
+				cylinder.position.set( 0, -30, 0 );
+				scene.add( cylinder );
+				var geometry = new THREE.CylinderBufferGeometry( 50, 50, 10, 64 );
+				var material = new THREE.MeshBasicMaterial( {color: 0xfedd91} );
+				var cylinder = new THREE.Mesh( geometry, material );
+				cylinder.position.set( 0, -10, 0 );
+				scene.add( cylinder );
+				window.addEventListener( 'resize', onWindowResize, false );
+			}
+			function onWindowResize() {
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+				renderer.setSize( window.innerWidth, window.innerHeight );
+			}
+			
+			var geometry = new THREE.CircleBufferGeometry( 40, 64 );
+				var groundMirror = new Reflector( geometry, {
+					clipBias: 0.003,
+					textureWidth: SCREEN_WIDTH * window.devicePixelRatio,
+					textureHeight: SCREEN_HEIGHT * window.devicePixelRatio,
+					color: 0x777777,
+					recursion: 1
+				} );
+				groundMirror.position.y = 0.5;
+				groundMirror.rotateX( - Math.PI / 2 );
+				scene.add( groundMirror );
+				
+				
+				
+				var geometry = new THREE.PlaneBufferGeometry( 100, 100 );
+				var verticalMirror = new Reflector( geometry, {
+					clipBias: 0.003,
+					textureWidth: SCREEN_WIDTH  * window.devicePixelRatio,
+					textureHeight: SCREEN_HEIGHT * window.devicePixelRatio,
+					color: 0x889999,
+					recursion: 1
+				} );
+				verticalMirror.position.y = 50;
+				verticalMirror.position.z = - 50;
+				scene.add( verticalMirror );
+				
+				sphereGroup = new THREE.Object3D();
+				scene.add( sphereGroup );
+				var geometry = new THREE.CylinderBufferGeometry( 0.1, 15 * Math.cos( Math.PI / 180 * 30 ), 0.1, 24, 1 );
+				var material = new THREE.MeshPhongMaterial( { color: 0xffffff, emissive: 0x444444 } );
+				var P1 = new THREE.Mesh( geometry, material );
+				P1.position.y = - 15 * Math.sin( Math.PI / 180 * 30 ) - 0.05;
+				P1.rotateX( - Math.PI );
+			
+			//
+			function animate() {
+				requestAnimationFrame( animate );
+				renderer.render( scene, camera );
+				stats.update();
+			}
+		</script>
+
+	</body>
+
+</html>
+-->
 
 
 
@@ -18,19 +187,9 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-	
-	
-		
-		
-		 <title>q</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <meta name="renderer" content="webkit|ie-stand|ie-comp">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<title>three.js webgl - mirror</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<link type="text/css" rel="stylesheet" href="css/main.css">
 		<style>
 			body {
