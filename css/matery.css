@@ -2,26 +2,26 @@
 /*小屏幕下(手机类)的样式*/
 @media only screen and (max-width: 601px) {
     .container {
-        width: 95%;
+        width: 96%;
     }
 }
 
 /*中等屏幕下(平板类)的样式*/
 @media only screen and (min-width: 600px) and (max-width: 992px) {
     .container {
-        width: 90%;
+        width: 91%;
     }
 }
 
 /*大屏幕下(桌面类)的样式*/
 @media only screen and (min-width: 993px) {
     .container {
-        width: 85%;
+        width: 86%;
         max-width: 1125px;
     }
 
     .post-container {
-        width: 90%;
+        width: 91%;
         margin: 0 auto;
         max-width: 1250px;
     }
@@ -208,17 +208,17 @@ header .nav-transparent {
 }
 
 header nav .brand-span {
-    font-size: 1.45rem;
+    font-size: 1.35rem;
 }
 
 header .brand-logo .logo-img {
     height: 45px;
     vertical-align: middle;
-    padding-bottom: 6px;
+    padding-bottom: 2px;
 }
 
 header .brand-logo .logo-span {
-    font-size: 2rem;
+    font-size: 1.2rem;
 }
 
 header .button-collapse i {
@@ -238,14 +238,14 @@ header .side-nav .mobile-head img {
 header .side-nav .mobile-head .logo-name {
     margin-top: -30px;
     padding-left: 10px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 header .side-nav .mobile-head .logo-desc {
     margin-top: -10px;
     padding-left: 10px;
     padding-bottom: 10px;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     line-height: 1.3rem;
     color: #e3e3e3;
 }
@@ -386,10 +386,10 @@ header .go-back i {
 }
 
 .bg-cover .title {
-    font-size: 4rem;
+    font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.85em;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     position: relative;
 }
 
@@ -1458,7 +1458,7 @@ table tr:nth-child(2n), thead {
 .my-projects .title,
 .my-skills .title,
 .my-gallery .title {
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin-bottom: 2.25rem;
 }
 
