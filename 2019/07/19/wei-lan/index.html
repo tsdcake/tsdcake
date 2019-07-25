@@ -2,6 +2,8 @@
 <html lang="zh-CN">
 
 
+
+
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="keywords" content="蔚蓝, 太泗蒂.艺术蛋糕">
@@ -18,6 +20,7 @@
     <title>蔚蓝 | 太泗蒂.艺术蛋糕</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
+
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
@@ -30,7 +33,174 @@
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<style>
+#loading {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: #2d303a;
+  overflow-y: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.bounce {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+	color: white;
+  height: 100%;
+  font: normal bold 4rem "Product Sans", sans-serif;
+  white-space: nowrap;
+}
+
+.letter {
+  animation: bounce 0.15s cubic-bezier(0.05, 0, 0.13, 1) infinite alternate;
+  display: inline-block;
+  transform: translate3d(0, 0, 0);
+  margin-top: 0.5em;
+  text-shadow: rgba(255, 255, 255, 0.4) 0 0 0.05em;
+  font: normal 500 4rem 'Varela Round', sans-serif;
+}
+.letter:nth-child(1) {
+  animation-delay: 0s;
+}
+.letter:nth-child(2) {
+  animation-delay: 0.0133333333s;
+}
+.letter:nth-child(3) {
+  animation-delay: 0.0366666667s;
+}
+.letter:nth-child(4) {
+  animation-delay: 0.0525s;
+}
+.letter:nth-child(5) {
+  animation-delay: 0.0733333333s;
+}
+.letter:nth-child(6) {
+  animation-delay: 0.0816666667s;
+}
+.letter:nth-child(7) {
+  animation-delay: 0.09166666667s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate3d(0, 0, 0);
+    text-shadow: rgba(255, 255, 255, 0.4) 0 0 0.05em;
+  }
+  100% {
+    transform: translate3d(0, -1em, 0);
+    text-shadow: rgba(255, 255, 255, 0.4) 0 1em 0.35em;
+  }
+}
+</style>
+<div id="loading">
+   <div class="bounce">
+	   <span class="letter">太</span>
+	   <span class="letter">泗</span>
+	   <span class="letter">蒂</span>
+	   <span class="letter">.</span>
+	   <span class="letter">艺</span>
+	   <span class="letter">术</span>
+	   <span class="letter">蛋</span>
+	   <span class="letter">糕</span>
+   <div>
+</div>
+</div></div><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+
+
+
+<div class="suspension">
+	<div class="suspension-box">
+		<a href="#" class="a a-service "><i class="i"></i></a>
+		<a href="javascript:;" class="a a-service-phone "><i class="i"></i></a>
+		<a href="javascript:;" class="a a-qrcode"><i class="i"></i></a>
+		<a href="#" class="a a-cart"><i class="i"></i></a>
+		<a href="javascript:;" class="a a-top"><i class="i"></i></a>
+		<div class="d d-service">
+			<i class="arrow"></i>
+			<div class="inner-box">
+				<div class="d-service-item clearfix">
+					<a href="#" class="clearfix"><span class="circle"><i class="i-qq"></i></span><h3>咨询在线客服</h3></a>
+				</div>
+			</div>
+		</div>
+		<div class="d d-service-phone">
+			<i class="arrow"></i>
+			<div class="inner-box">
+				<div class="d-service-item clearfix">
+					<span class="circle"><i class="i-tel"></i></span>
+					<div class="text">
+						<p>服务热线</p>
+						<p class="red number">4001-021-758</p>
+					</div>
+				</div>
+				<div class="d-service-intro clearfix">
+					<p><i></i>功能和特性</p>
+					<p><i></i>价格和优惠</p>
+					<p><i></i>获取内部资料</p>
+				</div>
+			</div>
+		</div>
+		<div class="d d-qrcode">
+			<i class="arrow"></i>
+			<div class="inner-box">
+				<div class="qrcode-img"><img src="images/side_ewm.jpg" alt></div>
+				<p>微信服务号</p>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	/* ----- 侧边悬浮 ---- */
+	$(document).on("mouseenter", ".suspension .a", function(){
+		var _this = $(this);
+		var s = $(".suspension");
+		var isService = _this.hasClass("a-service");
+		var isServicePhone = _this.hasClass("a-service-phone");
+		var isQrcode = _this.hasClass("a-qrcode");
+		if(isService){ s.find(".d-service").show().siblings(".d").hide();}
+		if(isServicePhone){ s.find(".d-service-phone").show().siblings(".d").hide();}
+		if(isQrcode){ s.find(".d-qrcode").show().siblings(".d").hide();}
+	});
+	$(document).on("mouseleave", ".suspension, .suspension .a-top", function(){
+		$(".suspension").find(".d").hide();
+	});
+	$(document).on("mouseenter", ".suspension .a-top", function(){
+		$(".suspension").find(".d").hide(); 
+	});
+	$(document).on("click", ".suspension .a-top", function(){
+		$("html,body").animate({scrollTop: 0});
+	});
+	$(window).scroll(function(){
+		var st = $(document).scrollTop();
+		var $top = $(".suspension .a-top");
+		if(st > 400){
+			$top.css({display: 'block'});
+		}else{
+			if ($top.is(":visible")) {
+				$top.hide();
+			}
+		}
+	});
+	
+});	
+</script>
+
 
 
 <body>
@@ -423,12 +593,12 @@ sdjksj
 <footer class="page-footer bg-color">
     <div class="container row center-align">
 		<div>
-		<span class="col s12 m4 4" ><img src="cm15.jpg" class="w-img"/><br>微信公众号：tsd-cake</span>
+		<span class="col s12 m4 4" ><img src="cm15.jpg" class="w-img"/><br>微信公众号：tsd-cake <br>扫二维码 获取最新优惠与活动 ~ 更多惊喜等着你</span>
 		</div>
         <div class="col s12 m8 l0 copy-right">
 		
 		 <span><i class="fa fa-map-marker"></i>地址:成都高新区交子大道300号(悠方广场)M4.2305  </span><br> 
-		 <span><i class="fa fa-calendar"></i>&nbsp;&nbsp;营业时间：周一至周日 09:00-20:00</span><br><span><i class="fa fa-phone"></i>&nbsp;&nbsp;客服电话：15719466286</span><br>
+		 <span><i class="fa fa-calendar"></i>&nbsp;&nbsp;营业时间：周一至周日 09:00-20:00</span><span><h4><i class="fa fa-phone"></i>&nbsp;&nbsp;订购电话:15719466286</h4></span>
 		
             版权所有&nbsp;&nbsp;&copy;2019&nbsp;<a href="#" target="_blank">成都市清新时刻食品有限公司</a><br>旗下品牌
             <a href="#" target="_blank">太泗蒂.艺术蛋糕</a> 
@@ -475,6 +645,7 @@ sdjksj
 <div class="progress-bar"></div>
 
 
+
 <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -519,4 +690,7 @@ $(function () {
 
 
 </body>
+<script>
+$("#loading").fadeOut(3600);
+</script>
 </html>
