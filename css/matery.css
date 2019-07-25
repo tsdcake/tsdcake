@@ -208,7 +208,7 @@ header .nav-transparent {
 }
 
 header nav .brand-span {
-    font-size: 1.35rem;
+    font-size: 1.5rem;
 }
 
 header .brand-logo .logo-img {
@@ -217,10 +217,27 @@ header .brand-logo .logo-img {
     padding-bottom: 2px;
 }
 
-header .brand-logo .logo-span {
-    font-size: 1.2rem;
-}
 
+
+header .brand-logo .logo-span {
+    font-size: 1.8rem;
+}
+@media only screen and (min-width: 551px)and (max-width: 992px) {
+   header .brand-logo .logo-span {
+      font-size: 1.5rem;
+   }
+}
+@media only screen and (min-width: 351px) and (max-width: 550px){
+    header .brand-logo .logo-span {
+    font-size: 1.2rem;
+    }
+}
+}
+@media only screen and (max-width: 350px) {
+    header .brand-logo .logo-span {
+    font-size: 0.8rem;
+    }
+}
 header .button-collapse i {
     font-size: 1.5rem;
 }
@@ -385,12 +402,42 @@ header .go-back i {
     z-index: 2;
 }
 
+
 .bg-cover .title {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.85em;
+    margin-bottom: 12px;
+    position: relative;
+}
+@media only screen and (min-width: 551px) and (max-width: 922px){
+  .bg-cover .title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.85em;
+    margin-bottom: 12px;
+    position: relative;
+}
+}
+
+
+@media only screen and (min-width: 351px) and (max-width: 550px){
+  .bg-cover .title {
     font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.85em;
     margin-bottom: 12px;
     position: relative;
+}
+}
+@media only screen and (max-width: 350px){
+  .bg-cover .title {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.85em;
+    margin-bottom: 12px;
+    position: relative;
+}
 }
 
 .bg-cover .description {
@@ -1616,7 +1663,11 @@ footer a {
 footer .copy-right {
     color: #dbdbdb;
 }
-
+footer .weixin-img{
+	width: 260px;
+	height: auto;
+    margin: auto;
+}
 /*搜索层样式*/
 #searchIcon {
     font-size: 1.2rem;
@@ -1661,6 +1712,7 @@ footer .copy-right {
     font-size: .9rem;
     white-space: pre-wrap;
 }
+
 
 /*回到顶部按钮样式*/
 .top-scroll {
