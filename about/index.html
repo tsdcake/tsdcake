@@ -23,7 +23,7 @@
   width: 100%;
   height: 100%;
   margin: 0;
-  background: #2d303a;
+  background: #f3815e;
   overflow-y: hidden;
     position: fixed;
     left: 0;
@@ -31,8 +31,70 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 999;
+    z-index: 99;
 }
+
+
+
+
+
+.loadingImage {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    background: #2e98df;
+    border-radius: 50px;
+    animation: loadingImage 1.5s infinite linear;
+	  z-index: 299;
+}
+
+.loadingImage::after {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-top: 10px solid #b160d1;
+    border-bottom: 10px solid #b160d1;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-radius: 50px;
+    content: '';
+    top: -20px;
+    left: -20px;
+    animation: loadingImage_after 1.5s infinite linear;
+}
+
+@keyframes loadingImage {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+        background: #2ecc71;
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loadingImage_after {
+    0% {
+        border-top: 10px solid #b160d1;
+        border-bottom: 10px solid #b160d1;
+    }
+
+    50% {
+        border-top: 10px solid #2e98df;
+        border-bottom: 10px solid #2e98df;
+    }
+
+    100% {
+        border-top: 10px solid #b160d1;
+        border-bottom: 10px solid #b160d1;
+    }
+}
+
 
 .bounce {
   display: flex;
@@ -41,38 +103,60 @@
   width: 100%;
 	color: white;
   height: 100%;
-  font: normal bold 4rem "Product Sans", sans-serif;
+  font: normal bold 5rem "Product Sans", sans-serif;
   white-space: nowrap;
+  
 }
 
-.letter {
+.letter { 
+  top: 200px;
   animation: bounce 0.55s cubic-bezier(0.05, 0, 0.23, 1) infinite alternate;
   display: inline-block;
   transform: translate3d(0, 0, 0);
   margin-top: 0.5em;
   text-shadow: rgba(255, 255, 255, 0.4) 0 0 0.05em;
-  font: normal 500 4rem 'Varela Round', sans-serif;
+  font: normal 500 5rem 'Varela Round', sans-serif;
 }
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  .letter {animation: bounce 0.55s cubic-bezier(0.05, 0, 0.23, 1) infinite alternate;
+		  display: inline-block;
+		  transform: translate3d(0, 0, 0);
+		  margin-top: 0.5em;
+		  text-shadow: rgba(255, 255, 255, 0.4) 0 0 0.05em;
+		  font: normal 500 4.5rem 'Varela Round', sans-serif;
+		}
+}
+
+@media only screen and (max-width: 601px) {
+   .letter {animation: bounce 0.55s cubic-bezier(0.05, 0, 0.23, 1) infinite alternate;
+		  display: inline-block;
+		  transform: translate3d(0, 0, 0);
+		  margin-top: 0.5em;
+		  text-shadow: rgba(255, 255, 255, 0.4) 0 0 0.05em;
+		  font: normal 500 3.4rem 'Varela Round', sans-serif;
+		}
+}
+
 .letter:nth-child(1) {
   animation-delay: 0s;
 }
 .letter:nth-child(2) {
-  animation-delay: 0.033333333s;
+  animation-delay: 0.083333333s;
 }
 .letter:nth-child(3) {
-  animation-delay: 0.0266666667s;
+  animation-delay: 0.1266666667s;
 }
 .letter:nth-child(4) {
-  animation-delay: 0.045s;
+  animation-delay: 0.145s;
 }
 .letter:nth-child(5) {
-  animation-delay: 0.0833333333s;
+  animation-delay: 0.1833333333s;
 }
 .letter:nth-child(6) {
-  animation-delay: 0.1116666667s;
+  animation-delay: 0.2116666667s;
 }
 .letter:nth-child(7) {
-  animation-delay: 0.15166666667s;
+  animation-delay: 0.25166666667s;
 }
 
 @keyframes bounce {
@@ -87,15 +171,16 @@
 }
 </style>
 <div id="loading">
+<div class="loadingImage"></div>
    <div class="bounce">
-	   <span class="letter">太</span>
-	   <span class="letter">泗</span>
-	   <span class="letter">蒂</span>
-	   <span class="letter">.</span>
-	   <span class="letter">艺</span>
-	   <span class="letter">术</span>
-	   <span class="letter">蛋</span>
-	   <span class="letter">糕</span>
+	   <span class="letter"><br><br><br>太</span>
+	   <span class="letter"><br><br><br>泗</span>
+	   <span class="letter"><br><br><br>蒂</span>
+	   <span class="letter"><br><br><br>.</span>
+	   <span class="letter"><br><br><br>艺</span>
+	   <span class="letter"><br><br><br>术</span>
+	   <span class="letter"><br><br><br>蛋</span>
+	   <span class="letter"><br><br><br>糕</span>
    <div>
 </div>
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -120,6 +205,8 @@
 <div class="suspension">
 	<div class="suspension-box">
 		<a href="#" class="a a-service "><i class="i"></i></a>
+		
+		
 		<a href="javascript:;" class="a a-service-phone "><i class="i"></i></a>
 		<a href="javascript:;" class="a a-qrcode"><i class="i"></i></a>
 		<!--<a href="#" class="a a-cart"><i class="i"></i></a>-->
@@ -128,32 +215,33 @@
 			<i class="arrow"></i>
 			<div class="inner-box">
 				<div class="d-service-item clearfix">
-					<a href="tencent://Message/?Uin=3127802431&websiteName=www.joytrands.com=&Menu=yes" class="clearfix"><span class="circle"><i class="i-qq"></i></span><h5>QQ在线咨询</h5></a>
+					<a href="tencent://Message/?Uin=3127802431&websiteName=www.joytrands.com=&Menu=yes" class="clearfix"><span class="circle"><em class="i-qq"></em></span><h5>QQ在线咨询</h5></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i style="color:#F05352;">QQ:3127802431</i>
 				</div>
 			</div>
 		</div>
-		<div class="d d-service-phone">
-			<i class="arrow"></i>
+		<div style="width:200px;min-height: 44px;line-height:43px; font-weight:bold; color:#fff;font-size:16px;text-align:center; background:#F05352;border-radius:0px;border:0px;" class="d d-service-phone ">
+		客服电话:15719466286
+		<!--<i class="arrow"></i>
+			
 			<div class="inner-box">
 				<div class="d-service-item clearfix">
 					<span class="circle"><i class="i-tel"></i></span>
 					<div class="text">
 						<p>服务热线</p>
-						<h4>15719466286</h4>
+						
 					</div>
 				</div>
 				<div class="d-service-intro clearfix">
-					<p><i></i>预订蛋糕</p>
-					<p><i></i>价格和优惠</p>
+					预订蛋糕
+					价格和优惠
 				</div>
-			</div>
+			</div>-->
+			
 		</div>
 		<div class="d d-qrcode">
 			<i class="arrow"></i>
-			<div class="inner-box">
-				<div class="qrcode-img"><img src="cm15.jpg" style="width: 180px;"></div>
-				<p>微信官方服务号</p>
-			</div>
+				<div><img src=" /medias/cm15.jpg" style="width: 180px;"></div>
+				微信官方服务号
 		</div>
 
 	</div>
@@ -348,7 +436,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                     <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
                         
 <div class="statis">
-    <span class="count"><a href="/" target="_blank">2</a></span>
+    <span class="count"><a href="/" target="_blank">4</a></span>
     <span class="name">文章</span>
 </div>
 
@@ -357,7 +445,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
 
 <div class="statis">
-    <span class="count"><a href="/tags" target="_blank">3</a></span>
+    <span class="count"><a href="/tags" target="_blank">4</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -372,7 +460,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                                 <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
                                     
 <div class="statis">
-    <span class="count"><a href="/" target="_blank">2</a></span>
+    <span class="count"><a href="/" target="_blank">4</a></span>
     <span class="name">文章</span>
 </div>
 
@@ -381,7 +469,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
 
 <div class="statis">
-    <span class="count"><a href="/tags" target="_blank">3</a></span>
+    <span class="count"><a href="/tags" target="_blank">4</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -490,7 +578,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,0,0,0,0,0,2],
+                data: [0,0,0,0,0,0,0,0,0,0,0,0,4],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -556,7 +644,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
         xAxis: [
             {
                 type: 'category',
-                data: ["慕斯","圆形","方形"]
+                data: ["慕斯","圆形","心形","方形"]
             }
         ],
         yAxis: [
@@ -569,7 +657,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                 type: 'bar',
                 color: ['#82d3f4'],
                 barWidth : 18,
-                data: [2,1,1],
+                data: [4,2,1,1],
                 markPoint: {
                     symbolSize: 45,
                     data: [{
@@ -749,6 +837,12 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             
             
+            <a href="/tags/心形/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">心形</span>
+            </a>
+            
+            
+            
             <a href="/tags/方形/" target="_blank">
                 <span class="chip center-align waves-effect waves-light chip-default">方形</span>
             </a>
@@ -811,7 +905,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 <footer class="page-footer bg-color">
     <div class="container row center-align">
 		<div>
-		<span class="col s12 m4 4" ><img src="cm15.jpg" class="w-img"/><br>微信公众号：tsd-cake <br>扫二维码 获取最新优惠与活动 ~ 更多惊喜等着你</span>
+		<span class="col s12 m4 4" ><img src="/medias/cm15.jpg" class="w-img"/><br>微信公众号：tsd-cake <br>扫二维码 获取最新优惠与活动 ~ 更多惊喜等着你</span>
 		</div>
         <div class="col s12 m8 l0 copy-right">
 		
@@ -903,6 +997,6 @@ $(function () {
 
 </body>
 <script>
-$("#loading").fadeOut(6600);
+$("#loading").fadeOut(2600);
 </script>
 </html>
