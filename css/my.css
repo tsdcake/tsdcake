@@ -196,7 +196,7 @@ a.p-btn:hover{
 
 
 /*鎮诞閾炬帴*/
-.suspension{position:fixed;z-index:55;right:0;bottom:10%;width:70px;height:240px;}
+.suspension{position:fixed;z-index:55;right:0;bottom:15%;width:70px;height:240px;}
 .suspension-box{position:relative;float:right;}
 .suspension .a{display:block;width:44px;height:44px;background-color:#353535;margin-bottom:4px;cursor:pointer;outline:none;}
 .suspension .a.active,
@@ -218,7 +218,7 @@ a.p-btn:hover{
 .suspension .d{display:none;width:223px;background:#fff; position:absolute;right:67px;min-height:90px;border:1px solid #E0E1E5;border-radius:3px;box-shadow:0px 2px 5px 0px rgba(161, 163, 175, 0.11);}
 .suspension .d .arrow{position:absolute;width:8px;height:12px;background:url(../medias/Images/side_bg_arrow.png) no-repeat;right:-8px;top:31px;}
 .suspension .d-service{top:0;}
-.suspension .d-service-phone {top:47.5px; right:44.1px;}
+.suspension .d-service-phone {top:47.8px; right:44.1px;}
 .suspension .d-qrcode{top:78px;}
 .suspension .d .inner-box{padding:1px 1px 1px;}
 .suspension .d-service-item{border-bottom:1px solid #eee;padding:14px 0;}
