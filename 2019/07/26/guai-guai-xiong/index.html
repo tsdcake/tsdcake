@@ -460,15 +460,50 @@ $(document).ready(function(){
             </div>
         </div>
         <hr class="clearfix">
-        <div class="card-content article-card-content">
+        <div>
+		
+		   <sapn style="width:200px;margin: 1 auto;">
+		    <div id="slideshow2" class="slideshow_buttontitle">
+			   <ul>
+				<li><a href="#" title="1"><img src="/images/1.jpg" alt="slideshow_large"/></a></li>
+				<li><a href="#" title="2"><img src="/images/2.jpg" alt="slideshow_large"/></a></li>
+				<li><a href="#" title="3"><img src="/images/3.jpg" alt="slideshow_large"/></a></li>
+				<li><a href="#" title="4"><img src="/images/4.jpg" alt="slideshow_large"/></a></li>
+			</ul>
+				<!--<div class="slideshow_simple1_title"></div>-->
+				<ul class="slideshow_simple1_nav">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				
+		   <div style="clear: both"></div>
+		   <span class="aui-list-theme-pic"style="float: right;">
+							    
+				   
+				      ￥198
+					  <em>￥288</em> 
+					  <i>团购价</i>  
+                    
+					   
+				  </span>
+		    </div>
+	         </span>
+            </div>
+	
             <div id="articleContent">
                 <h3 id="乖乖熊"><a href="#乖乖熊" class="headerlink" title="乖乖熊"></a>乖乖熊</h3><p>  6寸 乖乖熊 慕斯蛋糕 ，冰爽丝滑  不锈钢刀叉  美味  颜又高<br>  <img src="http://p1.meituan.net/deal/4327d5b68c0d9ce186213d85dbf3c15275864.jpg@428w_320h_1e_1c" alt="乖乖熊"><br>  <img src="http://p0.meituan.net/deal/f09d193766fff657511864fdd68943ab60388.jpg@328w_320h_1e_1c" alt="乖乖熊细节1"><br>  <img src="http://p0.meituan.net/deal/2fd1358a1a008fbc71395340b22ebf6482673.jpg@328w_320h_1e_1c" alt="乖乖熊细节2"></p>
 
             </div>
-            <hr/>
-
+			<div ><img style="max-width: 100%;height: auto;cursor: pointer;"src="/medias/Images/l栏0.jpg"/></div>
+			<div ><img style="max-width: 100%;height: auto;cursor: pointer;"src="/medias/Images/栏1.jpg"/></div>
+			<div ><img  style="max-width: 100%;height: auto;cursor: pointer;"src="/medias/Images/栏2.jpg"/></div>
+			<div ><img  style="margin-bottom:0px;max-width: 100%;height: auto;cursor: pointer;"src="/medias/Images/食用.jpg"/></div>
             
 
+            
+             <!--<div style=" text-align: center;"><h5>分享</h5></div>-->
             <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
 
 <div id="article-share">
@@ -478,6 +513,7 @@ $(document).ready(function(){
 </div>
 
 <script src="/libs/share/js/social-share.min.js"></script>
+          <div style="height:20px; "></div>
 
             
 
@@ -658,6 +694,44 @@ $(document).ready(function(){
         selection.selectAllChildren(newdiv);
         window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
     });
+	
+	
+	
+	
+	
+$(function() {
+
+	$("#slideshow1").slideshow_buttontitle({
+		time_interval: '3000',
+		window_background_color: "#FFF",
+		window_padding: '1',
+		window_width: '300',
+		window_height: '250',
+		border_size: '1',
+		border_color: 'black',
+		title_text_color: 'white',
+		title_background_color: '#42AEC2',
+		button_color: '#84C5D2',
+		button_current_color: '#2C7E8F',
+		button_size: '15'
+	});
+	
+	$("#slideshow2").slideshow_buttontitle({
+		time_interval: '5000',
+		window_background_color: "#FFF",
+		window_padding: '0',
+		window_width: '200',
+		window_height: '150',
+		border_size: '2',
+		border_color: '#9C0',
+		title_text_color: '#000',
+		title_background_color: '#9C0',
+		button_color: '#9C0',
+		button_current_color: '#9F0',
+		button_size: '10'
+	});
+});
+
 </script>
 
 

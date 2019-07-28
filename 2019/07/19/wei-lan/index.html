@@ -461,16 +461,51 @@ $(document).ready(function(){
             </div>
         </div>
         <hr class="clearfix">
-        <div class="card-content article-card-content">
+        <div>
+		
+		   <sapn style="width:200px;margin: 1 auto;">
+		    <div id="slideshow2" class="slideshow_buttontitle">
+			   <ul>
+				<li><a href="#" title="1"><img src="/images/1.jpg" alt="slideshow_large"/></a></li>
+				<li><a href="#" title="2"><img src="/images/2.jpg" alt="slideshow_large"/></a></li>
+				<li><a href="#" title="3"><img src="/images/3.jpg" alt="slideshow_large"/></a></li>
+				<li><a href="#" title="4"><img src="/images/4.jpg" alt="slideshow_large"/></a></li>
+			</ul>
+				<!--<div class="slideshow_simple1_title"></div>-->
+				<ul class="slideshow_simple1_nav">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				
+		   <div style="clear: both"></div>
+		   <span class="aui-list-theme-pic"style="float: right;">
+							    
+				   
+				      ￥198
+					  <em>￥288</em> 
+					  <i>团购价</i>  
+                    
+					   
+				  </span>
+		    </div>
+	         </span>
+            </div>
+	
             <div id="articleContent">
                 <h2 id="蔚蓝"><a href="#蔚蓝" class="headerlink" title="蔚蓝"></a>蔚蓝</h2><p>  产品 </p>
 <p>  <img src="/images/6.jpg" alt="蔚蓝"><br>  刷卡电话卡</p>
 
             </div>
-            <hr/>
-
+			<div ><img style="max-width: 100%;height: auto;cursor: pointer;"src="/medias/Images/l栏0.jpg"/></div>
+			<div ><img style="max-width: 100%;height: auto;cursor: pointer;"src="/medias/Images/栏1.jpg"/></div>
+			<div ><img  style="max-width: 100%;height: auto;cursor: pointer;"src="/medias/Images/栏2.jpg"/></div>
+			<div ><img  style="margin-bottom:0px;max-width: 100%;height: auto;cursor: pointer;"src="/medias/Images/食用.jpg"/></div>
             
 
+            
+             <!--<div style=" text-align: center;"><h5>分享</h5></div>-->
             <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
 
 <div id="article-share">
@@ -480,6 +515,7 @@ $(document).ready(function(){
 </div>
 
 <script src="/libs/share/js/social-share.min.js"></script>
+          <div style="height:20px; "></div>
 
             
 
@@ -666,6 +702,44 @@ sdjksj
         selection.selectAllChildren(newdiv);
         window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
     });
+	
+	
+	
+	
+	
+$(function() {
+
+	$("#slideshow1").slideshow_buttontitle({
+		time_interval: '3000',
+		window_background_color: "#FFF",
+		window_padding: '1',
+		window_width: '300',
+		window_height: '250',
+		border_size: '1',
+		border_color: 'black',
+		title_text_color: 'white',
+		title_background_color: '#42AEC2',
+		button_color: '#84C5D2',
+		button_current_color: '#2C7E8F',
+		button_size: '15'
+	});
+	
+	$("#slideshow2").slideshow_buttontitle({
+		time_interval: '5000',
+		window_background_color: "#FFF",
+		window_padding: '0',
+		window_width: '200',
+		window_height: '150',
+		border_size: '2',
+		border_color: '#9C0',
+		title_text_color: '#000',
+		title_background_color: '#9C0',
+		button_color: '#9C0',
+		button_current_color: '#9F0',
+		button_size: '10'
+	});
+});
+
 </script>
 
 
