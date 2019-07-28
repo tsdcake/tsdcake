@@ -9,14 +9,14 @@
 /*中等屏幕下(平板类)的样式*/
 @media only screen and (min-width: 600px) and (max-width: 992px) {
     .container {
-        width: 91%;
+        width: 88%;
     }
 }
 
 /*大屏幕下(桌面类)的样式*/
 @media only screen and (min-width: 993px) {
     .container {
-        width: 86%;
+        width: 85%;
         max-width: 1125px;
     }
 
@@ -690,7 +690,7 @@ header .go-back i {
 
 .recommend .post-card .read-more {
     height: 40px;
-    margin: .6rem 1px;
+    margin: 0.4rem 1px;
     font-size: 0.9rem;
     font-weight: 400;
     line-height: 40px;

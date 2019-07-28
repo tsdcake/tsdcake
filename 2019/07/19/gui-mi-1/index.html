@@ -218,7 +218,9 @@ sdjksj
 		<a href="javascript:;" class="a a-service-phone "><i class="i"></i></a>
 		<a href="javascript:;" class="a a-qrcode"><i class="i"></i></a>
 		<!--<a href="#" class="a a-cart"><i class="i"></i></a>-->
+	
 		<a href="javascript:;" class="a a-top"><i class="i"></i></a>
+		
 		<div class="d d-service">
 			<i class="arrow"></i>
 			<div class="inner-box">
@@ -422,14 +424,183 @@ $(document).ready(function(){
 
 
 
-<main class="container content">
+
+
+
+<style>
+    .carousel-control {
+        width: 45px;
+        height: 45px;
+        line-height: 55px;
+        border-radius: 45px;
+        background: transparent;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    #prev-cover {
+        position: absolute;
+        top: 48%;
+        left: 8px;
+    }
+
+    #next-cover {
+        position: absolute;
+        top: 48%;
+        right: 8px;;
+    }
+
+    #prev-cover i {
+        margin-right: 3px;
+    }
+
+    #next-cover i {
+        margin-left: 3px;
+    }
+
+    .carousel-control:hover {
+        background-color:rgba(0, 0, 0, .4);
+    }
+
+    .carousel-control i {
+        color: #fff;
+        font-size: 2.4rem;
+    }
+	
+	
+</style>
+
+
+
+<script>
+$(function () {
+    let coverSlider = $('.carousel');
+    coverSlider.carousel({
+        duration: Number('120'),
+        fullWidth: true,
+        indicators: 'true' === 'true'
+    });
+
+    let carouselIntervalId;
+    
+    // Loop to call the next cover article picture.
+    let autoCarousel = function() {
+        carouselIntervalId = setInterval(function () {
+            coverSlider.carousel('next');
+        }, 5000);
+    };
+    autoCarousel();
+    
+
+    let restartPlay = function () {
+        
+        clearInterval(carouselIntervalId);
+        autoCarousel();
+        
+    };
+
+    
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+<style>
+/*小屏幕下(手机类)的样式*/
+@media only screen and (max-width: 601px) {
+    .container {
+        width: 95%;
+    }
+}
+
+/*中等屏幕下(平板类)的样式*/
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+    .container {
+        width: 68%;
+    }
+	.post-container {
+        width: 86%;
+        margin: 0 auto;
+        max-width: 1150px;
+    }
+}
+
+/*大屏幕下(桌面类)的样式*/
+@media only screen and (min-width: 993px) {
+    .container {
+        width: 65%;
+        max-width: 1125px;
+    }
+
+    .post-container {
+        width: 91%;
+        margin: 0 auto;
+        max-width: 1250px;
+    }
+}
+</style>
+<main class="container content" >
 
     
     <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
-            <div class="row tag-cate">
+            
+
+            <div class="post-info">
+                
+
+                
+				
+				
+            </div>
+        </div>
+        
+        <div>
+			    
+    <div style="max-white:300px;max-height 150px; ">
+	<div class="carousel carousel-slider   "  data-indicators="true" style="margin-top: -2px;max-white:300px;">
+    
+    
+    
+    
+
+    
+    
+    <div class="carousel-item" style=" max-height 150px; max-white:300px; background-size: cover; background-color: #08070c;">
+        <img src="http://p1.meituan.net/deal/4327d5b68c0d9ce186213d85dbf3c15275864.jpg" style="max-white:300px;max-height 150px; border-top-left-radius: 10px;border-top-right-radius:10px;" />
+    </div>
+    
+    
+    <div class="carousel-item" style=" max-height 150px; max-white:300px; background-size: cover; background-color: #08070c;">
+        <img src="http://p1.meituan.net/deal/e05b1dac2f045da40e2bec541b0e2b9443116.jpg@428w_320h_1e_1c" style="max-white:300px;max-height 150px; border-top-left-radius: 10px;border-top-right-radius:10px;" />
+    </div>
+    
+    
+    <div class="carousel-item" style=" max-height 150px; max-white:300px; background-size: cover; background-color: #08070c;">
+        <img src="/images/0.jpg" style="max-white:300px;max-height 150px; border-top-left-radius: 10px;border-top-right-radius:10px;" />
+    </div>
+    
+    
+    <div class="carousel-item" style=" max-height 150px; max-white:300px; background-size: cover; background-color: #08070c;">
+        <img src="/images/6.jpg" style="max-white:300px;max-height 150px; border-top-left-radius: 10px;border-top-right-radius:10px;" />
+    </div>
+    
+    
+</div>
+</div>
+
+
+<hr class="clearfix">
+<div class="row tag-cate">
                 <div class="col s7">
                     
                     <div class="article-tag">
@@ -446,29 +617,19 @@ $(document).ready(function(){
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                </div>
-            </div>
-
-            <div class="post-info">
-                <div class="post-date info-break-policy">
+                   <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
                     2019-07-19
-                </div>
-
-                
-				
-				
+                  </div>
+				  
                     <div id="busuanzi_container_page_pv" class="info-break-policy">
-                        <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <i class="fa fa-hot fa-fw"></i>人气:&nbsp;&nbsp;
                         <span id="busuanzi_value_page_pv"></span>
                     </div>
 				
+                </div>
             </div>
-        </div>
-        <hr class="clearfix">
-        <div>
-		
+
 		   <sapn style="width:200px;margin: 1 auto;">
 		    <div id="slideshow2" class="slideshow_buttontitle">
 			   <ul>
@@ -498,6 +659,9 @@ $(document).ready(function(){
 		    </div>
 	         </span>
             </div>
+
+	
+	
 	
             <div id="articleContent">
                 <h2 id="闺蜜"><a href="#闺蜜" class="headerlink" title="**闺蜜"></a>**闺蜜</h2><p>本产品 时代精神的</p>
@@ -534,6 +698,9 @@ $(document).ready(function(){
 
         </div>
     </div>
+	
+
+
 
     
 
@@ -677,6 +844,8 @@ sdjksj
     </div>
 </article>
 </div>
+
+
 
 
 <script>
