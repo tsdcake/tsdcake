@@ -156,14 +156,23 @@
 
 
 
+
 a.p-btn{
 	background: #35c4da;
 	color: #FFF;
 	padding: 0.4em 0.9em;
 	text-decoration: none;
 	border-radius: 6px;
-	font-size: 0.7em;
+	font-size: 0.85em;
 	text-transform: capitalize;
+}
+
+@media only screen and (min-width: 981px) {
+	a.p-btn{
+		
+		font-size: 0.7em;
+		
+	}
 }
 a.p-btn:hover{
 	background:#f356b3;
