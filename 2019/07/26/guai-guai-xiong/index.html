@@ -352,6 +352,15 @@ $(document).ready(function(){
         </a>
     </li>
     
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <i class="fa fa-address-book"></i>
+            
+            <span>友情链接</span>
+        </a>
+    </li>
+    
     <li>
         <a href="#searchModal" class="modal-trigger waves-effect waves-light">
             <i id="searchIcon" class="fa fa-search" title="搜索"></i>
@@ -401,6 +410,15 @@ $(document).ready(function(){
                 <i class="fa fa-fw fa-user-circle-o"></i>
                 
                 关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-address-book"></i>
+                
+                友情链接
             </a>
         </li>
         
@@ -585,36 +603,16 @@ $(function () {
         </div>
         
         <div>
-			    
     <div style="max-white:300px;max-height 150px; ">
-	<div class="carousel carousel-slider   "  data-indicators="true" style="margin-top: -15px;max-white:300px;border-top-left-radius: 10px;border-top-right-radius:10px;">
+	<div class="carousel carousel-slider   "  data-indicators="true" style="margin-top: -5%;max-white:300px;border-top-left-radius: 10px;border-top-right-radius:10px;">
+ 
     
-    
-    
-    
-
-    
-    
-    <div class="carousel-item" style=" max-height 150px; max-white:300px; background-size: cover; background-color: #08070c; ">
-        <img src="http://p1.meituan.net/deal/4327d5b68c0d9ce186213d85dbf3c15275864.jpg" style="max-white:300px;max-height 150px;" />
-    </div>
-    
-    
-    <div class="carousel-item" style=" max-height 150px; max-white:300px; background-size: cover; background-color: #08070c; ">
-        <img src="http://p1.meituan.net/deal/e05b1dac2f045da40e2bec541b0e2b9443116.jpg@428w_320h_1e_1c" style="max-white:300px;max-height 150px;" />
-    </div>
-    
-    
-    <div class="carousel-item" style=" max-height 150px; max-white:300px; background-size: cover; background-color: #08070c; ">
-        <img src="/images/0.jpg" style="max-white:300px;max-height 150px;" />
-    </div>
-    
-    
-    <div class="carousel-item" style=" max-height 150px; max-white:300px; background-size: cover; background-color: #08070c; ">
-        <img src="/images/6.jpg" style="max-white:300px;max-height 150px;" />
-    </div>
-    
-    
+	    <div class="carousel-item" style=" max-height 150px; max-white:300px; background-size: cover; background-color: #08070c; ">
+              <img src="http://p1.meituan.net/deal/4327d5b68c0d9ce186213d85dbf3c15275864.jpg" style="max-white:300px;max-height 150px;" />
+       </div>
+	
+	
+ 
 </div>
 </div>
 
@@ -703,6 +701,7 @@ $(function () {
     </div>
 	
 
+
 <div class="row tag-cate">
                 <div class="col s7">
 				 
@@ -724,16 +723,27 @@ $(function () {
               
             </div>
 			
+                
+
 			
-			
-                          <div class="buybt_box" style="float: right;"> 
-                				  
-						   
-							   <a onclick="jump(605429336)" class="waves-effect waves-light p-btn" style="font-size:1.2em;margin:0.2rem 0.3rem 0.3rem 13%;" target="_blank">
+				
+	    
+		   <div id="transport-options" class="toolbar-icons hidden" >
+			<a href="tel:15719466286" style="width:100px; height:40px;"><i class="fa fa-phone">电话预订</i></a>
+			<a href="#" style="width:100px; height:40px;" ><i class="fa fa-shopping-bag"></i>线上下单</a>
+		  </div>
+		
+
+        		             <div class="buybt_box" style="float: right;"> 
+                				 
+						  
+							
+						   	 
+							  
+							   <a onclick="jump(605429336)"  data-toolbar="transport-options" data-toolbar-animation="flyin" class=" btn-toolbar-info waves-effect waves-light p-btn" style="font-size:1.2em; margin: 0.2rem 30rem 0.3rem 6%;" target="_blank">
 								<i class="icon fa fa-shopping-bag fa-fw" ></i>立即购买
 							   </a>
 							
-						   	
 						  </div>
 		   <sapn style="width:200px;margin: 1 auto;">
 		   <!-- <div id="slideshow2" class="slideshow_buttontitle">
@@ -966,9 +976,17 @@ $(function () {
         selection.selectAllChildren(newdiv);
         window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
     });
-	
-	
-	
+	jQuery(document).ready(function($) {
+		// Define any icon actions before calling the toolbar
+			$('.toolbar-icons a').on('click', function( event ) {
+				event.preventDefault();
+			});
+            $('a[data-toolbar="transport-options"]').toolbar({
+			    content: '#transport-options',
+			    position: 'top',
+			});		
+   });
+			
 	
 	
 $(function() {
