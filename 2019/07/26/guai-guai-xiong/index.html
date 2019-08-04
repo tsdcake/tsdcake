@@ -182,6 +182,13 @@
     text-shadow: rgba(255, 255, 255, 0.4) 0 1em 0.35em;
   }
 }
+
+
+
+
+
+
+
 </style>
 <div id="loading">
 <div class="loadingImage"></div>
@@ -554,7 +561,15 @@ $(function () {
 <main class="container content" >
 
     
-    <!-- 文章内容详情 -->
+    <script>
+     function jump(cpath){
+	   var Cost_Path;
+	    if($(window).width()<891) Cost_Path="http://meishi.meituan.com/i/order/"+cpath;
+		else Cost_Path="https://www.meituan.com/meishi/order/buy/"+cpath;
+        window.location.href=Cost_Path;
+    }
+</script>
+<!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -586,11 +601,6 @@ $(function () {
     
     
     <div class="carousel-item" style=" max-height 150px; max-white:300px; background-size: cover; background-color: #08070c; ">
-        <img src="/images/6.jpg" style="max-white:300px;max-height 150px;" />
-    </div>
-    
-    
-    <div class="carousel-item" style=" max-height 150px; max-white:300px; background-size: cover; background-color: #08070c; ">
         <img src="http://p1.meituan.net/deal/e05b1dac2f045da40e2bec541b0e2b9443116.jpg@428w_320h_1e_1c" style="max-white:300px;max-height 150px;" />
     </div>
     
@@ -600,15 +610,27 @@ $(function () {
     </div>
     
     
+    <div class="carousel-item" style=" max-height 150px; max-white:300px; background-size: cover; background-color: #08070c; ">
+        <img src="/images/6.jpg" style="max-white:300px;max-height 150px;" />
+    </div>
+    
+    
 </div>
 </div>
 
   <div class="col s5 right-align">
-                   
+                  <div class="card">
+				  <span class="aui-list-theme-pic" style="float: left;">   
+				   
+				      ￥198
+					  <em>￥288</em> 
+					  <i>团购价</i>  
+                    
+				</div>  
+				  </span>		
 				    <div class="info-break-policy left-alignl"  >
-					
+
 						<img style="height:25px;" src="/medias/Images/canpan.png"/>免费配送6套餐具
-						
 				   </div>
 				   <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
@@ -622,30 +644,68 @@ $(function () {
 					
 				
                 </div>
+
 <hr class="clearfix">
+
+<div class="cake_price_box" style="margin-left:2%;width:96%; height:280px;">
+         <form>    
+          <div class="cake_price_tit">
+                <span>
+                    请选择尺寸：
+                    <span class="cake_sed_att"></span>
+                </span>
+            </div>
+           
+			<ul>
+                <label >
+                        <span>6寸加高</span>
+                </label>
+                <label>
+                   <span>8寸加高  </span>
+                </label>  
+            </ul>
+			<form>
+			<br>
+			<hr class="clearfix">
+			<div calss="cake_price_tit">
+			<div class="xiangqing" >
+				  <p>
+				  ❄保鲜：<i> 0~4℃保藏 24小时，10℃食用最佳</i> </p>
+				   <p>🍦甜度: 
+				           <span>🍦</span> 
+				        
+				           <span>🍦</span> 
+				        
+				           <span>🍦</span> 
+				        
+				          <span style="opacity: 0.3;">🍦</span> 
+				        
+				          <span style="opacity: 0.3;">🍦</span> 
+				        </p>
+				<p>👄口味：<i  style=" color: #959695;"> 抹茶 薄荷</i></p>
+				 <p>  🍰原料：<i style="color: #959695;">动物奶油慕斯 巧克力</i> </p>
+				  <p>👨‍👦‍👦&nbsp;适宜：👶👴👦👨 </p>
+		       </div>
+					
+			 
+   
+        <div class="clear"></div>
+                
+
+               
+        <div class="cake_att_box">
+           dfdf
+           
+              
+        </div>
+                <div class="clear"></div>
+
+    </div>
+	
+
 <div class="row tag-cate">
                 <div class="col s7">
-				  
-				  <div style=" width: 150%;">
-				  <p style="font-weight: 700;font-size: 1.1rem">
-				  ❄保鲜：<i style="font-weight: 400; font-size: 0.95rem"> 0~4℃保藏 24小时，10℃食用最佳</i><br>
-				  🍦甜度:
-				           <span>🍦</span> 
-				       
-				           <span>🍦</span> 
-				       
-				           <span>🍦</span> 
-				       
-				          <span style="opacity: 0.3;">🍦</span> 
-				       
-				          <span style="opacity: 0.3;">🍦</span> 
-				       <br>
-				   👄口味：<i style="font-weight: 400; color: #959695; font-size: 1rem"> 抹茶 薄荷</i><br>
-				   🍰原料：<i style="font-weight: 400; color: #959695; font-size: 1rem">动物奶油慕斯 巧克力</i> <br>
-				   👨‍👦‍👦&nbsp;适宜：👶👴👦👨 <br>
 				 
-				  </p>
-		          </div>
 				  
                     
                     <div class="article-tag">
@@ -663,35 +723,37 @@ $(function () {
                 </div>
               
             </div>
-
+			
+			
+			
+                          <div class="buybt_box" style="float: right;"> 
+                				  
+						   
+							   <a onclick="jump(605429336)" class="waves-effect waves-light p-btn" style="font-size:1.2em;margin:0.2rem 0.3rem 0.3rem 13%;" target="_blank">
+								<i class="icon fa fa-shopping-bag fa-fw" ></i>立即购买
+							   </a>
+							
+						   	
+						  </div>
 		   <sapn style="width:200px;margin: 1 auto;">
-		    <div id="slideshow2" class="slideshow_buttontitle">
+		   <!-- <div id="slideshow2" class="slideshow_buttontitle">
 			   <ul>
 				<li><a href="#" title="1"><img src="/images/1.jpg" alt="slideshow_large"/></a></li>
 				<li><a href="#" title="2"><img src="/images/2.jpg" alt="slideshow_large"/></a></li>
 				<li><a href="#" title="3"><img src="/images/3.jpg" alt="slideshow_large"/></a></li>
 				<li><a href="#" title="4"><img src="/images/4.jpg" alt="slideshow_large"/></a></li>
 			</ul>
-				<!--<div class="slideshow_simple1_title"></div>-->
+				<div class="slideshow_simple1_title"></div>
 				<ul class="slideshow_simple1_nav">
 					<li></li>
 					<li></li>
 					<li></li>
 					<li></li>
 				</ul>
-				
+				 </div>-->
 		   <div style="clear: both"></div>
-		   <span class="aui-list-theme-pic"style="float: right;">   
-				   
-				      ￥198
-					  <em>￥288</em> 
-					  <i>团购价</i>  
-                    
-					   
-				  </span>
-		    </div>
+		   
 	         </span>
-		
             </div>
               
 	
@@ -952,9 +1014,9 @@ $(function() {
 
 <footer class="page-footer bg-color">
     <div class="container row center-align">
-		<div>
-		<span class="col s12 m4 4" ><img src="/medias/cm15.jpg" class="w-img"/><br>微信公众号：tsd-cake <br>扫二维码 获取最新优惠与活动 ~ 更多惊喜等着你</span>
-		</div>
+		<span>
+		<span class="col s12 m4 4"  style="font-size:0.6em;"><img src="/medias/cm15.jpg" class="w-img"/><br>微信公众号：tsd-cake <br>扫二维码 获取最新优惠与活动 ~ 更多惊喜等着你</span>
+		</span>
         <div class="col s12 m8 l0 copy-right">
 		
 		 <span><i class="fa fa-map-marker"></i>地址:成都高新区交子大道300号(悠方广场)M4.2305  </span><br> 
@@ -980,6 +1042,7 @@ $(function() {
                     <i class="fa fa-users"></i>
                     次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
                 </span>
+				
                 
             
         </div>

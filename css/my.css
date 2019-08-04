@@ -169,9 +169,9 @@ a.p-btn:hover{
 	background:#f356b3;
 }
 .w-img{
-	width: 220px; 
+	width: 200px; 
 	margin: -52px 0px 0px 0px;
-	border-radius: 16px;
+	border-radius: 15px;
     
 }
 
@@ -453,4 +453,255 @@ a.p-btn:hover{
 	border-radius: .2rem;
 	width: 6.20rem;
 	height: 6.20rem;
+}
+
+
+@media only screen and (min-width: 923px) {
+.xiangqing {
+	width: 100%;
+	
+}
+.xiangqing p {
+	font-weight: 760;font-size: 1.5rem;
+	 margin: 8px;
+}
+
+.xiangqing p i {
+	
+	font-weight: 430;font-size: 1.35rem;
+}
+
+.xiangqing p span{
+	 margin: -2px;
+	
+}
+}
+
+
+
+@media only screen and (min-width: 523px) and (max-width: 922px) {
+.xiangqing {
+	width: 100%;
+}
+
+.xiangqing p {
+	font-weight: 700;font-size: 1.38rem;
+	 margin: 5px;
+}
+
+.xiangqing p i {
+	
+	font-weight: 400;font-size: 1.25rem;
+}
+.xiangqing span{
+	 margin: -2px;
+}
+}
+
+@media only screen and (max-width: 522px) {
+.xiangqing {
+	width: 100%;
+}
+.xiangqing p {
+	font-weight: 700;font-size: 1.1rem;
+	 margin: 3px;
+}
+
+.xiangqing p i {
+	
+	font-weight: 400;font-size: 1rem;
+}
+.xiangqing span{
+	 margin: -2px;
+}
+}
+
+
+
+.cake_name_box {
+	width: 6rem;
+	margin: 0.2rem 0.2rem 0;
+	font-size: .36rem;
+	color: #3c3c3c;
+}
+
+.cake_name_price {
+	width: 6rem;
+	color: #932f14;
+	font-size: .36rem;
+	font-weight: bold;
+	margin: 0 0.2rem 0.1rem;
+}
+
+.cake_brief_box {
+	width: 6rem;
+	margin: 0 0.2rem;
+	font-size: .24rem;
+	color: #dab866;
+}
+
+.cake_keywords_box {
+	width: 6rem;
+	margin: 0.2rem 0.2rem;
+	font-size: .22rem;
+	color: #932f14;
+}
+
+.cake_keywords_box .keywords_item {
+	min-width: 0.8rem;
+	height: .35rem;
+	border-radius: .2rem;
+	border: #932f14 1px solid;
+	float: left;
+	text-align: center;
+	line-height: .38rem;
+	margin-right: .2rem;
+}
+
+.cake_raw_box {
+	width: 96%;
+	margin: 0.2rem 0.2rem;
+	font-size: 1.2rem;
+	color: #555;
+}
+
+.cake_price_box {
+	width: 6rem;
+	/* min-height: 4rem; */
+	margin: 0.2rem 0.2rem;
+	border-radius: 0.9rem;
+	box-shadow: 0 0 0.8rem 0 rgba(0, 0, 0, 0.10);
+}
+
+.cake_price_tit {
+	border-top-left-radius: 0.9rem;
+	border-top-right-radius: 0.9rem;
+	background: #dab866;
+	color: #fff;
+	font-size: 1.6 rem;
+	height: 25px;
+	line-height: 1.6rem;
+	width: 100%;
+}
+
+.cake_price_tit span {
+	margin-left: .9rem;
+}
+
+.cake_price_box ul label {
+	display: block;
+	float: left;
+	height:25px;
+	min-width: 130px;
+	max-width:200px;
+	overflow: hidden;
+	margin: 0.18rem;
+	line-height: 15px;
+	font-size: 15px;
+	border-radius: 0.85rem;
+	border: #eee 1px solid;
+	background: #eee;
+	color: #000;
+}
+
+.option_radio {
+	display: none;
+}
+
+/* 选中后的状态 */
+
+.option_radio:checked+label {
+	background: #fff;
+	border: #dab866 1px solid;
+}
+
+.option_radio:checked+label svg {
+	color: #dab866
+}
+
+.cake_price_box ul label svg {
+	width: .5rem;
+	color: #dcdcdc;
+	float: left;
+}
+
+.cake_price_box ul label span {
+	display: block;
+	float: left;
+	height: 100%;
+	overflow: hidden;
+	line-height: 1.5rem;
+}
+
+.cake_att_box {
+	width: 5.6rem;
+	margin: 0 auto;
+	font-size: 0.22rem;
+	color: #707070;
+}
+
+.cake_att_box svg {
+	width: .4rem;
+	float: left;
+}
+
+.cake_att_item {
+	width: 2.8rem;
+	height: .6rem;
+	line-height: .6rem;
+	float: left;
+}
+
+.b_color {
+	font-weight: bold;
+	color: #932f14;
+}
+
+.cake_att_item div {
+	float: left;
+	margin-left: .1rem;
+}
+
+.yellowline {
+	clear: both;
+	border-bottom: #dab866 1px solid;
+	width: 6rem;
+}
+
+.cake_att_item_long {
+	width: 5.6rem;
+	height: .6rem;
+	line-height: .6rem;
+	float: left;
+}
+
+.cake_att_item_long div {
+	float: left;
+	margin-left: .1rem;
+}
+
+.yesug {
+	color: #dab866;
+}
+.buybt_box {
+	  display:none;
+}
+
+
+
+@media only screen and (max-width: 599px) {
+
+.buybt_box {
+	 display: inline-block;
+	width: 110%;
+	height: 55px;
+	position: fixed;
+	background: #fff;
+	bottom: -5px;
+    margin-left: -10%;
+	z-index: 91;
+	box-shadow: 0 0 .3rem 0 rgba(0, 0, 0, 0.10);
+	font-size: 1.12rem;
+}
+
 }
