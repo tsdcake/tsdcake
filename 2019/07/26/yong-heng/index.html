@@ -660,14 +660,58 @@ $(function () {
             </div>
            
 			<ul>
-                <label >
+			
+			
+			
+<div class="iteminfo_buying">
+	<!--规格属性-->
+	<div class="sys_item_spec">
+		<dl class="clearfix iteminfo_parameter iteminfo_parameter_default lh32">
+			<dt>市场价</dt>
+			<dd><span class="iteminfo_mktprice">$<b class="sys_item_mktprice">13.00</b></span></dd>
+		</dl>
+		<dl class="clearfix iteminfo_parameter lh32">
+			<dt>本网价</dt>
+			<dd><span class="iteminfo_price">$ <b class="sys_item_price">6.80</b></span></dd>
+		</dl>
+		<dl class="clearfix iteminfo_parameter sys_item_specpara" data-sid="1">
+			<dt>颜色</dt>
+			<dd>
+				<ul class="sys_spec_text">
+					<li data-aid="3"><a href="javascript:;" title="白色">白色</a><i></i></li>
+					<li data-aid="4"><a href="javascript:;" title="粉色">粉色</a><i></i></li>
+					<li data-aid="8"><a href="javascript:;" title="蓝色">蓝色</a><i></i></li>
+					
+				</ul>
+
+			</dd>
+		</dl>
+		<dl class="clearfix iteminfo_parameter sys_item_specpara" data-sid="2">
+			<dt>尺码</dt>
+			<dd>
+				<ul class="sys_spec_text">
+					<li data-aid="13"><a href="javascript:;" title="S">S</a><i></i></li>
+					<li data-aid="14"><a href="javascript:;" title="M">M</a><i></i></li>
+					<li data-aid="16"><a href="javascript:;" title="L">L</a><i></i></li>
+					<li data-aid="17"><a href="javascript:;" title="XL">XL</a><i></i></li>
+				</ul>
+			</dd>
+		</dl>
+					</div>
+	<!--规格属性-->
+</div>
+
+			
+			<input id="spec_value_3720" class="option_radio" type="radio" data-price="￥168.00元" data-lablename="6寸加高" name="spec_212" value="3720" checked="">
+                <label for="1" >
                         <span>6寸加高</span>
                 </label>
-                <label>
+				<input id="spec_value_3722" class="option_radio" type="radio" data-price="￥198.00元" data-lablename="8寸加高" name="spec_215" value="3722" >
+                <label for="2" >
                    <span>8寸加高  </span>
                 </label>  
             </ul>
-			<form>
+			</form>
 			<br>
 			<hr class="clearfix">
 			<div calss="cake_price_tit">
@@ -675,11 +719,11 @@ $(function () {
 				  <p>
 				  ❄保鲜：<i> 0~4℃保藏 24小时，10℃食用最佳</i> </p>
 				   <p>🍦甜度: 
-				           <span>🍦</span> 
+				          <span style="opacity: 0.3;">🍦</span> 
 				        
-				           <span>🍦</span> 
+				          <span style="opacity: 0.3;">🍦</span> 
 				        
-				           <span>🍦</span> 
+				          <span style="opacity: 0.3;">🍦</span> 
 				        
 				          <span style="opacity: 0.3;">🍦</span> 
 				        
@@ -997,7 +1041,67 @@ $(function () {
 			});		
    });
 			
+/*var sys_item={
+	"mktprice":"13.00",
+	"price":"6.80",
+	"sys_attrprice":{"3_13":{"price":"6.80","mktprice":"13.00"},"3_14":{"price":"7.80","mktprice":"14.00"},"3_16":{"price":"8.80","mktprice":"15.00"},"3_17":{"price":"9.80","mktprice":"16.00"},"4_13":{"price":"6.80","mktprice":"13.00"},"4_14":{"price":"7.80","mktprice":"14.00"},"4_16":{"price":"8.80","mktprice":"15.00"},"4_17":{"price":"9.80","mktprice":"16.00"},"8_13":{"price":"6.80","mktprice":"13.00"},"8_14":{"price":"7.80","mktprice":"1400"},"8_16":{"price":"8.80","mktprice":"15.00"},"8_17":{"price":"9.80","mktprice":"16.00"},"9_13":{"price":"6.80","mktprice":"13.00"},"9_14":{"price":"7.80","mktprice":"14.00"},"9_16":{"price":"8.80","mktprice":"15.00"},"9_17":{"price":"9.80","mktprice":"16.00"},"10_13":{"price":"6.80","mktprice":"13.00"},"10_14":{"price":"7.80","mktprice":"14.00"},"10_16":{"price":"8.80","mktprice":"15.00"},"10_17":{"price":"9.80","mktprice":"16.00"},"12_13":{"price":"6.80","mktprice":"13.00"},"12_14":{"price":"7.80","mktprice":"14.00"},"12_16":{"price":"8.80","mktprice":"15.00"},"12_17":{"price":"9.80","mktprice":"16.00"}}};
+*/
+
+//商品规格选择
+$(function(){
+	$(".sys_item_spec .sys_item_specpara").each(function(){
+		var i=$(this);
+		var p=i.find("ul>li");
+		p.click(function(){
+			if(!!$(this).hasClass("selected")){
+				$(this).removeClass("selected");
+				i.removeAttr("data-attrval");
+			}else{
+				$(this).addClass("selected").siblings("li").removeClass("selected");
+				i.attr("data-attrval",$(this).attr("data-aid"))
+			}
+			getattrprice() //输出价格
+		})
+	})
 	
+	//获取对应属性的价格
+	function getattrprice(){
+		var defaultstats=true;
+		var _val='';
+		var _resp={
+			mktprice:".sys_item_mktprice",
+			price:".sys_item_price"
+		}  //输出对应的class
+		$(".sys_item_spec .sys_item_specpara").each(function(){
+			var i=$(this);
+			var v=i.attr("data-attrval");
+			if(!v){
+				defaultstats=false;
+			}else{
+				_val+=_val!=""?"_":"";
+				_val+=v;
+			}
+		})
+		if(!!defaultstats){
+			_mktprice=sys_item['sys_attrprice'][_val]['mktprice'];
+			_price=sys_item['sys_attrprice'][_val]['price'];
+		}else{
+			_mktprice=sys_item['mktprice'];
+			_price=sys_item['price'];
+		}
+		//输出价格
+		$(_resp.mktprice).text(288);  ///其中的math.round为截取小数点位数
+		$(_resp.price).text(168);
+	}
+})
+
+    
+    
+
+
+
+
+
 	
 $(function() {
 
@@ -1138,7 +1242,7 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 <script>
-$("#loading").fadeOut(2600);
+$("#loading").fadeOut(3600);
 </script>
 </body>
 
