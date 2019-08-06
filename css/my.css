@@ -167,16 +167,35 @@ a.p-btn{
 	text-transform: capitalize;
 }
 
+a.p-btn-phone{
+	background: #c1c1c1de;
+	color: #002;
+	padding: 0.4em 0.9em;
+	text-decoration: none;
+	border-radius: 6px;
+	border: 1px;
+	font-size: 0.85em;
+	text-transform: capitalize;
+}
+
 @media only screen and (min-width: 981px) {
 	a.p-btn{
 		
 		font-size: 0.7em;
 		
 	}
+	a.p-btn-phone{
+		
+		font-size: 0.7em;
+	}
 }
 a.p-btn:hover{
 	background:#f356b3;
 }
+a.p-btn-phone:hover{
+		
+		background:#f356b3a2;
+	}
 .w-img{
 	width: 200px; 
 	margin: -52px 0px 0px 0px;
@@ -249,7 +268,7 @@ a.p-btn:hover{
 
 
 
-.one{margin:0 px auto;height:300px;width:100%;overflow:hidden;position:relative; }
+.one{margin:0 px auto;height:275px;width:100%;overflow:hidden;position:relative; }
 .one ul{height:220px;width:10000px;position:absolute;left:0;} /*ul width的宽不能过小*/
 .one ul li{display:block;float:left;margin:5px;height:10px;border-radius:5px;position:relative;}
 .one ul li a{display:inline-block;height:150px;} 
@@ -257,7 +276,10 @@ a.p-btn:hover{
 .one ul li a span{height:0;display:block;background:rgba(0,0,0,0.4);position:absolute;bottom:0;color:#fff;font-size:0px;}
 .one ul li a:hover span{height:150px;line-height:150px;font-size:20px;text-align:center;transition:all 0.7s;}
 
-
+@media only screen and (max-width: 622px) {
+	.one{height:185px;width:100%;overflow:hidden;position:relative; }
+	.one ul li a{height:55px;} 
+}
 
 
 
@@ -1253,4 +1275,37 @@ to {
 }
 .hidden {
   display: none;
+}
+
+.title-box-2{
+	width: 100%;
+	height:50px;
+	color: #fff;
+	text-align: center;
+	
+}
+.title-box-bg{
+	padding: 0.1rem 0;
+	background-color:#030206d9;
+}
+.title-box-2 .title-h{
+	top:2px;
+	margin: 0px 0px 0px 0px;
+	margin-top: 5px;
+	
+	font-size: 1.3rem;
+	line-height: 0.42rem;
+}
+.title-p{
+	font-size: 0.24rem;
+	line-height: 0.36rem;
+}
+.fgx{
+	width: 7.04rem;
+	height: 2px;
+	text-align: center;
+}
+.fgx img{
+	display: inline-block;
+	width: 100%;
 }

@@ -583,7 +583,7 @@ header .go-back i {
 }
 
 .index-card .card .card-content {
-    padding: 20px 40px;
+    padding: 0px 0px;
 }
 
 @media only screen and (min-width: 1418px) {
@@ -595,14 +595,14 @@ header .go-back i {
 
 @media only screen and (max-width: 601px) {
     .index-card .card .card-content {
-        padding: 10px 10px;
+        padding: 0px 0px;
     }
 }
 
 /*中等屏幕下(平板类)的样式*/
 @media only screen and (min-width: 600px) and (max-width: 992px) {
     .index-card .card .card-content {
-        padding: 20px 20px;
+        padding: 0px 0px;
     }
 }
 
@@ -647,6 +647,8 @@ header .go-back i {
     background-size: cover;
     box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07);
 }
+
+
 
 .recommend .post-card .post-body {
     position: relative;
@@ -702,6 +704,13 @@ header .go-back i {
 .recommend .post-card .read-more .icon {
     font-size: 1.05rem;
     padding-right: 10px;
+}
+
+
+@media only screen and (max-width: 622px) {
+	.recommend .post-card {width: 170px;height: 125px;}
+    .recommend .post-card .post-body h3{font-size: 1.2rem;}
+    .recommend .post-card .read-more { height: 25px; margin: 0.9rem 1px;font-size: 0.01rem;line-height: 25px;}
 }
 
 .archive-calendar {

@@ -204,16 +204,7 @@
    <div>
 </div>
 	
-<!-- 百度统计代码 -->
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?e1d3bb1c0387fe9a60ef386597de6267";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+
 
 </div></div><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
@@ -363,7 +354,7 @@ $(document).ready(function(){
     
     <li>
         <a href="#searchModal" class="modal-trigger waves-effect waves-light">
-            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+            <i id="searchIcon" class="fa fa-search" title="商品搜索"></i>
         </a>
     </li>
 </ul>
@@ -579,18 +570,7 @@ $(function () {
 <main class="container content" >
 
     
-    <script>
-     function jump(cpath){
-	   var Cost_Path;
-	    if($(window).width()<891) Cost_Path="http://meishi.meituan.com/i/order/"+cpath;
-		else Cost_Path="https://www.meituan.com/meishi/order/buy/"+cpath;
-        window.location.href=Cost_Path;
-    }
-	
-	function phonef(){
-	  window.location.href="tel:15719466286";
-	}
-</script>
+    
 <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
@@ -679,7 +659,7 @@ $(function () {
 				 
 					
 					   
-                       <li data-aid="0"  class="selected"><a href="javascript:;" title="白色">6寸乖乖熊  </a><i></i></li>
+                       <li data-aid='0'  class="selected"><a href="javascript:;" title="白色">6寸乖乖熊  </a><i></i></li>
 					   
                         
 					
@@ -804,20 +784,23 @@ $(function () {
 	    
 		   <div id="transport-options" class="toolbar-icons hidden"  style="width:110px;height 50px;">
 			<a onclick="phonef()" style="width:100px; height:40px;color: #fff;" class="waves-effect" target="_blank"><i class="fa fa-phone"></i>电话预订</a>
-			<a onclick="jump(605429336)" style="width:100px; height:40px;" class="waves-effect" target="_blank"><i class="fa fa-shopping-bag"></i>线上下单</a>
+			<a onclick="jump()" style="width:100px; height:40px;" class="waves-effect" target="_blank"><i class="fa fa-shopping-bag"></i>在线购买</a>
 		  </div>
 		
 
         		             <div class="buybt_box" style="float: right;"> 
-                				 
-						  
-							
-						   	 
-							  
-							   <a  data-toolbar="transport-options" data-toolbar-animation="flyin" class=" btn-toolbar-info waves-effect waves-light p-btn"  target="_blank">
-								<i class="icon fa fa-shopping-bag fa-fw" ></i>立即购买
+                        
+						
+						
+							   <a  href="tel:15719466286" class="waves-effect waves-light p-btn-phone"  target="_blank">
+								<i class="icon fa fa-phone fa-fw" ></i>电话预订
 							   </a>
-							
+							   
+									<a onclick="jump()" class="waves-effect waves-light p-btn"  target="_blank">
+									<i class="icon fa fa-shopping-bag fa-fw" ></i>在线购买
+								   </a>
+						        
+						   
 						  </div>
 		   <sapn style="width:200px;margin: 1 auto;">
 		   <!-- <div id="slideshow2" class="slideshow_buttontitle">
@@ -909,10 +892,46 @@ $(function () {
 
     
 
+ <script>
+     function jump(cpath){
+	   var Cost_Path;
+	    if($(window).width()<891) Cost_Path="http://meishi.meituan.com/i/order/"+cpath;
+		else Cost_Path="https://www.meituan.com/meishi/order/buy/"+cpath;
+        window.location.href=Cost_Path;
+    }
+	
+	function phonef(){
+	  window.location.href="tel:15719466286";
+	}
+	
+	jQuery(document).ready(function($) {
+		// Define any icon actions before calling the toolbar
+			$('.toolbar-icons a').on('click', function( event ) {
+				event.preventDefault();
+			});
+			
+            $('a[data-toolbar="transport-options1"]').toolbar({
+			    content: '#transport-options1',
+			    position: 'top',
+			});		
+			
+            $('a[data-toolbar="transport-options2"]').toolbar({
+			    content: '#transport-options2',
+			    position: 'top',
+			});		
+   });
+</script>
+
+
 <article id="prenext-posts" class="prev-next articles">
+
     <div class="row article-row">
         
         <div class="article col s12 m6" data-aos="fade-up">
+		  <div id="transport-options1" class="toolbar-icons hidden"  style="width:110px;height 50px;">
+			<a onclick="phonef()" style="width:100px; height:40px;color: #fff;" class="waves-effect" target="_blank" ><i class="fa fa-phone"></i>电话预订</a>
+			<a onclick="jump(606882754)" style="width:100px; height:40px;" class="waves-effect" target="_blank" ><i class="fa fa-shopping-bag"></i>在线购买</a>
+		  </div>
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一款</div>
             <div class="card">
@@ -925,24 +944,23 @@ $(function () {
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-永恒 爱的味道，永恒   仅售168元！价值228元的永恒1个，约6英寸，心形。
-  ¥168最高门店价¥228  6.1折已售5减商家 新客立减30元 每人限购1张                   
-
-                        
-                    </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-26
+                        <span class="publish-date aui-list-theme-pic">
+						  
+						    ￥199	
+								<em>  ￥688</em>
+								   <i> 团购  </i>
+							</span>
+							
                         </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-user fa-fw"></i>
-                            tsd-cake
-                            
-                        </span>
+                       <span class="publish-author" style="margin:0px;">           
+						   
+							   <a  data-toolbar="transport-options1" data-toolbar-animation="standard" class="waves-effect waves-light p-btn" target="_blank">
+								<i class="icon fa fa-shopping-bag fa-fw"></i>立即购买
+							   </a>
+							
+						   	
+						  </span>
                     </div>
                 </div>
                 
@@ -963,6 +981,10 @@ $(function () {
         
         
         <div class="article col s12 m6" data-aos="fade-up">
+		<div id="transport-options2" class="toolbar-icons hidden"  style="width:110px;height 50px;">
+			<a onclick="phonef()" style="width:100px; height:40px;color: #fff;" class="waves-effect" target="_blank" ><i class="fa fa-phone"></i>电话预订</a>
+			<a onclick="jump(604599512)" style="width:100px; height:40px;" class="waves-effect" target="_blank" ><i class="fa fa-shopping-bag"></i>在线购买</a>
+		  </div>
             <div class="article-badge right-badge text-color">
                 下一款&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
@@ -976,21 +998,27 @@ $(function () {
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            就是好吃 啊哈哈
-                        
-                    </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-19
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-user fa-fw"></i>
-                            tsd-cake
-                            
+                        <span class="publish-date aui-list-theme-pic">
+						  
+						    ￥199	
+								<em>  ￥688</em>
+								   <i> 团购  </i>
+							</span>
+							
                         </span>
+                       <span class="publish-author" style="margin:0px;">           
+						   
+							   <a  data-toolbar="transport-options2" data-toolbar-animation="standard" class="waves-effect waves-light p-btn" target="_blank">
+								<i class="icon fa fa-shopping-bag fa-fw"></i>立即购买
+							   </a>
+							
+						   	
+								<a href="/dangao.html" class="waves-effect waves-light p-btn" target="_blank">
+								<i class="icon fa fa-cube fa-fw"></i>3D展示
+								</a> 
+							  
+						  </span>
                     </div>
                 </div>
                 
@@ -1061,6 +1089,7 @@ $(function () {
 			    position: 'top',
 			});		
    });
+   
 
 var sys_item={
 	"mktprice":"17.00",
@@ -1069,20 +1098,20 @@ var sys_item={
  var  gdata1= new Array();
 
  
-    gdata1[0]=new Array();
+    gdata1[parseInt('0')]=new Array();
     
-       gdata1[0].push("6寸乖乖熊");
+       gdata1[parseInt('0')].push("6寸乖乖熊");
     
-       gdata1[0].push("288");
+       gdata1[parseInt('0')].push("288");
     
-       gdata1[0].push("998");
+       gdata1[parseInt('0')].push("998");
     
-       gdata1[0].push("团购价");
+       gdata1[parseInt('0')].push("团购价");
     
-       gdata1[0].push("605429336");
+       gdata1[parseInt('0')].push("605429336");
    
  
-
+var _val='0';
 //商品规格选择
 $(function(){
 	$(".sys_item_spec .sys_item_specpara").each(function(){
@@ -1100,10 +1129,11 @@ $(function(){
 		})
 	})
 	
+	
 	//获取对应属性的价格
 	function getattrprice(){
 		var defaultstats=true;
-		var _val="";
+	       _val='';
 		var _resp={
 			mktprice:".sys_item_mktprice",
 			price:".sys_item_price",
@@ -1125,10 +1155,10 @@ $(function(){
 			}
 		})
 		if(!!defaultstats){
-			_mktprice=gdata1[_val][1];
-			_price=gdata1[_val][2];
-			_p=gdata1[_val][3];
-			_arr=gdata1[_val][0];
+			_mktprice=gdata1[parseInt(_val)][1];
+			_price=gdata1[parseInt(_val)][2];
+			_p=gdata1[parseInt(_val)][3];
+			_arr=gdata1[parseInt(_val)][0];
 		}else{
 			/*_mktprice=gdata1[0][1];
 			_price=gdata1[0][2];
@@ -1140,15 +1170,23 @@ $(function(){
 		$(_resp.p).text(" "+_p);
 		$(_resp.arr).text("已选："+_arr);
 			
-		
+		console.log(_val);
 		
 	}
-})
+ })
+ 
 
-    
-    
-
-
+    function jump(cpath){
+	  
+	   var Cost_Path=cpath ?cpath :gdata1[parseInt(_val)][4];
+	    if($(window).width()<891) Cost_Path="http://meishi.meituan.com/i/order/"+Cost_Path;
+		else Cost_Path="https://www.meituan.com/meishi/order/buy/"+Cost_Path;
+        window.location.href=Cost_Path;
+    }
+	
+	function phonef(){
+	  window.location.href="tel:15719466286";
+	}
 
 
 
@@ -1201,7 +1239,7 @@ $(function() {
 		</span>
         <div class="col s12 m8 l0 copy-right">
 		
-		 <span><i class="fa fa-map-marker"></i>地址:成都高新区交子大道300号(悠方广场)M4.2305  </span><br> 
+		 <span><i class="fa fa-map-marker"></i>地址:成都高新区交子大道300号(悠方广场)M4.2305</span><br> 
 		 <span><i class="fa fa-calendar"></i>&nbsp;&nbsp;营业时间：周一至周日 09:00-20:00</span><span><a href="tel:15719466286"><h4><i class="fa fa-phone"></i>&nbsp;&nbsp;订购电话:15719466286</h4></a></span>
 		
             版权所有&nbsp;&nbsp;&copy;2019&nbsp;<a href="#" target="_blank">成都市清新时刻食品有限公司</a><br>旗下品牌
@@ -1257,8 +1295,8 @@ $(function() {
 <div id="searchModal" class="modal">
     <div class="modal-content">
         <div class="search-header">
-            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
-            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;商品查询</span>
+            <input type="search" id="searchInput" name="s" placeholder="输入需要查询的商品,标签,或关键字."
                    class="search-input">
         </div>
         <div id="searchResult"></div>
@@ -1295,7 +1333,16 @@ $(function () {
 $("#loading").fadeOut(3600);
 </script>
 </body>
-
+<!-- 百度统计代码 -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?e1d3bb1c0387fe9a60ef386597de6267";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 
 
 </html>
