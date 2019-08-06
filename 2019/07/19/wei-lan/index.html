@@ -643,11 +643,13 @@ $(function () {
 
   <div class="col s5 right-align">
              
-				  <span class="aui-list-theme-pic sys_item_price" style="float: left;">  ￥199</span>	
+         
+           <span class="aui-list-theme-pic sys_item_price" style="float: left;">  ￥199</span>	
 			<span class="aui-list-theme-pic" style="float: left;">  
 				<em class="sys_item_mktprice">  ￥688</em>
 				   <i class="sys_item_p "> 团购  </i>
 			</span>
+			
 				    <div class="info-break-policy left-alignl"  >
 
 						<img style="height:25px;" src="/medias/Images/canpan.png"/>免费配送6套餐具
@@ -669,16 +671,16 @@ $(function () {
 
 <div class="cake_price_box" style="margin-left:2%;width:96%; height:280px;">
          <form>    
-          <div class="cake_price_tit">
+          <div class="cake_price_tit ">
                 <span>
                     请选择尺寸：
-                    <span class="cake_sed_att"></span>
+                    <span class="cake_sed_att sys_item_arr">已选：6寸蔚蓝</span>
                 </span>
             </div>
 <div class="iteminfo_buying">
 	<!--规格属性-->
 	<span class="sys_item_spec">
-		<span class="clearfix iteminfo_parameter sys_item_specpara" data-sid="10">
+		<span class="clearfix  sys_item_specpara" data-sid="10">
 				<ul class="sys_spec_text">
 				 
 					
@@ -737,7 +739,28 @@ $(function () {
 				  </p>
 				<p>👄口味：<i  style=" color: #959695;"> 抹茶 薄荷</i></p>
 				 <p>  🍰原料：<i style="color: #959695;">动物奶油慕斯 巧克力</i> </p>
-				  <p>👨‍👦‍👦&nbsp;适宜：👶👴👦👨 </p>
+				 <p>🍷 
+				        
+						   <span>🍷</span> 
+				        
+					   
+				        
+						   <span>🍷</span> 
+				        
+					   
+				        
+						   <span>🍷</span> 
+				        
+					   
+				        
+						   <span>🍷</span> 
+				        
+					   
+				        
+						 <span style="opacity: 0.3;">🍷</span>   
+					  
+				 
+				 </p>
 		       </div>
 					
 			 
@@ -1054,13 +1077,13 @@ sdjksj
 			    position: 'top',
 			});		
    });
-	
+
 var sys_item={
 	"mktprice":"17.00",
 	"price":"6.80",
 	"sys_attrprice":{"3_13":{"price":"6.80","mktprice":"13.00"},"3_14":{"price":"7.80","mktprice":"14.00"},"3_16":{"price":"8.80","mktprice":"15.00"},"3_17":{"price":"9.80","mktprice":"16.00"},"4_13":{"price":"6.80","mktprice":"13.00"},"4_14":{"price":"7.80","mktprice":"14.00"},"4_16":{"price":"8.80","mktprice":"15.00"},"4_17":{"price":"9.80","mktprice":"16.00"},"8_13":{"price":"6.80","mktprice":"13.00"},"8_14":{"price":"7.80","mktprice":"1400"},"8_16":{"price":"8.80","mktprice":"15.00"},"8_17":{"price":"9.80","mktprice":"16.00"},"9_13":{"price":"6.80","mktprice":"13.00"},"9_14":{"price":"7.80","mktprice":"14.00"},"9_16":{"price":"8.80","mktprice":"15.00"},"9_17":{"price":"9.80","mktprice":"16.00"},"10_13":{"price":"6.80","mktprice":"13.00"},"10_14":{"price":"7.80","mktprice":"14.00"},"10_16":{"price":"8.80","mktprice":"15.00"},"10_17":{"price":"9.80","mktprice":"16.00"},"12_13":{"price":"6.80","mktprice":"13.00"},"12_14":{"price":"7.80","mktprice":"14.00"},"12_16":{"price":"8.80","mktprice":"15.00"},"12_17":{"price":"9.80","mktprice":"16.00"}}};
  var  gdata1= new Array();
-    
+
  
     gdata1[0]=new Array();
     
@@ -1113,11 +1136,13 @@ $(function(){
 		var _resp={
 			mktprice:".sys_item_mktprice",
 			price:".sys_item_price",
-			p:".sys_item_p"
+			p:".sys_item_p",
+			arr:".sys_item_arr"
 		}  //输出对应的class
 		 var_mktprice=gdata1[0][1];
 		var_price=gdata1[0][2];
 		var	_p=gdata1[0][3];
+		var _arr=gdata1[0][0];
 		$(".sys_item_spec .sys_item_specpara").each(function(){
 			var i=$(this);
 			var v=i.attr("data-attrval");
@@ -1132,6 +1157,7 @@ $(function(){
 			_mktprice=gdata1[_val][1];
 			_price=gdata1[_val][2];
 			_p=gdata1[_val][3];
+			_arr=gdata1[_val][0];
 		}else{
 			/*_mktprice=gdata1[0][1];
 			_price=gdata1[0][2];
@@ -1141,6 +1167,7 @@ $(function(){
 		$(_resp.mktprice).text("￥"+_mktprice);  ///其中的math.round为截取小数点位数
 		$(_resp.price).text("￥"+_price);
 		$(_resp.p).text(" "+_p);
+		$(_resp.arr).text("已选："+_arr);
 			
 		
 		

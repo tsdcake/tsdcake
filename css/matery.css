@@ -1863,7 +1863,7 @@ footer .weixin-img{
 .lh32{ line-height:32px;}
 .iteminfo_price{ color:#c00; font-size:14px; font-family:Arial, Helvetica, sans-serif; vertical-align:middle;}
 .sys_item_price{ color:#c00; font-size:22px; vertical-align:middle;}
-.iteminfo_buying{ background:#f7f7f7; padding:12px 0;}
+.iteminfo_buying{ background:#f7f7f7; padding:0px 0;}
 
 /*规格*/
 .sys_item_spec dl.iteminfo_parameter{ padding-top:5px; padding-bottom:5px;}
@@ -1880,9 +1880,9 @@ footer .weixin-img{
 .sys_spec_img li.selected i{ display:block;}
 
 .sys_spec_text{}
-.sys_spec_text li{ float:left; height:28px; position:relative; margin:2px 6px 2px 0; outline:none;}
-.sys_spec_text li a{ height:24px; padding:1px 6px; border:1px solid #ccc; background:#fff; display:inline-block; line-height:24px;}
-.sys_spec_text li a:hover{ border:2px solid #e4393c; padding:0 5px; text-decoration:none;}
-.sys_spec_text li i{ position:absolute; width:10px; height:10px; font-size:0; line-height:0; right:2px; bottom:2px; background:url(img/sys_item_selected.gif) no-repeat right bottom; z-index:99; display:none;}
-.sys_spec_text li.selected a{ border:2px solid #e4393c; padding:0 5px;}
+.sys_spec_text li{ float:left; height:28px; position:relative; margin:2px 6px 2px 10px; outline:none; border-radius: 5px;}
+.sys_spec_text li a{ height:24px; padding:1px 13px; border:1px solid #ccc; background:#fff; display:inline-block; line-height:24px;  border-radius: 10px;}
+.sys_spec_text li a:hover{ border:2px solid #e4393c; padding:1px 10px; text-decoration:none; border-radius: 10px;}
+.sys_spec_text li i{ position:absolute; width:15px; height:15px; padding:2px;border-radius:15px; font-size:0; line-height:0;left:2px;right:2px;top:5px;background:url(http://www.17sucai.com/preview/420578/2017-07-24/%E9%80%89%E6%8B%A9%E5%88%A0%E9%99%A4%E8%AE%A1%E7%AE%97%E8%B4%AD%E7%89%A9%E8%BD%A6/images/check_on.jpg) no-repeat left ; background-size: 13px;z-index:9; display:none;}
+.sys_spec_text li.selected a{ border:2px solid #e4393c; padding:0 13px;}
 .sys_spec_text li.selected i{ display:block;}
