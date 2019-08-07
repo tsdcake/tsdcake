@@ -710,7 +710,7 @@ header .go-back i {
 @media only screen and (max-width: 622px) {
 	.recommend .post-card {width: 170px;height: 125px;}
     .recommend .post-card .post-body h3{font-size: 1.2rem;}
-    .recommend .post-card .read-more { height: 25px; margin: 0.9rem 1px;font-size: 0.01rem;line-height: 25px;}
+    .recommend .post-card .read-more { height: 25px; margin: 0.9rem 1px;font-size: 0.8rem;line-height: 25px;}
 }
 
 .archive-calendar {
@@ -1141,7 +1141,8 @@ table tr:nth-child(2n), thead {
     line-height: 39px;
     font-size: 1rem;
     font-weight: 500;
-    border-radius: 5px;
+    border-radius: 25px;
+	 border-top-left-radius: 10px;
     word-wrap: break-word;
     cursor: pointer;
     box-shadow: 0 3px 5px rgba(0, 0, 0, .12);

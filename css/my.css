@@ -1297,7 +1297,7 @@ to {
 	line-height: 0.42rem;
 }
 .title-p{
-	font-size: 0.24rem;
+	font-size: 0.94rem;
 	line-height: 0.36rem;
 }
 .fgx{
@@ -1308,4 +1308,37 @@ to {
 .fgx img{
 	display: inline-block;
 	width: 100%;
+}
+
+
+.mycol{
+	width: 46%;
+	height: 200px;
+	margin: 2%;
+}
+
+@media only screen and (min-width: 699px) {
+.mycol{
+	width: 30%;
+	margin: 1.6666%;
+  }
+}
+
+
+@media only screen and (min-width: 699px) and (max-width: 992px){
+.mycol{
+	width: 30%;
+	margin: 1.6666%;
+  }
+}
+@media only screen and (min-width: 993px){
+.mycol{
+	width: 21%;
+	margin: 2%;
+  }
+}
+
+
+article .tag-image .img1 {
+    height: 135px;
 }

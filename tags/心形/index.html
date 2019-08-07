@@ -504,32 +504,75 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 </div>
 
     
+	<script>
+     function jump(cpath){
+	   var Cost_Path;
+	    if($(window).width()<891) Cost_Path="http://meishi.meituan.com/i/order/"+cpath;
+		else Cost_Path="https://www.meituan.com/meishi/order/buy/"+cpath;
+		console.log(cpath);
+        window.location.href=Cost_Path;
+    }
+	
+	function phonef(){
+	  window.location.href="tel:15719466286";
+	}
+	
+	jQuery(document).ready(function($) {
+		// Define any icon actions before calling the toolbar
+			$('.toolbar-icons a').on('click', function( event ) {
+				event.preventDefault();
+			});
+			
+            $('a[data-toolbar="transport-options0"]').toolbar({
+			    content: '#transport-options0',
+			    position: 'top',
+			});		
+			
+   });
+</script>
 
     <article id="articles" class="container articles">
         <div class="row tags-posts">
             
             
-            <div class="article tag-post col s12 m6 l4" data-tags="慕斯, 心形" data-aos="fade-up">
+          <div id="transport-options0" class="toolbar-icons hidden"  style="width:110px;height 50px;">
+			<a onclick="phonef()" style="width:100px; height:40px;color: #fff;" class="waves-effect" target="_blank" ><i class="fa fa-phone"></i>电话预订</a>
+			<a onclick="jump(606882754)" style="width:100px; height:40px;" class="waves-effect" target="_blank" ><i class="fa fa-shopping-bag"></i>在线购买</a>
+		  </div>
+            <div class="article tag-post mycol" data-tags="慕斯, 心形" data-aos="fade-up">
                 <div class="card">
                     <a href="/2019/07/26/yong-heng/">
                         <div class="card-image tag-image">
                             
-                            <img src="http://p1.meituan.net/deal/e05b1dac2f045da40e2bec541b0e2b9443116.jpg@428w_320h_1e_1c" class="responsive-img" alt="永恒">
+                            <img src="http://p1.meituan.net/deal/e05b1dac2f045da40e2bec541b0e2b9443116.jpg@428w_320h_1e_1c" class="img1" alt="永恒">
                             
                             <span class="card-title">永恒</span>
                         </div>
                     </a>
-                    <div class="card-content article-content">
+                    <div class="card-content article-content"  style="padding: 2px 10px 12px 10px;">
                         <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-26
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fa fa-user fa-fw"></i>
-                                tsd-cake
-                                
-                            </span>
+                            <span class="publish-date aui-list-theme-pic">
+							    
+							   
+								  ￥199
+								  <em>￥688</em> 
+								  <i>6.1折</i>  
+								
+					   
+					        </span>
+                            <span class="publish-author" style="margin:0px;">           
+						  
+							  
+							  <a  href="tel:15719466286" class="waves-effect waves-light p-btn-phone" style="font-size: 0.69em;" target="_blank">
+								<i class="icon fa fa-phone fa-fw" ></i>电话预订
+							   </a>
+							   
+									<a onclick="jump(606882754)" class="waves-effect waves-light p-btn" style="font-size: 0.69em;" target="_blank">
+									<i class="icon fa fa-shopping-bag fa-fw" ></i>在线购买
+								   </a>
+						        
+							
+						  </span>
                         </div>
                     </div>
                 </div>
