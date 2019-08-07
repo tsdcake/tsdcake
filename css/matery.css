@@ -710,7 +710,7 @@ header .go-back i {
 @media only screen and (max-width: 622px) {
 	.recommend .post-card {width: 170px;height: 125px;}
     .recommend .post-card .post-body h3{font-size: 1.2rem;}
-    .recommend .post-card .read-more { height: 25px; margin: 0.9rem 1px;font-size: 0.8rem;line-height: 25px;}
+    .recommend .post-card .read-more { height: 30px; margin: 0.9rem 1px;font-size: 0.8rem; font-size: 280px;line-height: 30px;}
 }
 
 .archive-calendar {
