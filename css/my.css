@@ -1514,9 +1514,14 @@ color:#fff;
     font-size: 3.2rem;
     font-weight: bold;
     line-height: 0.1rem;
+position: relative;
+    z-index: 1;
 }
 .dh-a {
-   margin-left:63%
+   margin-left:63%;
+   position: relative;
+    z-index: 1;
+  
 }
 @media only screen and (max-width: 837px){
 	.boat-info p{
@@ -1539,9 +1544,13 @@ letter-spacing:1px;
     font-size: 2.2rem;
     font-weight: bold;
     line-height: 0.05rem;
+	position: relative;
+    z-index: 1;
+	
 }
 .dh-a {
-    margin-left:39%
+    margin-left:36%;
+
 }
 }
 
@@ -1656,14 +1665,14 @@ height: 350px;
 
 .col-md-8{
    position: relative;
-    min-height: 1px;
-	width: 55%;
+    min-height: 200px;
+	width: 52%;
 	float: left;
 }
 .col-md-4
 {
 	float: left;
-    width: 45%;
+    width: 48%;
 }
 
 .speed-boats2 .boat-info:after {
@@ -1677,3 +1686,89 @@ height: 350px;
 }
 
 
+#gradient-rotate {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  margin-top: -12px;
+  border-radius: 50px 50px 0px 0px;
+  z-index:0;
+}
+#trianglify-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 0vw;
+  height: 10px;
+}
+#color-stop-1 {
+  -webkit-animation: change-color-1 12s ease-in-out infinite alternate;
+  animation: change-color-1 12s ease-in-out infinite alternate
+}
+
+#color-stop-2 {
+  -webkit-animation: change-color-2 12s ease-in-out infinite alternate;
+  animation: change-color-2 12s ease-in-out infinite alternate
+}
+
+#color-stop-3 {
+  -webkit-animation: change-color-3 12s ease-in-out infinite alternate;
+  animation: change-color-3 12s ease-in-out infinite alternate
+}
+@keyframes change-color-1 {
+  0% {
+	stop-color: #22C8F6
+  }
+
+  25% {
+	stop-color: #ff0
+  }
+
+  50% {
+	stop-color: #00ffcb
+  }
+
+  75% {
+	stop-color: #70ff00
+  }
+}
+@keyframes change-color-2 {
+  0% {
+	stop-color: #20C498
+  }
+
+  25% {
+	stop-color: #ff00ad
+  }
+
+  350% {
+	stop-color: #d480ff
+  }
+
+  75% {
+	stop-color: #ff9200
+  }
+}
+@keyframes change-color-3 {
+  0% {
+	stop-color: #189932
+  }
+
+  25% {
+	stop-color: #c300cb
+  }
+
+  50% {
+	stop-color: #5600d4
+  }
+
+  75% {
+	stop-color: #ff46dc
+  }
+}
