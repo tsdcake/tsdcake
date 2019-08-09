@@ -1646,4 +1646,12 @@ height: 350px;
     width: 45%;
 }
 
+.speed-boats2 .boat-info:after {
+	margin-top: -100px;
+	
+}
+.speed-boats1 .boat-info:after {
+	margin-top: -110px;
+	
+}
 }
