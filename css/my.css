@@ -1508,6 +1508,16 @@ color:#fff;
 	left:0;
 	z-index: 8;
 }
+
+.dh-h3 {
+    margin: 8px 10px 0px 10px;
+    font-size: 3.2rem;
+    font-weight: bold;
+    line-height: 0.1rem;
+}
+.dh-a {
+   margin-left:63%
+}
 @media only screen and (max-width: 837px){
 	.boat-info p{
 color:#fff;
@@ -1522,6 +1532,16 @@ color:#fff;
 font-size:1.3em;
 margin-bottom:15px;
 letter-spacing:1px;
+}
+
+.dh-h3 {
+    margin: 8px 10px 0px 10px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    line-height: 0.05rem;
+}
+.dh-a {
+    margin-left:39%
 }
 }
 
@@ -1647,11 +1667,13 @@ height: 350px;
 }
 
 .speed-boats2 .boat-info:after {
-	margin-top: -100px;
+	margin-top: -90px;
 	
 }
 .speed-boats1 .boat-info:after {
-	margin-top: -110px;
+	margin-top: -90px;
 	
 }
 }
+
+
