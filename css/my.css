@@ -1774,3 +1774,8 @@ height: 350px;
 	stop-color: #ff46dc
   }
 }
+
+canvas{
+    z-index: -2;
+    position: fixed;
+}
