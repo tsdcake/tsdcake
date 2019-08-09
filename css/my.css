@@ -1511,15 +1511,15 @@ color:#fff;
 @media only screen and (max-width: 837px){
 	.boat-info p{
 color:#fff;
-font-size:0.8em;
-line-height:1.8em;
+font-size:0.7em;
+line-height:1.5em;
 text-align:left;
  }
  
  .boat-info h3{
 font-family: 'Arimo', sans-serif;
 color:#fff;
-font-size:1.5em;
+font-size:1.3em;
 margin-bottom:15px;
 letter-spacing:1px;
 }
@@ -1634,5 +1634,16 @@ width: 44%;
 height: 350px;
 }
 
+.col-md-8{
+   position: relative;
+    min-height: 1px;
+	width: 55%;
+	float: left;
+}
+.col-md-4
+{
+	float: left;
+    width: 45%;
+}
 
 }
