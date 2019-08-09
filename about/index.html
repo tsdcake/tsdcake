@@ -334,6 +334,15 @@ $(document).ready(function(){
     </li>
     
     <li class="hide-on-med-and-down">
+        <a href="/categories/经典蛋糕/" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
         <a href="/about" class="waves-effect waves-light">
             
             <i class="fa fa-user-circle-o"></i>
@@ -391,6 +400,15 @@ $(document).ready(function(){
                 <i class="fa fa-fw fa-tags"></i>
                 
                 标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories/经典蛋糕/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
             </a>
         </li>
         
@@ -466,11 +484,16 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                     <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
                         
 <div class="statis">
-    <span class="count"><a href="/" target="_blank">4</a></span>
+    <span class="count"><a href="/" target="_blank">8</a></span>
     <span class="name">文章</span>
 </div>
 
 
+
+<div class="statis">
+    <span class="count"><a href="/categories" target="_blank">2</a></span>
+    <span class="name">分类</span>
+</div>
 
 
 
@@ -490,11 +513,16 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                                 <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
                                     
 <div class="statis">
-    <span class="count"><a href="/" target="_blank">4</a></span>
+    <span class="count"><a href="/" target="_blank">8</a></span>
     <span class="name">文章</span>
 </div>
 
 
+
+<div class="statis">
+    <span class="count"><a href="/categories" target="_blank">2</a></span>
+    <span class="name">分类</span>
+</div>
 
 
 
@@ -608,7 +636,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,0,0,0,0,4,0],
+                data: [0,0,0,0,0,0,0,0,0,0,0,8,0],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -650,7 +678,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [],
+                data: [{"name":"经典蛋糕","value":5},{"name":"慕斯蛋糕","value":3}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -687,7 +715,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                 type: 'bar',
                 color: ['#82d3f4'],
                 barWidth : 18,
-                data: [4,2,1,1],
+                data: [8,4,2,2],
                 markPoint: {
                     symbolSize: 45,
                     data: [{
