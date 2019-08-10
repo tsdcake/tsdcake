@@ -299,7 +299,7 @@ $(document).ready(function(){
 </script>
 
 
-<body style= "background: linear-gradient(-190deg, #4A4EA4 35%, #E884A1);">
+<body>
 
 <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
@@ -451,6 +451,9 @@ $(document).ready(function(){
 
 
         
+<!-- 星空-->
+<!--
+<style>body{background: linear-gradient(-190deg, #4A4EA4 35%, #E884A1);}</style>
 
 <script src='https://threejs.org/build/three.js'></script>
 <script>
@@ -558,11 +561,215 @@ function onMouseMove(e) {
   mouseY = e.clientY - windowHalfY;
 }
 
+</script>-->
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$('body').christmassnow({
+		snowflaketype: 15, // 1 to 25 types of flakes are available change the number from 1 to 25. each one contain different images.
+		snowflakesize: 2, //snowflakesize is 1 then it get the size of the image as random , if the snowflakesize is 2 means size of the image as custom
+		snowflakedirection: 1, // 1 means default no wind (top to bottom), 2 means random, 3 means left to right and 4 means  right to left
+		snownumberofflakes: 4, // number of flakes is user option
+		snowflakespeed: 35, // falling speed of flake 10 sec is default
+		flakeheightandwidth: 15 // if you are mention that option flakesize is 2 then this flakeheightandwidth should work values are in pixels 16*16.
+	});
+});
+
+
+// Author: FantasticPlugins
+// Website: www.fantasticplugins.com | Exclusive to: http://www.codecanyon.net
+// *********************************************************************************************
+
+(function($) {
+
+    $.fn.christmassnow = function(options) {
+// Establish our default settings
+        var settings = $.extend({
+            snowflaketype: null,
+            snowflakesize: null,
+            snowflakedirection: null,
+            snownumberofflakes: null,
+            snowflakespeed: null,
+            snowflakemovement: top,
+            flakeheightandwidth: null
+        }, options);
+        this.each(function() {
+            var windowHeight = jQuery(window).height();
+            var snowDisappear = (windowHeight * '100') / 100;
+            var drop = jQuery('.drop').detach();
+            var snowTop = Math.floor(Math.random() * (windowHeight));
+            snowTop = 0;
+            var header = document.getElementsByTagName("head")[0];
+            $(header).append('<style type="text/css">.drop{position: fixed;color:#fff;z-index:999;}</style>');
+            function create() {
+                var number1 = 1 + Math.floor(Math.random() * 4);
+                var number2 = 5 + Math.floor(Math.random() * 4);
+                var number3 = 9 + Math.floor(Math.random() * 4);
+                var number4 = 13 + Math.floor(Math.random() * 4);
+                var number5 = 15 + Math.floor(Math.random() * 4);
+                var content;
+
+                // alert(imageSize);
+                if (settings.snowflakesize === 1) {
+                    var imageSize = Math.floor(Math.random() * 30);
+                }
+                else {
+                    var imageSize = settings.flakeheightandwidth;
+                }
+                if (settings.snowflakesize === 1) {
+                    if (imageSize > 15) {
+                        var customsize = settings.snowflakespeed * 1000;
+                    } else {
+                        var customsize = settings.snowflakespeed * 1200;
+                    }
+                } else {
+                    var customsize = settings.snowflakespeed * 1200;
+                }
+                if (settings.snowflakedirection === 3) {
+                    var direction = "right";
+                } else {
+                    var direction = "left";
+                }
+                for (var i = 1; i <= 15; i++) {
+                    if (settings.snowflaketype === i) {
+                        if (i === 20) {
+                            content = '<img class="flakeimage" style="height:' + imageSize + 'px; width:' + imageSize + 'px;"src="/medias/theme-img/snowflake' + number1 + '.png"/>'
+                        } else if (i === 2) {
+                            content = '<img class="flakeimage" style="height:' + imageSize + 'px; width:' + imageSize + 'px;"src="/medias/theme-img/snowflake' + number2 + '.png"/>'
+                        } else if (i === 7) {
+                            content = '<img class="flakeimage" style="height:' + imageSize + 'px; width:' + imageSize + 'px;"src="/medias/theme-img/snowflake' + number3 + '.png"/>'
+                        } else if (i === 12) {
+                            content = '<img class="flakeimage" style="height:' + imageSize + 'px; width:' + imageSize + 'px;"src="/medias/theme-img/snowflake' + number4 + '.png"/>'
+                        } else if (i === 15) {
+                            content = '<img class="flakeimage" style="height:' + imageSize + 'px; width:' + imageSize + 'px;"src="/medias/theme-img/snowflake' + number5 + '.png"/>'
+                        } else {
+                            content = '<img class="flakeimage" style="height:' + imageSize + 'px; width:' + imageSize + 'px;"src="/medias/theme-img/snowflake' + i + '.png"/>'
+                        }
+                        var movement = settings.snowflakemovement;
+                        var clone = drop
+                                .clone()
+                                .appendTo('body')
+                                .css(direction, Math.random() * jQuery(window).width() - 20)
+                                .css('top', snowTop)
+                                .html(content)
+                                .animate(
+                                {top: jQuery(window).height() - 80},
+                        {
+                            duration: customsize,
+                            complete: function() {
+                                jQuery(this).fadeOut(200, function() {
+                                    jQuery(this).remove();
+                                });
+                            },
+                            step: function(fallingSpeed) {
+
+
+                                var fallingSpeed = Math.floor(Math.random() * 5 + 1);
+                                var movingDirection = Math.floor(Math.random() * 2);
+                                var currentTop = parseInt(jQuery(this).css('top'));
+                                var currentLeft = parseInt(jQuery(this).css('left'));
+                                var currentRight = parseInt(jQuery(this).css('right'));
+                                // jQuery(this).css('top', currentTop + fallingSpeed);
+                                //alert(currentRight);
+                                //
+                                //alert(movingDirection);
+
+                                if (settings.snowflakedirection === 1) {
+                                    if (movingDirection === 0) {
+                                        jQuery(this).css('bottom', currentLeft + fallingSpeed);
+                                    } else {
+                                        // set the snow move to left
+                                        jQuery(this).css('bottom', currentLeft + -(fallingSpeed));
+                                    }
+                                }
+                                if (settings.snowflakedirection === 2) {
+                                    if (movingDirection === 0) {
+                                        jQuery(this).css('left', currentLeft + fallingSpeed);
+                                    } else {
+                                        // set the snow move to left
+                                        jQuery(this).css('left', currentLeft + -(fallingSpeed));
+                                    }
+
+                                }
+                                if (settings.snowflakedirection === 5) {
+                                    if (movingDirection === 0) {
+                                        console.log(currentRight);
+                                        jQuery(this).css('right', currentRight);
+
+                                    } else {
+                                        // set the snow move to left
+                                        jQuery(this).css('right', currentRight + -(fallingSpeed));
+                                    }
+                                }
+                                if (settings.snowflakedirection === 4) {
+                                    if (movingDirection === 0) {
+                                        jQuery(this).css('left', currentLeft);
+                                    } else {
+                                        // set the snow move to left
+                                        jQuery(this).css('left', currentLeft + -(fallingSpeed));
+                                    }
+
+                                }
+
+                            }
+
+                        });
+                    }
+                }
+            }
+            function makeflake() {
+                for (var j = 0; j < settings.snownumberofflakes; j++) {
+                    setTimeout(create, Math.random() * 5000);
+                }
+            }
+            setInterval(makeflake, 2000);
+
+        });
+    };
+
+}(jQuery));
+
 </script>
 
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{background:url('/medias/theme-img/theme-sd.png');no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;}
+  .bg22{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+}
+.bg222{
+    
+   position: absolute;
+    width: 150px;
+    height: 150px;
+   left:90%;
+    z-index: 2;
+}
+</style>
+<img class="bg22" src="/medias/theme-img/theme-sd.png"/>
 
-
-
+	<div class="drop"></div>
 
 
 
@@ -1088,13 +1295,66 @@ $(function () {
 
     <div class="row article-row">
         
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本 款
+            </div>
+            <div class="card">
+                <a href="/2019/07/26/yong-heng/">
+                    <div class="card-image">
+                        
+                        <img src="http://p1.meituan.net/deal/e05b1dac2f045da40e2bec541b0e2b9443116.jpg@428w_320h_1e_1c" class="responsive-img" alt="永恒">
+                        
+                        <span class="card-title">永恒</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                   <div class="publish-info">
+                        <span class="publish-date aui-list-theme-pic">
+						  
+						    ￥199	
+								<em>  ￥688</em>
+								   <i> 团购  </i>
+							</span>
+							
+                        </span>
+                       <span class="publish-author" style="margin:0px;">           
+						   
+							   <a  data-toolbar="transport-options" data-toolbar-animation="standard" class="waves-effect waves-light p-btn" target="_blank">
+								<i class="icon fa fa-shopping-bag fa-fw"></i>立即购买
+							   </a>
+							
+						   	
+						  </span>
+						</span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/慕斯/" target="_blank">
+                        <span class="chip bg-color">慕斯</span>
+                    </a>
+                    
+                    <a href="/tags/心形/" target="_blank">
+                        <span class="chip bg-color">心形</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
         <div class="article col s12 m6" data-aos="fade-up">
-		  <div id="transport-options1" class="toolbar-icons hidden"  style="width:110px;height 50px;">
+		<div id="transport-options2" class="toolbar-icons hidden"  style="width:110px;height 50px;">
 			<a onclick="phonef()" style="width:100px; height:40px;color: #fff;" class="waves-effect" target="_blank" ><i class="fa fa-phone"></i>电话预订</a>
 			<a onclick="jump(606882754)" style="width:100px; height:40px;" class="waves-effect" target="_blank" ><i class="fa fa-shopping-bag"></i>在线购买</a>
 		  </div>
-            <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一款</div>
+            <div class="article-badge right-badge text-color">
+                下一款&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2019/07/26/yong-heng-fu-ben/">
                     <div class="card-image">
@@ -1116,7 +1376,7 @@ $(function () {
                         </span>
                        <span class="publish-author" style="margin:0px;">           
 						   
-							   <a  data-toolbar="transport-options1" data-toolbar-animation="standard" class="waves-effect waves-light p-btn" target="_blank">
+							   <a  data-toolbar="transport-options2" data-toolbar-animation="standard" class="waves-effect waves-light p-btn" target="_blank">
 								<i class="icon fa fa-shopping-bag fa-fw"></i>立即购买
 							   </a>
 							
@@ -1133,60 +1393,6 @@ $(function () {
                     
                     <a href="/tags/心形/" target="_blank">
                         <span class="chip bg-color">心形</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-		<div id="transport-options2" class="toolbar-icons hidden"  style="width:110px;height 50px;">
-			<a onclick="phonef()" style="width:100px; height:40px;color: #fff;" class="waves-effect" target="_blank" ><i class="fa fa-phone"></i>电话预订</a>
-			<a onclick="jump(605429336)" style="width:100px; height:40px;" class="waves-effect" target="_blank" ><i class="fa fa-shopping-bag"></i>在线购买</a>
-		  </div>
-            <div class="article-badge right-badge text-color">
-                下一款&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/07/26/guai-guai-xiong-fu-ben/">
-                    <div class="card-image">
-                        
-                        <img src="http://p1.meituan.net/deal/4327d5b68c0d9ce186213d85dbf3c15275864.jpg" class="responsive-img" alt="乖乖熊">
-                        
-                        <span class="card-title">乖乖熊</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="publish-info">
-                        <span class="publish-date aui-list-theme-pic">
-						  
-						    ￥998	
-								<em>  ￥288</em>
-								   <i> 团购价  </i>
-							</span>
-							
-                        </span>
-                       <span class="publish-author" style="margin:0px;">           
-						   
-							   <a  data-toolbar="transport-options2" data-toolbar-animation="standard" class="waves-effect waves-light p-btn" target="_blank">
-								<i class="icon fa fa-shopping-bag fa-fw"></i>立即购买
-							   </a>
-							
-						   	
-						  </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/慕斯/" target="_blank">
-                        <span class="chip bg-color">慕斯</span>
-                    </a>
-                    
-                    <a href="/tags/圆形/" target="_blank">
-                        <span class="chip bg-color">圆形</span>
                     </a>
                     
                 </div>
