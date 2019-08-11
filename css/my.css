@@ -1320,7 +1320,7 @@ to {
 
 .mycol{
 	width: 46%;
-	height: 200px;
+	height: auto;
 	margin: 2%;
 }
 
