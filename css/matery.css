@@ -2,7 +2,7 @@
 /*小屏幕下(手机类)的样式*/
 @media only screen and (max-width: 601px) {
     .container {
-        width: 96%;
+        width: 91%;
     }
 }
 
@@ -21,7 +21,7 @@
     }
 
     .post-container {
-        width: 91%;
+        width: 90%;
         margin: 0 auto;
         max-width: 1250px;
     }
@@ -450,7 +450,6 @@ header .go-back i {
 .bg-cover .post-title {
     font-size: 1.9rem;
 }
-
 @-webkit-keyframes rainbow {
     0%,
     100% {
@@ -1896,3 +1895,29 @@ footer .weixin-img{
 .sys_spec_text li i{ position:absolute; width:15px; height:15px; padding:2px;border-radius:15px; font-size:0; line-height:0;left:2px;right:2px;top:5px;background:url(http://www.17sucai.com/preview/420578/2017-07-24/%E9%80%89%E6%8B%A9%E5%88%A0%E9%99%A4%E8%AE%A1%E7%AE%97%E8%B4%AD%E7%89%A9%E8%BD%A6/images/check_on.jpg) no-repeat left ; background-size: 13px;z-index:9; display:none;}
 .sys_spec_text li.selected a{ border:2px solid #e4393c; padding:0 13px;}
 .sys_spec_text li.selected i{ display:block;}
+
+
+
+.payment-time{
+	display: inline-block;
+	overflow: hidden;
+	line-height: 20px;
+	vertical-align: middle;
+	background-color: #2E2E2E;
+	padding: 1px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 7px;
+	color: #c1c1c1;
+	padding: 7px;
+}
+.payment-time em{
+	color: #fff;
+	background-color: #2B8C25;
+	padding: 0 3px;
+	margin: 0 2px;
+	-webkit-border-radius: 1px;
+	-moz-border-radius: 1px;
+	border-radius: 5px;
+	font-style: normal;
+}

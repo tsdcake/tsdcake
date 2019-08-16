@@ -226,7 +226,9 @@
 			<i class="arrow"></i>
 			<div class="inner-box">
 				<div class="d-service-item clearfix">
-					<a href="tencent://Message/?Uin=3127802431&websiteName=www.joytrands.com=&Menu=yes" class="clearfix"><span class="circle"><em class="i-qq"></em></span><h5>QQ在线咨询</h5></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i style="color:#F05352;">QQ:3127802431</i>
+				  
+					<a onclick="getQQ()" class="clearfix"><span class="circle"><em class="i-qq"></em></span><h5>QQ在线咨询</h5></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i style="color:#F05352;">QQ:3127802431</i>
+				         
 				</div>
 			</div>
 		</div>
@@ -293,6 +295,11 @@ $(document).ready(function(){
 	});
 	
 });	
+
+function getQQ(){
+    if($(window).width()<591){ window.location.href="mqqwpa://im/chat?chat_type=wpa&uin=3127802431&version=1&src_type=web&web_src=www.joytrands.com";}
+	else{window.location.href="tencent://Message/?Uin=3127802431&websiteName=www.joytrands.com=&Menu=yes";}
+}
 </script>
 
 

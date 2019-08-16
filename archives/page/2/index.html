@@ -226,7 +226,9 @@
 			<i class="arrow"></i>
 			<div class="inner-box">
 				<div class="d-service-item clearfix">
-					<a href="tencent://Message/?Uin=3127802431&websiteName=www.joytrands.com=&Menu=yes" class="clearfix"><span class="circle"><em class="i-qq"></em></span><h5>QQ在线咨询</h5></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i style="color:#F05352;">QQ:3127802431</i>
+				  
+					<a onclick="getQQ()" class="clearfix"><span class="circle"><em class="i-qq"></em></span><h5>QQ在线咨询</h5></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i style="color:#F05352;">QQ:3127802431</i>
+				         
 				</div>
 			</div>
 		</div>
@@ -293,6 +295,11 @@ $(document).ready(function(){
 	});
 	
 });	
+
+function getQQ(){
+    if($(window).width()<591){ window.location.href="mqqwpa://im/chat?chat_type=wpa&uin=3127802431&version=1&src_type=web&web_src=www.joytrands.com";}
+	else{window.location.href="tencent://Message/?Uin=3127802431&websiteName=www.joytrands.com=&Menu=yes";}
+}
 </script>
 
 
@@ -813,7 +820,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 	   var Cost_Path;
 	    if($(window).width()<891) Cost_Path="http://meishi.meituan.com/i/order/"+cpath;
 		else Cost_Path="https://www.meituan.com/meishi/order/buy/"+cpath;
-		console.log(cpath);
+		//console.log(cpath);
         window.location.href=Cost_Path;
     }
 	
@@ -978,10 +985,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                               **闺蜜本产品 时代精神的
-本产品 时代精神的
-
-本产品 时
+                                sadsadassadsadsadsa
                             
                         </div>
 		  <div id="transport-options1" class="toolbar-icons hidden"  style="width:110px;height 50px;">
@@ -995,8 +999,8 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 						<span class="publish-date aui-list-theme-pic">
 							    
 				   
-				      ￥50
-					  <em>￥88</em> 
+				      ￥500
+					  <em>￥2888</em> 
 					  <i>团购价</i>  
                     
 					   

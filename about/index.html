@@ -226,7 +226,9 @@
 			<i class="arrow"></i>
 			<div class="inner-box">
 				<div class="d-service-item clearfix">
-					<a href="tencent://Message/?Uin=3127802431&websiteName=www.joytrands.com=&Menu=yes" class="clearfix"><span class="circle"><em class="i-qq"></em></span><h5>QQ在线咨询</h5></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i style="color:#F05352;">QQ:3127802431</i>
+				  
+					<a onclick="getQQ()" class="clearfix"><span class="circle"><em class="i-qq"></em></span><h5>QQ在线咨询</h5></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i style="color:#F05352;">QQ:3127802431</i>
+				         
 				</div>
 			</div>
 		</div>
@@ -293,6 +295,11 @@ $(document).ready(function(){
 	});
 	
 });	
+
+function getQQ(){
+    if($(window).width()<591){ window.location.href="mqqwpa://im/chat?chat_type=wpa&uin=3127802431&version=1&src_type=web&web_src=www.joytrands.com";}
+	else{window.location.href="tencent://Message/?Uin=3127802431&websiteName=www.joytrands.com=&Menu=yes";}
+}
 </script>
 
 
@@ -830,7 +837,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
 
 <div class="statis">
-    <span class="count"><a href="/tags" target="_blank">5</a></span>
+    <span class="count"><a href="/tags" target="_blank">7</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -859,7 +866,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
 
 <div class="statis">
-    <span class="count"><a href="/tags" target="_blank">5</a></span>
+    <span class="count"><a href="/tags" target="_blank">7</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -1034,7 +1041,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
         xAxis: [
             {
                 type: 'category',
-                data: ["慕斯","圆形","心形","方形","8888"]
+                data: ["慕斯","圆形","心形","方形","SHDKSNNDNDFF","- - SHK  -KSDK","'SS','SSSS'"]
             }
         ],
         yAxis: [
@@ -1047,7 +1054,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                 type: 'bar',
                 color: ['#82d3f4'],
                 barWidth : 18,
-                data: [8,4,2,2,1],
+                data: [8,4,2,2,0,0,0],
                 markPoint: {
                     symbolSize: 45,
                     data: [{

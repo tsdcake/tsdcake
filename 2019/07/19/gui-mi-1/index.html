@@ -233,7 +233,9 @@ sdjksj ">
 			<i class="arrow"></i>
 			<div class="inner-box">
 				<div class="d-service-item clearfix">
-					<a href="tencent://Message/?Uin=3127802431&websiteName=www.joytrands.com=&Menu=yes" class="clearfix"><span class="circle"><em class="i-qq"></em></span><h5>QQ在线咨询</h5></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i style="color:#F05352;">QQ:3127802431</i>
+				  
+					<a onclick="getQQ()" class="clearfix"><span class="circle"><em class="i-qq"></em></span><h5>QQ在线咨询</h5></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i style="color:#F05352;">QQ:3127802431</i>
+				         
 				</div>
 			</div>
 		</div>
@@ -300,6 +302,11 @@ $(document).ready(function(){
 	});
 	
 });	
+
+function getQQ(){
+    if($(window).width()<591){ window.location.href="mqqwpa://im/chat?chat_type=wpa&uin=3127802431&version=1&src_type=web&web_src=www.joytrands.com";}
+	else{window.location.href="tencent://Message/?Uin=3127802431&websiteName=www.joytrands.com=&Menu=yes";}
+}
 </script>
 
 
@@ -950,16 +957,16 @@ $(function () {
  
     
 	    <div class="carousel-item" style=" max-height 150px; max-white:300px; background-size: cover; background-color: #08070c; ">
-              <img src="/images/0.jpg" style="max-white:300px;max-height 150px;" />
+              <img src="/images/0.jpg" style="max-white:300px;max-height 150px;" /> 
+			  
        </div>
-	
-	
- 
+	       
+	 
+	        
 </div>
-</div>
-
+</div>  
   <div class="col s5 right-align">
-             
+
          
            <span class="aui-list-theme-pic sys_item_price" style="float: left;">  ￥198</span>	
 			<span class="aui-list-theme-pic" style="float: left;">  
@@ -1402,6 +1409,7 @@ $(function () {
 </div>
 
 
+<script src="/js/countDown.js"></script>
 
 
 <script>
@@ -1548,6 +1556,29 @@ $(function(){
 	}
  })
  
+
+
+
+
+
+       $("input[name='countDown']").each(function () {
+        var time_end=this.value;
+        var con=$(this).next("span");
+        var _=this.dataset;
+        countDown(con,{
+            title:_.title,//优先级最高,填充在prefix位置
+            prefix:_.prefix,//前缀部分
+            suffix:_.suffix,//后缀部分
+            time_end:time_end//要到达的时间
+        })
+        //提供3个事件分别为:启动,重启,停止
+        .on("countDownStarted countDownRestarted  countDownEnded ",function (arguments) {
+            console.info(arguments);
+        });
+    });
+
+
+
 
     function jump(cpath){
 	  

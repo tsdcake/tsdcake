@@ -226,7 +226,9 @@
 			<i class="arrow"></i>
 			<div class="inner-box">
 				<div class="d-service-item clearfix">
-					<a href="tencent://Message/?Uin=3127802431&websiteName=www.joytrands.com=&Menu=yes" class="clearfix"><span class="circle"><em class="i-qq"></em></span><h5>QQ在线咨询</h5></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i style="color:#F05352;">QQ:3127802431</i>
+				  
+					<a onclick="getQQ()" class="clearfix"><span class="circle"><em class="i-qq"></em></span><h5>QQ在线咨询</h5></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i style="color:#F05352;">QQ:3127802431</i>
+				         
 				</div>
 			</div>
 		</div>
@@ -293,6 +295,11 @@ $(document).ready(function(){
 	});
 	
 });	
+
+function getQQ(){
+    if($(window).width()<591){ window.location.href="mqqwpa://im/chat?chat_type=wpa&uin=3127802431&version=1&src_type=web&web_src=www.joytrands.com";}
+	else{window.location.href="tencent://Message/?Uin=3127802431&websiteName=www.joytrands.com=&Menu=yes";}
+}
 </script>
 
 
@@ -882,8 +889,8 @@ a {
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	width: 106.67px;
-	height: 12px;
+	width: 29%;
+	height: 14px;
 	border-top: 3px solid #217af0;
 	overflow: hidden;
 	text-align: center;
@@ -952,9 +959,10 @@ a {
 }
 
 .price .category1 ul li {
-	display: table-cell;
+	/*display: table-cell;*/
 	white-space: nowrap;
-	font-size: 14px;
+	width: 25%;
+	font-size: 16px;
 	text-align: center;
 	border-bottom: 3px solid transparent;
 	cursor: pointer;
@@ -978,7 +986,7 @@ a {
 .price .cont ul li {
 	
 	float: left;
-	margin: 0 5px;
+	
 	box-sizing: border-box;
 }
 
@@ -997,7 +1005,7 @@ margin-right: 0 !important;
 }
 
 
-.article-tags .chip {
+.chip {
     margin: 2px;
     font-size: 0.8rem;
     font-weight: 400;
@@ -1012,7 +1020,11 @@ margin-right: 0 !important;
 	height:134px;
 }
 
+@media(min-width:636px){
 
+
+
+}
 
 </style>
 <main class="content">
@@ -1021,8 +1033,8 @@ margin-right: 0 !important;
 	<div class="price">
 		<h2>导航分类</h2>
 		<div class="category1">
-			<ul>
-			
+			<ul >
+		
 			<li class="center-align waves-effect waves-light active">全部商品</li>
 			  
                   
@@ -1039,9 +1051,10 @@ margin-right: 0 !important;
 				<p><b></b></p>
 			</ul>
 			</ul>
-			<a href="javascript:;" class="prev"><span></span></a>
-			<a href="javascript:;" class="next"><span></span></a>
+			<!--<a href="javascript:;" class="prev"><span></span></a>
+			<a href="javascript:;" class="next"><span></span></a>-->
 		</div>
+		 
 		<div class="cont active">
 			<ul>
 				
@@ -1054,7 +1067,7 @@ margin-right: 0 !important;
 													   <li class="mycol">
 													   <div class="article tag-post"  data-aos="zoom-in" >
 														 <div class="cont_main card">
-															<a href="/2019/07/26/yong-heng/">
+															<a href="/2019/07/26/yong-heng-fu-ben/">
 																<div class="card-image tag-image">
 																	
 																	<img src="http://p1.meituan.net/deal/e05b1dac2f045da40e2bec541b0e2b9443116.jpg@428w_320h_1e_1c" class="img1" style="height: 135px;" alt="永恒">
@@ -1124,7 +1137,7 @@ margin-right: 0 !important;
 													   <li class="mycol">
 													   <div class="article tag-post"  data-aos="zoom-in" >
 														 <div class="cont_main card">
-															<a href="/2019/07/26/yong-heng-fu-ben/">
+															<a href="/2019/07/26/yong-heng/">
 																<div class="card-image tag-image">
 																	
 																	<img src="http://p1.meituan.net/deal/e05b1dac2f045da40e2bec541b0e2b9443116.jpg@428w_320h_1e_1c" class="img1" style="height: 135px;" alt="永恒">
@@ -1174,12 +1187,6 @@ margin-right: 0 !important;
 																 
 																	<a href="/tags/心形/" target="_blank">
 																		<span class="chip bg-color">心形</span>
-																	</a>
-																
-																
-																 
-																	<a href="/tags/8888/" target="_blank">
-																		<span class="chip bg-color">8888</span>
 																	</a>
 																
 																
@@ -1499,8 +1506,8 @@ margin-right: 0 !important;
 																	<span class="publish-date aui-list-theme-pic">
 																		
 																	   
-																		  ￥50
-																		  <em>￥88</em> 
+																		  ￥500
+																		  <em>￥2888</em> 
 																		  <i>团购价</i>  
 																		
 															   
@@ -1637,7 +1644,7 @@ margin-right: 0 !important;
 													   <div class="article tag-post"  data-aos="zoom-in" >
 														 <div class="cont_main card">
 														
-															<a href="/2019/07/26/yong-heng/">
+															<a href="/2019/07/26/yong-heng-fu-ben/">
 																<div class="card-image tag-image">
 																	
 																	<img src="http://p1.meituan.net/deal/e05b1dac2f045da40e2bec541b0e2b9443116.jpg@428w_320h_1e_1c" class="img1" style="height: 135px;" alt="永恒">
@@ -1709,7 +1716,7 @@ margin-right: 0 !important;
 													   <div class="article tag-post"  data-aos="zoom-in" >
 														 <div class="cont_main card">
 														
-															<a href="/2019/07/26/yong-heng-fu-ben/">
+															<a href="/2019/07/26/yong-heng/">
 																<div class="card-image tag-image">
 																	
 																	<img src="http://p1.meituan.net/deal/e05b1dac2f045da40e2bec541b0e2b9443116.jpg@428w_320h_1e_1c" class="img1" style="height: 135px;" alt="永恒">
@@ -1758,12 +1765,6 @@ margin-right: 0 !important;
 																 
 																	<a href="/tags/心形/" target="_blank">
 																		<span class="chip bg-color">心形</span>
-																	</a>
-																
-																
-																 
-																	<a href="/tags/8888/" target="_blank">
-																		<span class="chip bg-color">8888</span>
 																	</a>
 																
 																
@@ -1955,8 +1956,8 @@ margin-right: 0 !important;
 																	<span class="publish-date aui-list-theme-pic">
 																		
 																	   
-																		  ￥50
-																		  <em>￥88</em> 
+																		  ￥500
+																		  <em>￥2888</em> 
 																		  <i>团购价</i>  
 																		
 															   
@@ -2307,7 +2308,7 @@ margin-right: 0 !important;
 													   </div>
 													<div class="article tag-post mycol"  data-aos="zoom-in" >
 														<div class="card">
-															<a href="/2019/07/26/yong-heng/">
+															<a href="/2019/07/26/yong-heng-fu-ben/">
 																<div class="card-image tag-image">
 																	
 																	<img src="http://p1.meituan.net/deal/e05b1dac2f045da40e2bec541b0e2b9443116.jpg@428w_320h_1e_1c" class="img1" style="height: 135px;" alt="永恒">
@@ -2372,7 +2373,7 @@ margin-right: 0 !important;
 													   </div>
 													<div class="article tag-post mycol"  data-aos="zoom-in" >
 														<div class="card">
-															<a href="/2019/07/26/yong-heng-fu-ben/">
+															<a href="/2019/07/26/yong-heng/">
 																<div class="card-image tag-image">
 																	
 																	<img src="http://p1.meituan.net/deal/e05b1dac2f045da40e2bec541b0e2b9443116.jpg@428w_320h_1e_1c" class="img1" style="height: 135px;" alt="永恒">
@@ -2421,12 +2422,6 @@ margin-right: 0 !important;
 																 
 																	<a href="/tags/心形/" target="_blank">
 																		<span class="chip bg-color">心形</span>
-																	</a>
-																
-																
-																 
-																	<a href="/tags/8888/" target="_blank">
-																		<span class="chip bg-color">8888</span>
 																	</a>
 																
 																
@@ -2721,8 +2716,8 @@ margin-right: 0 !important;
 																	<span class="publish-date aui-list-theme-pic">
 																		
 																	   
-																		  ￥50
-																		  <em>￥88</em> 
+																		  ￥500
+																		  <em>￥2888</em> 
 																		  <i>团购价</i>  
 																		
 															   
@@ -2851,7 +2846,7 @@ margin-right: 0 !important;
 													   </div>
 													 <div class="article tag-post mycol" data-aos="zoom-in">
 														<div class="card">
-															<a href="/2019/07/26/yong-heng/">
+															<a href="/2019/07/26/yong-heng-fu-ben/">
 																<div class="card-image tag-image">
 																	
 																	<img src="http://p1.meituan.net/deal/e05b1dac2f045da40e2bec541b0e2b9443116.jpg@428w_320h_1e_1c" class="img1" style="height: 135px;" alt="永恒">
@@ -2921,7 +2916,7 @@ margin-right: 0 !important;
 													   </div>
 													 <div class="article tag-post mycol" data-aos="zoom-in">
 														<div class="card">
-															<a href="/2019/07/26/yong-heng-fu-ben/">
+															<a href="/2019/07/26/yong-heng/">
 																<div class="card-image tag-image">
 																	
 																	<img src="http://p1.meituan.net/deal/e05b1dac2f045da40e2bec541b0e2b9443116.jpg@428w_320h_1e_1c" class="img1" style="height: 135px;" alt="永恒">
@@ -2970,12 +2965,6 @@ margin-right: 0 !important;
 																 
 																	<a href="/tags/心形/" target="_blank">
 																		<span class="chip bg-color">心形</span>
-																	</a>
-																
-																
-																 
-																	<a href="/tags/8888/" target="_blank">
-																		<span class="chip bg-color">8888</span>
 																	</a>
 																
 																
@@ -3161,8 +3150,8 @@ margin-right: 0 !important;
 																	<span class="publish-date aui-list-theme-pic">
 																		
 																	   
-																		  ￥50
-																		  <em>￥88</em> 
+																		  ￥500
+																		  <em>￥2888</em> 
 																		  <i>团购价</i>  
 																		
 															   
@@ -3498,7 +3487,7 @@ margin-right: 0 !important;
 
 	$('.category1 li').mouseover(function(){
 		var liindex = $('.category1 li').index(this);
-		var liWidth = $('.category1 li').width()+50;
+		var liWidth = $('.category1 li').width()+48;
 		$(' .price .category1 ul p').stop(false,true).animate({'left' : liindex * liWidth + 'px'},300);
 	});
 
