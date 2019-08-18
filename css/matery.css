@@ -732,6 +732,11 @@ header .go-back i {
     margin-bottom: 10px;
 }
 
+.articlesfive {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 article a {
     margin-right: 0 !important;
     color: #525f7f;
@@ -749,6 +754,10 @@ article a:hover {
     margin-right: 0;
 }
 
+.articles1 .row {
+    margin-left: 0;
+    margin-right: 0;
+}
 article .card {
     border-radius: 8px;
 }

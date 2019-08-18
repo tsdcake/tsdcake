@@ -30,6 +30,8 @@
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+	
+	 <script src="/js/touchSlider.js"></script>
 	<style>
 #loading {
   width: 100%;
@@ -814,7 +816,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
 
 
-
+/*
 
 ul {
 	list-style: none;
@@ -1004,7 +1006,7 @@ margin-right: 0 !important;
 	border-color: rgba(229, 229, 229, .73);
 }
 
-
+*/
 .chip {
     margin: 2px;
     font-size: 0.8rem;
@@ -1029,7 +1031,7 @@ margin-right: 0 !important;
 </style>
 <main class="content">
 <!--<article id="articles" class=" ">-->
-<div class="container1 container">
+<!--<div class="container1 container">
 	<div class="price">
 		<h2>导航分类</h2>
 		<div class="category1">
@@ -1051,8 +1053,8 @@ margin-right: 0 !important;
 				<p><b></b></p>
 			</ul>
 			</ul>
-			<!--<a href="javascript:;" class="prev"><span></span></a>
-			<a href="javascript:;" class="next"><span></span></a>-->
+			<a href="javascript:;" class="prev"><span></span></a>
+			<a href="javascript:;" class="next"><span></span></a>
 		</div>
 		 
 		<div class="cont active">
@@ -2264,50 +2266,49 @@ margin-right: 0 !important;
 	
 		
 	</div>
-</div>
+</div>-->
 
- 
+  
 
-
-    <!--<div style="overflow: hidden;">
-	<div class="price5" >
-		<h2>导航分类</h2>
-		<div class="category5">
-			<ul class="newflag">
-			<li style="width:106.67px;"></li>
-			<li class="center-align waves-effect waves-light active">全部商品</li>
+<div class="find_nav">
+    <div class="find_nav_left">
+        <div class="find_nav_list" id="pagenavi1">
+            <ul>
+		    <li class="center-align waves-effect waves-light"><a href="#" class="active" >全部商品</a></li>
 			  
                   
 				  
 				  
 				        
-                        <li class="center-align waves-effect waves-light">经典蛋糕</li>
+                        <li class="center-align waves-effect waves-light"><a href="#">经典蛋糕</a></li>
                   
 				        
-                        <li class="center-align waves-effect waves-light">慕斯蛋糕</li>
+                        <li class="center-align waves-effect waves-light"><a href="#">慕斯蛋糕</a></li>
                   
               
-				
-				<p><b></b></p>
-			</ul>
-			<a href="javascript:;" class="prev5"><span></span></a>
-			<a href="javascript:;" class="next5"><span></span></a>
-		 </div>
-   
-	
-					  <div class="cont"></div> 
+			  
+			 
+                <li class="sideline"></li>
+            </ul>
 
-					 <div class="cont active "> 
-					    <ul>
-					  <article id="articles" class="container articles" style=" margin-top: -10px;">
-			                <div class="row tags-posts" >
-								       
-														<div id="transport-options0" class="toolbar-icons hidden55"  style="width:110px;height 50px;">
+        </div>
+    </div>
+</div>
+
+    <div id="slider11" class="swipe">
+      <ul class="box01_list">
+          <li class="li_list">
+		          <article id="articles" class="container articles" style=" margin-top: 0px;">
+                         <div class="row tags-posts">
+						 
+				           
+														<div id="transport-options0" class="toolbar-icons hidden"  style="width:110px;height 50px;">
 															<a onclick="phonef()" style="width:100px; height:40px;color: #fff;" class="waves-effect" target="_blank" ><i class="fa fa-phone"></i>电话预订</a>
 															<a onclick="jump(606882754)" style="width:100px; height:40px;" class="waves-effect" target="_blank" ><i class="fa fa-shopping-bag"></i>在线购买</a>
 													   </div>
-													<div class="article tag-post mycol"  data-aos="zoom-in" >
-														<div class="card">
+													
+													   <div class="article tag-post mycol"  data-aos="zoom-in" >
+														 <div class=" card">
 															<a href="/2019/07/26/yong-heng/">
 																<div class="card-image tag-image">
 																	
@@ -2319,6 +2320,7 @@ margin-right: 0 !important;
 																	
 																</div>
 															</a>
+													
 															<div class="card-content article-content"  style="padding: 2px 10px 12px 10px;">
 																<div class="publish-info">
 																	<span class="publish-date aui-list-theme-pic">
@@ -2346,7 +2348,7 @@ margin-right: 0 !important;
 																</div>
 															</div>
 															
-															<div class="card-action article-tags">
+															<div class="card-action article-tags" style="padding: 1px 15px 1px 18px;border-radius: 0 0 8px 8px !important">
 																
 																 
 																	<a href="/tags/慕斯/" target="_blank">
@@ -2362,17 +2364,18 @@ margin-right: 0 !important;
 																
 															</div>
 															
-															
+															</div>
 														</div>
-													</div>
-													
+														
 								           
-														<div id="transport-options1" class="toolbar-icons hidden55"  style="width:110px;height 50px;">
+				           
+														<div id="transport-options1" class="toolbar-icons hidden"  style="width:110px;height 50px;">
 															<a onclick="phonef()" style="width:100px; height:40px;color: #fff;" class="waves-effect" target="_blank" ><i class="fa fa-phone"></i>电话预订</a>
 															<a onclick="jump(606882754)" style="width:100px; height:40px;" class="waves-effect" target="_blank" ><i class="fa fa-shopping-bag"></i>在线购买</a>
 													   </div>
-													<div class="article tag-post mycol"  data-aos="zoom-in" >
-														<div class="card">
+													
+													   <div class="article tag-post mycol"  data-aos="zoom-in" >
+														 <div class=" card">
 															<a href="/2019/07/26/yong-heng-fu-ben/">
 																<div class="card-image tag-image">
 																	
@@ -2384,6 +2387,7 @@ margin-right: 0 !important;
 																	
 																</div>
 															</a>
+													
 															<div class="card-content article-content"  style="padding: 2px 10px 12px 10px;">
 																<div class="publish-info">
 																	<span class="publish-date aui-list-theme-pic">
@@ -2411,7 +2415,7 @@ margin-right: 0 !important;
 																</div>
 															</div>
 															
-															<div class="card-action article-tags">
+															<div class="card-action article-tags" style="padding: 1px 15px 1px 18px;border-radius: 0 0 8px 8px !important">
 																
 																 
 																	<a href="/tags/慕斯/" target="_blank">
@@ -2427,17 +2431,18 @@ margin-right: 0 !important;
 																
 															</div>
 															
-															
+															</div>
 														</div>
-													</div>
-													
+														
 								           
-														<div id="transport-options2" class="toolbar-icons hidden55"  style="width:110px;height 50px;">
+				           
+														<div id="transport-options2" class="toolbar-icons hidden"  style="width:110px;height 50px;">
 															<a onclick="phonef()" style="width:100px; height:40px;color: #fff;" class="waves-effect" target="_blank" ><i class="fa fa-phone"></i>电话预订</a>
 															<a onclick="jump(605429336)" style="width:100px; height:40px;" class="waves-effect" target="_blank" ><i class="fa fa-shopping-bag"></i>在线购买</a>
 													   </div>
-													<div class="article tag-post mycol"  data-aos="zoom-in" >
-														<div class="card">
+													
+													   <div class="article tag-post mycol"  data-aos="zoom-in" >
+														 <div class=" card">
 															<a href="/2019/07/26/guai-guai-xiong/">
 																<div class="card-image tag-image">
 																	
@@ -2449,6 +2454,7 @@ margin-right: 0 !important;
 																	
 																</div>
 															</a>
+													
 															<div class="card-content article-content"  style="padding: 2px 10px 12px 10px;">
 																<div class="publish-info">
 																	<span class="publish-date aui-list-theme-pic">
@@ -2476,7 +2482,7 @@ margin-right: 0 !important;
 																</div>
 															</div>
 															
-															<div class="card-action article-tags">
+															<div class="card-action article-tags" style="padding: 1px 15px 1px 18px;border-radius: 0 0 8px 8px !important">
 																
 																 
 																	<a href="/tags/慕斯/" target="_blank">
@@ -2492,17 +2498,18 @@ margin-right: 0 !important;
 																
 															</div>
 															
-															
+															</div>
 														</div>
-													</div>
-													
+														
 								           
-														<div id="transport-options3" class="toolbar-icons hidden55"  style="width:110px;height 50px;">
+				           
+														<div id="transport-options3" class="toolbar-icons hidden"  style="width:110px;height 50px;">
 															<a onclick="phonef()" style="width:100px; height:40px;color: #fff;" class="waves-effect" target="_blank" ><i class="fa fa-phone"></i>电话预订</a>
 															<a onclick="jump(605429336)" style="width:100px; height:40px;" class="waves-effect" target="_blank" ><i class="fa fa-shopping-bag"></i>在线购买</a>
 													   </div>
-													<div class="article tag-post mycol"  data-aos="zoom-in" >
-														<div class="card">
+													
+													   <div class="article tag-post mycol"  data-aos="zoom-in" >
+														 <div class=" card">
 															<a href="/2019/07/26/guai-guai-xiong-fu-ben/">
 																<div class="card-image tag-image">
 																	
@@ -2514,6 +2521,7 @@ margin-right: 0 !important;
 																	
 																</div>
 															</a>
+													
 															<div class="card-content article-content"  style="padding: 2px 10px 12px 10px;">
 																<div class="publish-info">
 																	<span class="publish-date aui-list-theme-pic">
@@ -2541,7 +2549,7 @@ margin-right: 0 !important;
 																</div>
 															</div>
 															
-															<div class="card-action article-tags">
+															<div class="card-action article-tags" style="padding: 1px 15px 1px 18px;border-radius: 0 0 8px 8px !important">
 																
 																 
 																	<a href="/tags/慕斯/" target="_blank">
@@ -2557,17 +2565,18 @@ margin-right: 0 !important;
 																
 															</div>
 															
-															
+															</div>
 														</div>
-													</div>
-													
+														
 								           
-														<div id="transport-options4" class="toolbar-icons hidden55"  style="width:110px;height 50px;">
+				           
+														<div id="transport-options4" class="toolbar-icons hidden"  style="width:110px;height 50px;">
 															<a onclick="phonef()" style="width:100px; height:40px;color: #fff;" class="waves-effect" target="_blank" ><i class="fa fa-phone"></i>电话预订</a>
 															<a onclick="jump(604599512)" style="width:100px; height:40px;" class="waves-effect" target="_blank" ><i class="fa fa-shopping-bag"></i>在线购买</a>
 													   </div>
-													<div class="article tag-post mycol"  data-aos="zoom-in" >
-														<div class="card">
+													
+													   <div class="article tag-post mycol"  data-aos="zoom-in" >
+														 <div class=" card">
 															<a href="/2019/07/19/wei-lan/">
 																<div class="card-image tag-image">
 																	
@@ -2579,6 +2588,7 @@ margin-right: 0 !important;
 																	
 																</div>
 															</a>
+													
 															<div class="card-content article-content"  style="padding: 2px 10px 12px 10px;">
 																<div class="publish-info">
 																	<span class="publish-date aui-list-theme-pic">
@@ -2607,7 +2617,7 @@ margin-right: 0 !important;
 																</div>
 															</div>
 															
-															<div class="card-action article-tags">
+															<div class="card-action article-tags" style="padding: 1px 15px 1px 18px;border-radius: 0 0 8px 8px !important">
 																
 																 
 																	<a href="/tags/慕斯/" target="_blank">
@@ -2623,17 +2633,18 @@ margin-right: 0 !important;
 																
 															</div>
 															
-															
+															</div>
 														</div>
-													</div>
-													
+														
 								           
-														<div id="transport-options5" class="toolbar-icons hidden55"  style="width:110px;height 50px;">
+				           
+														<div id="transport-options5" class="toolbar-icons hidden"  style="width:110px;height 50px;">
 															<a onclick="phonef()" style="width:100px; height:40px;color: #fff;" class="waves-effect" target="_blank" ><i class="fa fa-phone"></i>电话预订</a>
 															<a onclick="jump(604599512)" style="width:100px; height:40px;" class="waves-effect" target="_blank" ><i class="fa fa-shopping-bag"></i>在线购买</a>
 													   </div>
-													<div class="article tag-post mycol"  data-aos="zoom-in" >
-														<div class="card">
+													
+													   <div class="article tag-post mycol"  data-aos="zoom-in" >
+														 <div class=" card">
 															<a href="/2019/07/19/wei-lan-fu-ben/">
 																<div class="card-image tag-image">
 																	
@@ -2645,6 +2656,7 @@ margin-right: 0 !important;
 																	
 																</div>
 															</a>
+													
 															<div class="card-content article-content"  style="padding: 2px 10px 12px 10px;">
 																<div class="publish-info">
 																	<span class="publish-date aui-list-theme-pic">
@@ -2673,7 +2685,7 @@ margin-right: 0 !important;
 																</div>
 															</div>
 															
-															<div class="card-action article-tags">
+															<div class="card-action article-tags" style="padding: 1px 15px 1px 18px;border-radius: 0 0 8px 8px !important">
 																
 																 
 																	<a href="/tags/慕斯/" target="_blank">
@@ -2689,17 +2701,18 @@ margin-right: 0 !important;
 																
 															</div>
 															
-															
+															</div>
 														</div>
-													</div>
-													
+														
 								           
-														<div id="transport-options6" class="toolbar-icons hidden55"  style="width:110px;height 50px;">
+				           
+														<div id="transport-options6" class="toolbar-icons hidden"  style="width:110px;height 50px;">
 															<a onclick="phonef()" style="width:100px; height:40px;color: #fff;" class="waves-effect" target="_blank" ><i class="fa fa-phone"></i>电话预订</a>
 															<a onclick="jump(604599512)" style="width:100px; height:40px;" class="waves-effect" target="_blank" ><i class="fa fa-shopping-bag"></i>在线购买</a>
 													   </div>
-													<div class="article tag-post mycol"  data-aos="zoom-in" >
-														<div class="card">
+													
+													   <div class="article tag-post mycol"  data-aos="zoom-in" >
+														 <div class=" card">
 															<a href="/2019/07/19/gui-mi-1-fu-ben/">
 																<div class="card-image tag-image">
 																	
@@ -2711,6 +2724,7 @@ margin-right: 0 !important;
 																	
 																</div>
 															</a>
+													
 															<div class="card-content article-content"  style="padding: 2px 10px 12px 10px;">
 																<div class="publish-info">
 																	<span class="publish-date aui-list-theme-pic">
@@ -2739,7 +2753,7 @@ margin-right: 0 !important;
 																</div>
 															</div>
 															
-															<div class="card-action article-tags">
+															<div class="card-action article-tags" style="padding: 1px 15px 1px 18px;border-radius: 0 0 8px 8px !important">
 																
 																 
 																	<a href="/tags/慕斯/" target="_blank">
@@ -2755,17 +2769,18 @@ margin-right: 0 !important;
 																
 															</div>
 															
-															
+															</div>
 														</div>
-													</div>
-													
+														
 								           
-														<div id="transport-options7" class="toolbar-icons hidden55"  style="width:110px;height 50px;">
+				           
+														<div id="transport-options7" class="toolbar-icons hidden"  style="width:110px;height 50px;">
 															<a onclick="phonef()" style="width:100px; height:40px;color: #fff;" class="waves-effect" target="_blank" ><i class="fa fa-phone"></i>电话预订</a>
 															<a onclick="jump(604599512)" style="width:100px; height:40px;" class="waves-effect" target="_blank" ><i class="fa fa-shopping-bag"></i>在线购买</a>
 													   </div>
-													<div class="article tag-post mycol"  data-aos="zoom-in" >
-														<div class="card">
+													
+													   <div class="article tag-post mycol"  data-aos="zoom-in" >
+														 <div class=" card">
 															<a href="/2019/07/19/gui-mi-1/">
 																<div class="card-image tag-image">
 																	
@@ -2777,6 +2792,7 @@ margin-right: 0 !important;
 																	
 																</div>
 															</a>
+													
 															<div class="card-content article-content"  style="padding: 2px 10px 12px 10px;">
 																<div class="publish-info">
 																	<span class="publish-date aui-list-theme-pic">
@@ -2805,7 +2821,7 @@ margin-right: 0 !important;
 																</div>
 															</div>
 															
-															<div class="card-action article-tags">
+															<div class="card-action article-tags" style="padding: 1px 15px 1px 18px;border-radius: 0 0 8px 8px !important">
 																
 																 
 																	<a href="/tags/慕斯/" target="_blank">
@@ -2821,31 +2837,35 @@ margin-right: 0 !important;
 																
 															</div>
 															
-															
+															</div>
 														</div>
-													</div>
-													
+														
 								           	
-							     </div>
-							</article>
-			
-						  </div>
-				   
-				   
-				   
-						 <div class="cont"> 
-						 <article id="articles" class="container articles" style="margin-top: -10px;">
-			                  <div class="row tags-posts">
+									
+									 </div>
+									</article>
+                         
+		</li>
+		
+		
+	
+		
+		
+		  
+		                 <li class="li_list">
+						   <article  class="articlesfive container articles" style=" margin-top: 0px;">
+                                <div class="row tags-posts">
 								       
 											 
 											   
 													
-														<div id="transport-options0_0" class="toolbar-icons hidden55"  style="width:110px;height 50px;">
+														<div id="transport-options0_0" class="toolbar-icons hidden"  style="width:110px;height 50px;">
 														<a onclick="phonef()" style="width:100px; height:40px;color: #fff;" class="waves-effect" target="_blank" ><i class="fa fa-phone"></i>电话预订</a>
 														<a onclick="jump(606882754)" style="width:100px; height:40px;" class="waves-effect" target="_blank" ><i class="fa fa-shopping-bag"></i>在线购买</a>
 													   </div>
-													 <div class="article tag-post mycol" data-aos="zoom-in">
-														<div class="card">
+													 
+													   <div class="article tag-post mycol"  data-aos="zoom-in" >
+														 <div class="card">
 															<a href="/2019/07/26/yong-heng/">
 																<div class="card-image tag-image">
 																	
@@ -2884,7 +2904,7 @@ margin-right: 0 !important;
 																</div>
 															</div>
 															
-															<div class="card-action article-tags">
+															<div class="card-action article-tags" style="padding: 1px 15px 1px 18px;border-radius: 0 0 8px 8px !important">
 																
 																 
 																	<a href="/tags/慕斯/" target="_blank">
@@ -2898,24 +2918,25 @@ margin-right: 0 !important;
 																	</a>
 																
 																
-																</div>
+																
 															</div>
 															
 														</div>
-														
-													
+												   </div>
+												
 											  
 										   
-								     
+										 
 											 
 											   
 													
-														<div id="transport-options0_1" class="toolbar-icons hidden55"  style="width:110px;height 50px;">
+														<div id="transport-options0_1" class="toolbar-icons hidden"  style="width:110px;height 50px;">
 														<a onclick="phonef()" style="width:100px; height:40px;color: #fff;" class="waves-effect" target="_blank" ><i class="fa fa-phone"></i>电话预订</a>
 														<a onclick="jump(606882754)" style="width:100px; height:40px;" class="waves-effect" target="_blank" ><i class="fa fa-shopping-bag"></i>在线购买</a>
 													   </div>
-													 <div class="article tag-post mycol" data-aos="zoom-in">
-														<div class="card">
+													 
+													   <div class="article tag-post mycol"  data-aos="zoom-in" >
+														 <div class="card">
 															<a href="/2019/07/26/yong-heng-fu-ben/">
 																<div class="card-image tag-image">
 																	
@@ -2954,7 +2975,7 @@ margin-right: 0 !important;
 																</div>
 															</div>
 															
-															<div class="card-action article-tags">
+															<div class="card-action article-tags" style="padding: 1px 15px 1px 18px;border-radius: 0 0 8px 8px !important">
 																
 																 
 																	<a href="/tags/慕斯/" target="_blank">
@@ -2968,24 +2989,25 @@ margin-right: 0 !important;
 																	</a>
 																
 																
-																</div>
+																
 															</div>
 															
 														</div>
-														
-													
+												   </div>
+												
 											  
 										   
-								     
+										 
 											 
 											   
 													
-														<div id="transport-options0_2" class="toolbar-icons hidden55"  style="width:110px;height 50px;">
+														<div id="transport-options0_2" class="toolbar-icons hidden"  style="width:110px;height 50px;">
 														<a onclick="phonef()" style="width:100px; height:40px;color: #fff;" class="waves-effect" target="_blank" ><i class="fa fa-phone"></i>电话预订</a>
 														<a onclick="jump(605429336)" style="width:100px; height:40px;" class="waves-effect" target="_blank" ><i class="fa fa-shopping-bag"></i>在线购买</a>
 													   </div>
-													 <div class="article tag-post mycol" data-aos="zoom-in">
-														<div class="card">
+													 
+													   <div class="article tag-post mycol"  data-aos="zoom-in" >
+														 <div class="card">
 															<a href="/2019/07/26/guai-guai-xiong/">
 																<div class="card-image tag-image">
 																	
@@ -3024,7 +3046,7 @@ margin-right: 0 !important;
 																</div>
 															</div>
 															
-															<div class="card-action article-tags">
+															<div class="card-action article-tags" style="padding: 1px 15px 1px 18px;border-radius: 0 0 8px 8px !important">
 																
 																 
 																	<a href="/tags/慕斯/" target="_blank">
@@ -3038,24 +3060,25 @@ margin-right: 0 !important;
 																	</a>
 																
 																
-																</div>
+																
 															</div>
 															
 														</div>
-														
-													
+												   </div>
+												
 											  
 										   
-								     
+										 
 											 
 											   
 													
-														<div id="transport-options0_3" class="toolbar-icons hidden55"  style="width:110px;height 50px;">
+														<div id="transport-options0_3" class="toolbar-icons hidden"  style="width:110px;height 50px;">
 														<a onclick="phonef()" style="width:100px; height:40px;color: #fff;" class="waves-effect" target="_blank" ><i class="fa fa-phone"></i>电话预订</a>
 														<a onclick="jump(605429336)" style="width:100px; height:40px;" class="waves-effect" target="_blank" ><i class="fa fa-shopping-bag"></i>在线购买</a>
 													   </div>
-													 <div class="article tag-post mycol" data-aos="zoom-in">
-														<div class="card">
+													 
+													   <div class="article tag-post mycol"  data-aos="zoom-in" >
+														 <div class="card">
 															<a href="/2019/07/26/guai-guai-xiong-fu-ben/">
 																<div class="card-image tag-image">
 																	
@@ -3094,7 +3117,7 @@ margin-right: 0 !important;
 																</div>
 															</div>
 															
-															<div class="card-action article-tags">
+															<div class="card-action article-tags" style="padding: 1px 15px 1px 18px;border-radius: 0 0 8px 8px !important">
 																
 																 
 																	<a href="/tags/慕斯/" target="_blank">
@@ -3108,36 +3131,37 @@ margin-right: 0 !important;
 																	</a>
 																
 																
-																</div>
+																
 															</div>
 															
 														</div>
-														
-													
+												   </div>
+												
 											  
 										   
-								     
+										 
 											 
 											   
 										   
-								     
+										 
 											 
 											   
 										   
-								     
+										 
 											 
 											   
 										   
-								     
+										 
 											 
 											   
 													
-														<div id="transport-options0_7" class="toolbar-icons hidden55"  style="width:110px;height 50px;">
+														<div id="transport-options0_7" class="toolbar-icons hidden"  style="width:110px;height 50px;">
 														<a onclick="phonef()" style="width:100px; height:40px;color: #fff;" class="waves-effect" target="_blank" ><i class="fa fa-phone"></i>电话预订</a>
 														<a onclick="jump(604599512)" style="width:100px; height:40px;" class="waves-effect" target="_blank" ><i class="fa fa-shopping-bag"></i>在线购买</a>
 													   </div>
-													 <div class="article tag-post mycol" data-aos="zoom-in">
-														<div class="card">
+													 
+													   <div class="article tag-post mycol"  data-aos="zoom-in" >
+														 <div class="card">
 															<a href="/2019/07/19/gui-mi-1/">
 																<div class="card-image tag-image">
 																	
@@ -3177,7 +3201,7 @@ margin-right: 0 !important;
 																</div>
 															</div>
 															
-															<div class="card-action article-tags">
+															<div class="card-action article-tags" style="padding: 1px 15px 1px 18px;border-radius: 0 0 8px 8px !important">
 																
 																 
 																	<a href="/tags/慕斯/" target="_blank">
@@ -3191,48 +3215,49 @@ margin-right: 0 !important;
 																	</a>
 																
 																
-																</div>
+																
 															</div>
 															
 														</div>
-														
-													
+												   </div>
+												
 											  
 										   
-								     
-									</div> 
-	                           </article>		 
-				       </div> 
-			       
-						 <div class="cont"> 
-						 <article id="articles" class="container articles" style="margin-top: -10px;">
-			                  <div class="row tags-posts">
+										 
+										   </div>
+									    </article>
+									  </li>
+								      
+		                 <li class="li_list">
+						   <article  class="articlesfive container articles" style=" margin-top: 0px;">
+                                <div class="row tags-posts">
 								       
 											 
 											   
 										   
-								     
+										 
 											 
 											   
 										   
-								     
+										 
 											 
 											   
 										   
-								     
+										 
 											 
 											   
 										   
-								     
+										 
 											 
 											   
 													
-														<div id="transport-options1_4" class="toolbar-icons hidden55"  style="width:110px;height 50px;">
+														<div id="transport-options1_4" class="toolbar-icons hidden"  style="width:110px;height 50px;">
 														<a onclick="phonef()" style="width:100px; height:40px;color: #fff;" class="waves-effect" target="_blank" ><i class="fa fa-phone"></i>电话预订</a>
 														<a onclick="jump(604599512)" style="width:100px; height:40px;" class="waves-effect" target="_blank" ><i class="fa fa-shopping-bag"></i>在线购买</a>
 													   </div>
-													 <div class="article tag-post mycol" data-aos="zoom-in">
-														<div class="card">
+													 
+													   <div class="article tag-post mycol"  data-aos="zoom-in" >
+														 <div class="card">
 															<a href="/2019/07/19/wei-lan/">
 																<div class="card-image tag-image">
 																	
@@ -3272,7 +3297,7 @@ margin-right: 0 !important;
 																</div>
 															</div>
 															
-															<div class="card-action article-tags">
+															<div class="card-action article-tags" style="padding: 1px 15px 1px 18px;border-radius: 0 0 8px 8px !important">
 																
 																 
 																	<a href="/tags/慕斯/" target="_blank">
@@ -3286,24 +3311,25 @@ margin-right: 0 !important;
 																	</a>
 																
 																
-																</div>
+																
 															</div>
 															
 														</div>
-														
-													
+												   </div>
+												
 											  
 										   
-								     
+										 
 											 
 											   
 													
-														<div id="transport-options1_5" class="toolbar-icons hidden55"  style="width:110px;height 50px;">
+														<div id="transport-options1_5" class="toolbar-icons hidden"  style="width:110px;height 50px;">
 														<a onclick="phonef()" style="width:100px; height:40px;color: #fff;" class="waves-effect" target="_blank" ><i class="fa fa-phone"></i>电话预订</a>
 														<a onclick="jump(604599512)" style="width:100px; height:40px;" class="waves-effect" target="_blank" ><i class="fa fa-shopping-bag"></i>在线购买</a>
 													   </div>
-													 <div class="article tag-post mycol" data-aos="zoom-in">
-														<div class="card">
+													 
+													   <div class="article tag-post mycol"  data-aos="zoom-in" >
+														 <div class="card">
 															<a href="/2019/07/19/wei-lan-fu-ben/">
 																<div class="card-image tag-image">
 																	
@@ -3343,7 +3369,7 @@ margin-right: 0 !important;
 																</div>
 															</div>
 															
-															<div class="card-action article-tags">
+															<div class="card-action article-tags" style="padding: 1px 15px 1px 18px;border-radius: 0 0 8px 8px !important">
 																
 																 
 																	<a href="/tags/慕斯/" target="_blank">
@@ -3357,24 +3383,25 @@ margin-right: 0 !important;
 																	</a>
 																
 																
-																</div>
+																
 															</div>
 															
 														</div>
-														
-													
+												   </div>
+												
 											  
 										   
-								     
+										 
 											 
 											   
 													
-														<div id="transport-options1_6" class="toolbar-icons hidden55"  style="width:110px;height 50px;">
+														<div id="transport-options1_6" class="toolbar-icons hidden"  style="width:110px;height 50px;">
 														<a onclick="phonef()" style="width:100px; height:40px;color: #fff;" class="waves-effect" target="_blank" ><i class="fa fa-phone"></i>电话预订</a>
 														<a onclick="jump(604599512)" style="width:100px; height:40px;" class="waves-effect" target="_blank" ><i class="fa fa-shopping-bag"></i>在线购买</a>
 													   </div>
-													 <div class="article tag-post mycol" data-aos="zoom-in">
-														<div class="card">
+													 
+													   <div class="article tag-post mycol"  data-aos="zoom-in" >
+														 <div class="card">
 															<a href="/2019/07/19/gui-mi-1-fu-ben/">
 																<div class="card-image tag-image">
 																	
@@ -3414,7 +3441,7 @@ margin-right: 0 !important;
 																</div>
 															</div>
 															
-															<div class="card-action article-tags">
+															<div class="card-action article-tags" style="padding: 1px 15px 1px 18px;border-radius: 0 0 8px 8px !important">
 																
 																 
 																	<a href="/tags/慕斯/" target="_blank">
@@ -3428,31 +3455,37 @@ margin-right: 0 !important;
 																	</a>
 																
 																
-																</div>
+																
 															</div>
 															
 														</div>
-														
-													
+												   </div>
+												
 											  
 										   
-								     
+										 
 											 
 											   
 										   
+										 
+										   </div>
+									    </article>
+									  </li>
 								     
-									</div> 
-	                           </article>		 
-				       </div> 
-			       
 
-</div>
-</div>-->
+      </ul>
+
+    </div>
+  
+
+
+  
+  
 
 <script type="text/javascript">
 
 
-
+/*
 	$(function(){
 		//选项卡切换
 		$('.category1 ul li').click(function(){
@@ -3490,7 +3523,7 @@ margin-right: 0 !important;
 		var liWidth = $('.category1 li').width()+48;
 		$(' .price .category1 ul p').stop(false,true).animate({'left' : liindex * liWidth + 'px'},300);
 	});
-
+*/
 	
 	 function jump(cpath){
 	   var Cost_Path;
@@ -3661,6 +3694,120 @@ margin-right: 0 !important;
               			
 			
    });
+   
+
+   
+   
+   
+   
+   
+$(".find_nav_list").css("left",0);
+
+$(".find_nav_list li").each(function(){
+		$(".sideline").css({left:0});
+		$(".find_nav_list li").eq(0).addClass("find_nav_cur").siblings().removeClass("find_nav_cur");
+});
+var nav_w=$(".find_nav_list li").first().width();
+$(".sideline").width(nav_w);
+$(".find_nav_list li").on('click', function(){
+	nav_w=$(this).width();
+	$(".sideline").stop(true);
+	$(".sideline").animate({left:$(this).position().left},300);
+	$(".sideline").animate({width:nav_w});
+	$(this).addClass("find_nav_cur").siblings().removeClass("find_nav_cur");
+	var fn_w = ($(".find_nav").width() - nav_w) / 2;
+	var fnl_l;
+	var fnl_x = parseInt($(this).position().left);
+	if (fnl_x <= fn_w) {
+		fnl_l = 0;
+	} else if (fn_w - fnl_x <= flb_w - fl_w) {
+		fnl_l = flb_w - fl_w;
+	} else {
+		fnl_l = fn_w - fnl_x;
+	}
+	$(".find_nav_list").animate({
+		"left" : fnl_l
+	}, 300);
+	
+});
+var fl_w=$(".find_nav_list").width();
+var flb_w=$(".find_nav_left").width();
+$(".find_nav_list").on('touchstart', function (e) {
+	var touch1 = e.originalEvent.targetTouches[0];
+	x1 = touch1.pageX;
+	y1 = touch1.pageY;
+	ty_left = parseInt($(this).css("left"));
+});
+$(".find_nav_list").on('touchmove', function (e) {
+	var touch2 = e.originalEvent.targetTouches[0];
+	var x2 = touch2.pageX;
+	var y2 = touch2.pageY;
+	if(ty_left + x2 - x1>=0){
+		$(this).css("left", 0);
+	}else if(ty_left + x2 - x1<=flb_w-fl_w){
+		$(this).css("left", flb_w-fl_w);
+	}else{
+		$(this).css("left", ty_left + x2 - x1);
+	}
+	if(Math.abs(y2-y1)>0){
+		e.preventDefault();
+	}
+});
+
+
+for(n=1;n< 2;n++){
+	var page='pagenavi'+n;
+	var mslide='slider1'+n;
+	var mtitle='emtitle'+n;
+	arrdiv = 'arrdiv' + n;
+	var as=document.getElementById(page).getElementsByTagName('a');
+	var tt=new TouchSlider({id:mslide,'auto':'-1',fx:'ease-out',direction:'left',speed:600,timeout:5000,'before':function(index){
+		var as=document.getElementById(this.page).getElementsByTagName('a');
+		as[this.p].className='';
+		this.p=index;
+		
+		fnl_x =  parseInt($(".find_nav_list li").eq(this.p).position().left);
+		
+		nav_w=$(".find_nav_list li").eq(this.p).width();
+		$(".sideline").stop(true);
+		$(".sideline").animate({left:$(".find_nav_list li").eq(this.p).position().left},300);
+		$(".sideline").animate({width:nav_w},100);
+		$(".find_nav_list li").eq(this.p).addClass("find_nav_cur").siblings().removeClass("find_nav_cur");
+		var fn_w = ($(".find_nav").width() - nav_w) / 2;
+		var fnl_l;
+		if (fnl_x <= fn_w) {
+			fnl_l = 0;
+		} else if (fn_w - fnl_x <= flb_w - fl_w) {
+			fnl_l = flb_w - fl_w;
+		} else {
+			fnl_l = fn_w - fnl_x;
+		}
+		$(".find_nav_list").animate({
+			"left" : fnl_l
+		}, 300);
+	}});
+	tt.page = page;
+	tt.p = 0;
+	//console.dir(tt); console.dir(tt.__proto__);
+
+	for(var i=0;i<as.length;i++){
+		(function(){
+			var j=i;
+			as[j].tt = tt;
+			as[j].onclick=function(){
+				this.tt.slide(j);
+				return false;
+			}
+		})();
+	}
+}
+   
+   
+   
+   
+   
+   
+   
 	
 </script>
 

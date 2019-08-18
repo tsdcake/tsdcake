@@ -61,6 +61,13 @@ $(function () {
     $('#articles').masonry({
         itemSelector: '.article'
     });
+	
+	$('.articlesfive').masonry({
+        itemSelector: '.article'
+    });
+		$('#articles2').masonry({
+        itemSelector: '.article'
+    });
 
     AOS.init({
         easing: 'ease-in-out-sine',
@@ -576,9 +583,6 @@ if ( typeof Object.create !== 'function' ) {
     };
 
 }) ( jQuery, window, document );
-
-
-
 
 
 
