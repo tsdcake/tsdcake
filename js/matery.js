@@ -62,7 +62,7 @@ $(function () {
         itemSelector: '.article'
     });
 	
-	$('.articlesfive').masonry({
+	$('#articles1').masonry({
         itemSelector: '.article'
     });
 		$('#articles2').masonry({

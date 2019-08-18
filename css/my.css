@@ -130,7 +130,7 @@
     margin-right:0.2rem;
 }
 
-.featured-item1 {
+.featured-item1{
     position: absolute;
     top: 20px;
     background-color: #ab1d05;
@@ -154,6 +154,54 @@
     border-right: 0 solid transparent;
 }
 
+.featured-item1[title=新品]{
+    position: absolute;
+    top: 20px;
+    background-color: #0ab9eee8;
+    color: #ffffff;
+    padding-left: 12px;
+    left: -1px;
+    font-size: 14px;
+}
+
+.featured-item1[title=新品]:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 100%;
+    margin-top: -21px;
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-left: 12px solid #0ab9eee8;
+    border-bottom: 9px solid transparent;
+    border-right: 0 solid transparent;
+}
+
+
+.featured-item1[title=热销]{
+    position: absolute;
+    top: 20px;
+    background-color: #ff7300fc;
+    color: #ffffff;
+    padding-left: 12px;
+    left: -1px;
+    font-size: 14px;
+}
+
+.featured-item1[title=热销]:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 100%;
+    margin-top: -21px;
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-left: 12px solid #ff7300fc;
+    border-bottom: 9px solid transparent;
+    border-right: 0 solid transparent;
+}
 
 
 
@@ -1843,7 +1891,7 @@ canvas{
     background-color: #f9f9f9;
     /*position: fixed;*/
     top: 0;
-    z-index: 9;
+    z-index: 19;
     border-bottom: 1px solid #ddd;
     display: -moz-box;
     display: -webkit-box;
@@ -1895,6 +1943,6 @@ canvas{
     pointer-events: none;
 }
 .li_list{ }
-.swipe{ padding:0 0 0 0;height: -webkit-fill-available;}
+.swipe{ padding:0 0 0 0;}
 
 
