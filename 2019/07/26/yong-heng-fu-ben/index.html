@@ -775,8 +775,17 @@ body{background:url('/medias/theme-img/theme-sd.png');no-repeat center center fi
    left:90%;
     z-index: 2;
 }
+.pc-img{display: block}
+.plone-img{display: none}
+@media only screen and (max-width: 622px) {
+.pc-img{display:none}
+.plone-img{display:block}
+}
+
 </style>
-<img class="bg22" src="/medias/theme-img/theme-sd.png"/>
+
+<img class="bg22 pc-img" src="/medias/theme-img/theme-img-zqbg.jpg"/>
+<img class="bg22 plone-img" src="https://ku.90sjimg.com/back_pic/05/13/98/0059a393dc74bb0.jpg"/>
 
 	<!--<div class="drop"></div>-->
 

@@ -179,7 +179,7 @@
 }
 
 
-.featured-item1[title=热销]{
+.featured-item1[title*=销]{
     position: absolute;
     top: 20px;
     background-color: #ff7300fc;
@@ -189,7 +189,7 @@
     font-size: 14px;
 }
 
-.featured-item1[title=热销]:after {
+.featured-item1[title*=销]:after {
     content: '';
     display: block;
     position: absolute;
@@ -1946,3 +1946,14 @@ canvas{
 .swipe{ padding:0 0 0 0;}
 
 
+
+.theme-img-logo {
+	position: absolute;
+    top: 20px;
+    background-color: #ab1d05;
+    color: #ffffff;
+    padding-left: 12px;
+	
+	
+	
+}

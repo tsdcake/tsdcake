@@ -227,13 +227,13 @@ header .brand-logo .logo-span {
       font-size: 1.5rem;
    }
 }
-@media only screen and (min-width: 351px) and (max-width: 550px){
+@media only screen and (min-width: 451px) and (max-width: 550px){
     header .brand-logo .logo-span {
     font-size: 1.2rem;
     }
 }
-}
-@media only screen and (max-width: 350px) {
+
+@media only screen and (max-width: 450px) {
     header .brand-logo .logo-span {
     font-size: 0.8rem;
     }
@@ -363,7 +363,7 @@ header .go-back i {
     position: relative;
     display: flex;
     align-items: center;
-    height: 60vh;
+    height: 50vh;
     padding: 0;
     border: 0;
     overflow: hidden;
@@ -804,13 +804,14 @@ article .article-content .publish-author {
 }
 
 article .card .card-action {
-    padding: 1px 15px 1px 18px;
+    padding: 9px 5px 3px 5px;
     border-radius: 0 0 8px 8px !important;
+	margin-top: 8px;
 }
 
 article .article-tags .chip {
     margin: 2px;
-    font-size: 0.8rem;
+    font-size: 1.05rem;
     font-weight: 400;
     height: 22px;
     line-height: 22px;

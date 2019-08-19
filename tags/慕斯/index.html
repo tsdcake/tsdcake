@@ -772,8 +772,17 @@ body{background:url('/medias/theme-img/theme-sd.png');no-repeat center center fi
    left:90%;
     z-index: 2;
 }
+.pc-img{display: block}
+.plone-img{display: none}
+@media only screen and (max-width: 622px) {
+.pc-img{display:none}
+.plone-img{display:block}
+}
+
 </style>
-<img class="bg22" src="/medias/theme-img/theme-sd.png"/>
+
+<img class="bg22 pc-img" src="/medias/theme-img/theme-img-zqbg.jpg"/>
+<img class="bg22 plone-img" src="https://ku.90sjimg.com/back_pic/05/13/98/0059a393dc74bb0.jpg"/>
 
 	<!--<div class="drop"></div>-->
 
@@ -822,38 +831,38 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             <div class="tag-chips">
                 
                 
-                <a href="/tags/慕斯/" title="慕斯: 16">
+                <a href="/tags/慕斯/" title="慕斯: 8">
                     <span class="chip center-align waves-effect waves-light
                              chip-active "
                             data-tagname="慕斯" style="background-color: #F9EBEA;">慕斯
-                        <span class="tag-length">16</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/心形/" title="心形: 4">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="心形" style="background-color: #F5EEF8;">心形
-                        <span class="tag-length">4</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/圆形/" title="圆形: 8">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="圆形" style="background-color: #D5F5E3;">圆形
                         <span class="tag-length">8</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/方形/" title="方形: 4">
+                <a href="/tags/圆形/" title="圆形: 4">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="圆形" style="background-color: #F5EEF8;">圆形
+                        <span class="tag-length">4</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/心形/" title="心形: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="心形" style="background-color: #D5F5E3;">心形
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/方形/" title="方形: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             data-tagname="方形" style="background-color: #E8F8F5;">方形
-                        <span class="tag-length">4</span>
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
@@ -892,6 +901,36 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 			    position: 'top',
 			});		
 			
+            $('a[data-toolbar="transport-options2"]').toolbar({
+			    content: '#transport-options2',
+			    position: 'top',
+			});		
+			
+            $('a[data-toolbar="transport-options3"]').toolbar({
+			    content: '#transport-options3',
+			    position: 'top',
+			});		
+			
+            $('a[data-toolbar="transport-options4"]').toolbar({
+			    content: '#transport-options4',
+			    position: 'top',
+			});		
+			
+            $('a[data-toolbar="transport-options5"]').toolbar({
+			    content: '#transport-options5',
+			    position: 'top',
+			});		
+			
+            $('a[data-toolbar="transport-options6"]').toolbar({
+			    content: '#transport-options6',
+			    position: 'top',
+			});		
+			
+            $('a[data-toolbar="transport-options7"]').toolbar({
+			    content: '#transport-options7',
+			    position: 'top',
+			});		
+			
    });
 </script>
 
@@ -916,7 +955,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 							
                         </div>
                     </a>
-                    <div class="card-content article-content"  style="padding: 2px 10px 12px 10px;">
+                    <div class="card-content article-content"  style="padding: 2px 10px 1px 10px;">
                         <div class="publish-info">
                             <span class="publish-date aui-list-theme-pic">
 							    
@@ -927,7 +966,8 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 								
 					   
 					        </span>
-                           <span  style="margin:0px; float:right;">           
+							<div style="margin:0px;text-align:center;">
+                           <span  style="margin:0px;">           
 						  
 							  
 							  <a  href="tel:15719466286" class="waves-effect waves-light p-btn-phone" style="font-size: 0.69em;" target="_blank">
@@ -940,19 +980,19 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 						        
 							
 						  </span>
-						  
+						  </div>
                         </div>
                     </div>
 					
 					
-                    <div class="card-action article-tags">
-					 <a href="#" target="_blank"><span class="chip bg-color">慕斯</span></a>
+                    <div class="card-action article-tags" style="padding: 3px 3px 3px 3px; border-radius: 0 0 8px 8px !important;font-size:0.85rem;">
+					 <a href="#" target="_blank"><span class="chip bg-color" style="margin:0px;" >慕斯</span></a>
                         
 						 
                         
 						 
 							<a href="/tags/心形/" target="_blank">
-								<span class="chip bg-color">心形</span>
+								<span class="chip bg-color" style="margin:0px;">心形</span>
 							</a>
 						
                         
@@ -979,7 +1019,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 							
                         </div>
                     </a>
-                    <div class="card-content article-content"  style="padding: 2px 10px 12px 10px;">
+                    <div class="card-content article-content"  style="padding: 2px 10px 1px 10px;">
                         <div class="publish-info">
                             <span class="publish-date aui-list-theme-pic">
 							    
@@ -990,7 +1030,8 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 								
 					   
 					        </span>
-                           <span  style="margin:0px; float:right;">           
+							<div style="margin:0px;text-align:center;">
+                           <span  style="margin:0px;">           
 						  
 							  
 							  <a  href="tel:15719466286" class="waves-effect waves-light p-btn-phone" style="font-size: 0.69em;" target="_blank">
@@ -1003,19 +1044,407 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 						        
 							
 						  </span>
-						  
+						  </div>
                         </div>
                     </div>
 					
 					
-                    <div class="card-action article-tags">
-					 <a href="#" target="_blank"><span class="chip bg-color">慕斯</span></a>
+                    <div class="card-action article-tags" style="padding: 3px 3px 3px 3px; border-radius: 0 0 8px 8px !important;font-size:0.85rem;">
+					 <a href="#" target="_blank"><span class="chip bg-color" style="margin:0px;" >慕斯</span></a>
                         
 						 
                         
 						 
 							<a href="/tags/心形/" target="_blank">
-								<span class="chip bg-color">心形</span>
+								<span class="chip bg-color" style="margin:0px;">心形</span>
+							</a>
+						
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+          <div id="transport-options2" class="toolbar-icons hidden"  style="width:110px;height 50px;">
+			<a onclick="phonef()" style="width:100px; height:40px;color: #fff;" class="waves-effect" target="_blank" ><i class="fa fa-phone"></i>电话预订</a>
+			<a onclick="jump(605429336)" style="width:100px; height:40px;" class="waves-effect" target="_blank" ><i class="fa fa-shopping-bag"></i>在线购买</a>
+		  </div>
+            <div class="article tag-post mycol" data-tags="慕斯, 圆形" data-aos="fade-up">
+                <div class="card">
+                    <a href="/2019/07/26/guai-guai-xiong/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="http://p1.meituan.net/deal/4327d5b68c0d9ce186213d85dbf3c15275864.jpg" class="img1" style="height: 135px;" alt="乖乖熊">
+                            
+                            <span class="card-title">乖乖熊</span>
+							
+							<div class="featured-item1" title="畅销">畅销</div>
+							
+                        </div>
+                    </a>
+                    <div class="card-content article-content"  style="padding: 2px 10px 1px 10px;">
+                        <div class="publish-info">
+                            <span class="publish-date aui-list-theme-pic">
+							    
+							   
+								  ￥198
+								  <em>￥288</em> 
+								  <i>团购价</i>  
+								
+					   
+					        </span>
+							<div style="margin:0px;text-align:center;">
+                           <span  style="margin:0px;">           
+						  
+							  
+							  <a  href="tel:15719466286" class="waves-effect waves-light p-btn-phone" style="font-size: 0.69em;" target="_blank">
+								<i class="icon fa fa-phone fa-fw" ></i>电话预订
+							   </a>
+							   
+									<a onclick="jump(605429336)" class="waves-effect waves-light p-btn" style="font-size: 0.69em;" target="_blank">
+									<i class="icon fa fa-shopping-bag fa-fw" ></i>在线购买
+								   </a>
+						        
+							
+						  </span>
+						  </div>
+                        </div>
+                    </div>
+					
+					
+                    <div class="card-action article-tags" style="padding: 3px 3px 3px 3px; border-radius: 0 0 8px 8px !important;font-size:0.85rem;">
+					 <a href="#" target="_blank"><span class="chip bg-color" style="margin:0px;" >慕斯</span></a>
+                        
+						 
+                        
+						 
+							<a href="/tags/圆形/" target="_blank">
+								<span class="chip bg-color" style="margin:0px;">圆形</span>
+							</a>
+						
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+          <div id="transport-options3" class="toolbar-icons hidden"  style="width:110px;height 50px;">
+			<a onclick="phonef()" style="width:100px; height:40px;color: #fff;" class="waves-effect" target="_blank" ><i class="fa fa-phone"></i>电话预订</a>
+			<a onclick="jump(605429336)" style="width:100px; height:40px;" class="waves-effect" target="_blank" ><i class="fa fa-shopping-bag"></i>在线购买</a>
+		  </div>
+            <div class="article tag-post mycol" data-tags="慕斯, 圆形" data-aos="fade-up">
+                <div class="card">
+                    <a href="/2019/07/26/guai-guai-xiong-fu-ben/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="http://p1.meituan.net/deal/4327d5b68c0d9ce186213d85dbf3c15275864.jpg" class="img1" style="height: 135px;" alt="乖乖熊">
+                            
+                            <span class="card-title">乖乖熊</span>
+							
+							<div class="featured-item1" title="畅销">畅销</div>
+							
+                        </div>
+                    </a>
+                    <div class="card-content article-content"  style="padding: 2px 10px 1px 10px;">
+                        <div class="publish-info">
+                            <span class="publish-date aui-list-theme-pic">
+							    
+							   
+								  ￥198
+								  <em>￥288</em> 
+								  <i>团购价</i>  
+								
+					   
+					        </span>
+							<div style="margin:0px;text-align:center;">
+                           <span  style="margin:0px;">           
+						  
+							  
+							  <a  href="tel:15719466286" class="waves-effect waves-light p-btn-phone" style="font-size: 0.69em;" target="_blank">
+								<i class="icon fa fa-phone fa-fw" ></i>电话预订
+							   </a>
+							   
+									<a onclick="jump(605429336)" class="waves-effect waves-light p-btn" style="font-size: 0.69em;" target="_blank">
+									<i class="icon fa fa-shopping-bag fa-fw" ></i>在线购买
+								   </a>
+						        
+							
+						  </span>
+						  </div>
+                        </div>
+                    </div>
+					
+					
+                    <div class="card-action article-tags" style="padding: 3px 3px 3px 3px; border-radius: 0 0 8px 8px !important;font-size:0.85rem;">
+					 <a href="#" target="_blank"><span class="chip bg-color" style="margin:0px;" >慕斯</span></a>
+                        
+						 
+                        
+						 
+							<a href="/tags/圆形/" target="_blank">
+								<span class="chip bg-color" style="margin:0px;">圆形</span>
+							</a>
+						
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+          <div id="transport-options4" class="toolbar-icons hidden"  style="width:110px;height 50px;">
+			<a onclick="phonef()" style="width:100px; height:40px;color: #fff;" class="waves-effect" target="_blank" ><i class="fa fa-phone"></i>电话预订</a>
+			<a onclick="jump(604599512)" style="width:100px; height:40px;" class="waves-effect" target="_blank" ><i class="fa fa-shopping-bag"></i>在线购买</a>
+		  </div>
+            <div class="article tag-post mycol" data-tags="慕斯, 圆形" data-aos="fade-up">
+                <div class="card">
+                    <a href="/2019/07/19/wei-lan/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/images/6.jpg" class="img1" style="height: 135px;" alt="蔚蓝">
+                            
+                            <span class="card-title">蔚蓝</span>
+							
+							<div class="featured-item1" title="新品">新品</div>
+							
+                        </div>
+                    </a>
+                    <div class="card-content article-content"  style="padding: 2px 10px 1px 10px;">
+                        <div class="publish-info">
+                            <span class="publish-date aui-list-theme-pic">
+							    
+							   
+								  ￥198
+								  <em>￥288</em> 
+								  <i>团购价</i>  
+								
+					   
+					        </span>
+							<div style="margin:0px;text-align:center;">
+                           <span  style="margin:0px;">           
+						  
+						    
+							   <a  data-toolbar="transport-options4" data-toolbar-animation="standard" class="waves-effect waves-light p-btn" style="font-size: 0.69em;" target="_blank">
+								<i class="icon fa fa-shopping-bag fa-fw"></i>立即购买
+							   </a>
+							 
+						   	  
+									<a href="/dangao.html" class="waves-effect waves-light p-btn" style="font-size: 0.69em;" target="_blank">
+									<i class="icon fa fa-cube fa-fw"></i>3D展示
+									</a> 
+								
+							
+						  </span>
+						  </div>
+                        </div>
+                    </div>
+					
+					
+                    <div class="card-action article-tags" style="padding: 3px 3px 3px 3px; border-radius: 0 0 8px 8px !important;font-size:0.85rem;">
+					 <a href="#" target="_blank"><span class="chip bg-color" style="margin:0px;" >慕斯</span></a>
+                        
+						 
+                        
+						 
+							<a href="/tags/圆形/" target="_blank">
+								<span class="chip bg-color" style="margin:0px;">圆形</span>
+							</a>
+						
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+          <div id="transport-options5" class="toolbar-icons hidden"  style="width:110px;height 50px;">
+			<a onclick="phonef()" style="width:100px; height:40px;color: #fff;" class="waves-effect" target="_blank" ><i class="fa fa-phone"></i>电话预订</a>
+			<a onclick="jump(604599512)" style="width:100px; height:40px;" class="waves-effect" target="_blank" ><i class="fa fa-shopping-bag"></i>在线购买</a>
+		  </div>
+            <div class="article tag-post mycol" data-tags="慕斯, 圆形" data-aos="fade-up">
+                <div class="card">
+                    <a href="/2019/07/19/wei-lan-fu-ben/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/images/6.jpg" class="img1" style="height: 135px;" alt="蔚蓝">
+                            
+                            <span class="card-title">蔚蓝</span>
+							
+							<div class="featured-item1" title="新品">新品</div>
+							
+                        </div>
+                    </a>
+                    <div class="card-content article-content"  style="padding: 2px 10px 1px 10px;">
+                        <div class="publish-info">
+                            <span class="publish-date aui-list-theme-pic">
+							    
+							   
+								  ￥198
+								  <em>￥288</em> 
+								  <i>团购价</i>  
+								
+					   
+					        </span>
+							<div style="margin:0px;text-align:center;">
+                           <span  style="margin:0px;">           
+						  
+						    
+							   <a  data-toolbar="transport-options5" data-toolbar-animation="standard" class="waves-effect waves-light p-btn" style="font-size: 0.69em;" target="_blank">
+								<i class="icon fa fa-shopping-bag fa-fw"></i>立即购买
+							   </a>
+							 
+						   	  
+									<a href="/dangao.html" class="waves-effect waves-light p-btn" style="font-size: 0.69em;" target="_blank">
+									<i class="icon fa fa-cube fa-fw"></i>3D展示
+									</a> 
+								
+							
+						  </span>
+						  </div>
+                        </div>
+                    </div>
+					
+					
+                    <div class="card-action article-tags" style="padding: 3px 3px 3px 3px; border-radius: 0 0 8px 8px !important;font-size:0.85rem;">
+					 <a href="#" target="_blank"><span class="chip bg-color" style="margin:0px;" >慕斯</span></a>
+                        
+						 
+                        
+						 
+							<a href="/tags/圆形/" target="_blank">
+								<span class="chip bg-color" style="margin:0px;">圆形</span>
+							</a>
+						
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+          <div id="transport-options6" class="toolbar-icons hidden"  style="width:110px;height 50px;">
+			<a onclick="phonef()" style="width:100px; height:40px;color: #fff;" class="waves-effect" target="_blank" ><i class="fa fa-phone"></i>电话预订</a>
+			<a onclick="jump(604599512)" style="width:100px; height:40px;" class="waves-effect" target="_blank" ><i class="fa fa-shopping-bag"></i>在线购买</a>
+		  </div>
+            <div class="article tag-post mycol" data-tags="慕斯, 方形" data-aos="fade-up">
+                <div class="card">
+                    <a href="/2019/07/19/gui-mi-1/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/images/0.jpg" class="img1" style="height: 135px;" alt="闺蜜">
+                            
+                            <span class="card-title">闺蜜</span>
+							
+							<div class="featured-item1" title="热销">热销</div>
+							
+                        </div>
+                    </a>
+                    <div class="card-content article-content"  style="padding: 2px 10px 1px 10px;">
+                        <div class="publish-info">
+                            <span class="publish-date aui-list-theme-pic">
+							    
+							   
+								  ￥500
+								  <em>￥2888</em> 
+								  <i>团购价</i>  
+								
+					   
+					        </span>
+							<div style="margin:0px;text-align:center;">
+                           <span  style="margin:0px;">           
+						  
+						    
+							   <a  data-toolbar="transport-options6" data-toolbar-animation="standard" class="waves-effect waves-light p-btn" style="font-size: 0.69em;" target="_blank">
+								<i class="icon fa fa-shopping-bag fa-fw"></i>立即购买
+							   </a>
+							 
+						   	  
+									<a href="https://five-great.coding.me/qiao.html" class="waves-effect waves-light p-btn" style="font-size: 0.69em;" target="_blank">
+									<i class="icon fa fa-cube fa-fw"></i>3D展示
+									</a> 
+								
+							
+						  </span>
+						  </div>
+                        </div>
+                    </div>
+					
+					
+                    <div class="card-action article-tags" style="padding: 3px 3px 3px 3px; border-radius: 0 0 8px 8px !important;font-size:0.85rem;">
+					 <a href="#" target="_blank"><span class="chip bg-color" style="margin:0px;" >慕斯</span></a>
+                        
+						 
+                        
+						 
+							<a href="/tags/方形/" target="_blank">
+								<span class="chip bg-color" style="margin:0px;">方形</span>
+							</a>
+						
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+          <div id="transport-options7" class="toolbar-icons hidden"  style="width:110px;height 50px;">
+			<a onclick="phonef()" style="width:100px; height:40px;color: #fff;" class="waves-effect" target="_blank" ><i class="fa fa-phone"></i>电话预订</a>
+			<a onclick="jump(604599512)" style="width:100px; height:40px;" class="waves-effect" target="_blank" ><i class="fa fa-shopping-bag"></i>在线购买</a>
+		  </div>
+            <div class="article tag-post mycol" data-tags="慕斯, 方形" data-aos="fade-up">
+                <div class="card">
+                    <a href="/2019/07/19/gui-mi-1-fu-ben/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/images/0.jpg" class="img1" style="height: 135px;" alt="闺蜜">
+                            
+                            <span class="card-title">闺蜜</span>
+							
+							<div class="featured-item1" title="热销">热销</div>
+							
+                        </div>
+                    </a>
+                    <div class="card-content article-content"  style="padding: 2px 10px 1px 10px;">
+                        <div class="publish-info">
+                            <span class="publish-date aui-list-theme-pic">
+							    
+							   
+								  ￥50
+								  <em>￥88</em> 
+								  <i>团购价</i>  
+								
+					   
+					        </span>
+							<div style="margin:0px;text-align:center;">
+                           <span  style="margin:0px;">           
+						  
+						    
+							   <a  data-toolbar="transport-options7" data-toolbar-animation="standard" class="waves-effect waves-light p-btn" style="font-size: 0.69em;" target="_blank">
+								<i class="icon fa fa-shopping-bag fa-fw"></i>立即购买
+							   </a>
+							 
+						   	  
+									<a href="https://five-great.coding.me/qiao.html" class="waves-effect waves-light p-btn" style="font-size: 0.69em;" target="_blank">
+									<i class="icon fa fa-cube fa-fw"></i>3D展示
+									</a> 
+								
+							
+						  </span>
+						  </div>
+                        </div>
+                    </div>
+					
+					
+                    <div class="card-action article-tags" style="padding: 3px 3px 3px 3px; border-radius: 0 0 8px 8px !important;font-size:0.85rem;">
+					 <a href="#" target="_blank"><span class="chip bg-color" style="margin:0px;" >慕斯</span></a>
+                        
+						 
+                        
+						 
+							<a href="/tags/方形/" target="_blank">
+								<span class="chip bg-color" style="margin:0px;">方形</span>
 							</a>
 						
                         
@@ -1027,30 +1456,6 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
         </div>
     </article>
 </main>
-
-
-<div class="container paging">
-    <div class="row">
-        <div class="col s6 m4 l4">
-            
-            <a class="left btn-floating btn-large disabled">
-                <i class="fa fa-angle-left"></i>
-            </a>
-            
-        </div>
-        <div class="page-info col m4 l4 hide-on-small-only">
-            <div class="center-align b-text-gray">1 / 8</div>
-        </div>
-        <div class="col s6 m4 l4">
-            
-            <a href="/tags/慕斯/page/2/"
-               class="right btn-floating btn-large waves-effect waves-light bg-color">
-                <i class="fa fa-angle-right"></i>
-            </a>
-            
-        </div>
-    </div>
-</div>
 
 
 <footer class="page-footer bg-color">
