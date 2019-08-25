@@ -215,7 +215,7 @@
 			this.height=this.container.clientHeight-parseInt(this.css(this.container,'padding-top'))-parseInt(this.css(this.container,'padding-bottom'));
 			css={'position':'relative','webkitTransitionDuration':'0ms','MozTransitionDuration':'0ms','msTransitionDuration':'0ms','OTransitionDuration':'0ms','transitionDuration':'0ms'}
 			if(this.vertical){
-				//css['height']=this.height*this.length+'px';
+				css['height']=this.height*this.length+'px';
 				css['top']=-this.height*this.index+'px';
 				this.css(this.container,{'height':this.height+'px'});
 			}else{
