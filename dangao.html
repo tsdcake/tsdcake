@@ -247,8 +247,173 @@
             border-radius: 5px;
         }
 
-		</style>
-	</head>
+</style>
+
+
+
+
+<style>
+#loading {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: #f3815e;
+  overflow-y: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+}
+.loadingImage {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    background: #2e98df;
+    border-radius: 50px;
+    animation: loadingImage 1.5s infinite linear;
+	  z-index: 299;
+}
+
+.loadingImage::after {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-top: 10px solid #b160d1;
+    border-bottom: 10px solid #b160d1;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-radius: 50px;
+    content: '';
+    top: -20px;
+    left: -20px;
+    animation: loadingImage_after 1.5s infinite linear;
+}
+
+@keyframes loadingImage {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+        background: #2ecc71;
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loadingImage_after {
+    0% {
+        border-top: 10px solid #b160d1;
+        border-bottom: 10px solid #b160d1;
+    }
+
+    50% {
+        border-top: 10px solid #2e98df;
+        border-bottom: 10px solid #2e98df;
+    }
+
+    100% {
+        border-top: 10px solid #b160d1;
+        border-bottom: 10px solid #b160d1;
+    }
+}
+
+
+.bounce {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+	color: white;
+  height: 100%;
+  font: normal bold 5rem "Product Sans", sans-serif;
+  white-space: nowrap;
+  
+}
+
+.letter { 
+  top: 200px;
+  animation: bounce 0.55s cubic-bezier(0.05, 0, 0.23, 1) infinite alternate;
+  display: inline-block;
+  transform: translate3d(0, 0, 0);
+  margin-top: 0.5em;
+  text-shadow: rgba(255, 255, 255, 0.4) 0 0 0.05em;
+  font: normal 500 5rem 'Varela Round', sans-serif;
+}
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  .letter {animation: bounce 0.55s cubic-bezier(0.05, 0, 0.23, 1) infinite alternate;
+		  display: inline-block;
+		  transform: translate3d(0, 0, 0);
+		  margin-top: 0.5em;
+		  text-shadow: rgba(255, 255, 255, 0.4) 0 0 0.05em;
+		  font: normal 500 4.5rem 'Varela Round', sans-serif;
+		}
+}
+
+@media only screen and (max-width: 601px) {
+   .letter {animation: bounce 0.55s cubic-bezier(0.05, 0, 0.23, 1) infinite alternate;
+		  display: inline-block;
+		  transform: translate3d(0, 0, 0);
+		  margin-top: 0.5em;
+		  text-shadow: rgba(255, 255, 255, 0.4) 0 0 0.05em;
+		  font: normal 500 3.4rem 'Varela Round', sans-serif;
+		}
+}
+
+.letter:nth-child(1) {
+  animation-delay: 0s;
+}
+.letter:nth-child(2) {
+  animation-delay: 0.083333333s;
+}
+.letter:nth-child(3) {
+  animation-delay: 0.1266666667s;
+}
+.letter:nth-child(4) {
+  animation-delay: 0.145s;
+}
+.letter:nth-child(5) {
+  animation-delay: 0.1833333333s;
+}
+.letter:nth-child(6) {
+  animation-delay: 0.2116666667s;
+}
+.letter:nth-child(7) {
+  animation-delay: 0.25166666667s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate3d(0, 0, 0);
+    text-shadow: rgba(255, 255, 255, 0.4) 0 0 0.05em;
+  }
+  100% {
+    transform: translate3d(0, -1em, 0);
+    text-shadow: rgba(255, 255, 255, 0.4) 0 1em 0.35em;
+  }
+}
+
+</style>
+<div id="loading">
+<div class="loadingImage"></div>
+   <div class="bounce">
+	   <span class="letter"><br><br><br>太</span>
+	   <span class="letter"><br><br><br>泗</span>
+	   <span class="letter"><br><br><br>蒂</span>
+	   <span class="letter"><br><br><br>.</span>
+	   <span class="letter"><br><br><br>艺</span>
+	   <span class="letter"><br><br><br>术</span>
+	   <span class="letter"><br><br><br>蛋</span>
+	   <span class="letter"><br><br><br>糕</span>
+   <div>
+</div>
+	</div></div></head>
 	<body>
 		<div class="title one">巧克力</div>
 		<div class="title two">奶油夹层</div>
@@ -769,5 +934,8 @@
 				renderer.render( scene, camera );
 			}
 		</script>
+		<script>
+        $("#loading").fadeOut(3600);
+      </script>
 	</body>
 </html>
